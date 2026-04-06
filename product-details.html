@@ -1,641 +1,283 @@
 <!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="description" content="">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-
-    <!-- Title  -->
-    <title>Karl - Fashion Ecommerce Template | Product Details</title>
-
-    <!-- Favicon  -->
-    <link rel="icon" href="img/core-img/favicon.ico">
-
-    <!-- Core Style CSS -->
-    <link rel="stylesheet" href="css/core-style.css">
-    <link rel="stylesheet" href="style.css">
-
-    <!-- Responsive CSS -->
-    <link href="css/responsive.css" rel="stylesheet">
-
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Royal Maroon Hand-Woven Silk Saree | GauriNandan Silk</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary-fixed": "#ffdadc",
+                    "surface-container-low": "#fff1ec",
+                    "primary-fixed-dim": "#ffb2b9",
+                    "on-secondary-fixed-variant": "#5c4200",
+                    "surface-dim": "#ffd0bd",
+                    "inverse-primary": "#ffb2b9",
+                    "surface": "#fff8f6",
+                    "on-primary-fixed-variant": "#792d39",
+                    "tertiary-fixed": "#c8eadf",
+                    "tertiary-fixed-dim": "#adcec3",
+                    "surface-container-lowest": "#ffffff",
+                    "background": "#fff8f6",
+                    "on-error": "#ffffff",
+                    "on-primary": "#ffffff",
+                    "on-background": "#2e1509",
+                    "tertiary-container": "#0a2a23",
+                    "on-surface-variant": "#544244",
+                    "on-primary-container": "#ce707b",
+                    "inverse-surface": "#47291b",
+                    "inverse-on-surface": "#ffede7",
+                    "secondary-fixed": "#ffdea2",
+                    "on-secondary-fixed": "#261900",
+                    "on-primary-fixed": "#3f0110",
+                    "surface-variant": "#ffdbcd",
+                    "primary": "#2a0008",
+                    "outline-variant": "#d9c1c2",
+                    "on-secondary-container": "#785a18",
+                    "on-tertiary": "#ffffff",
+                    "secondary-fixed-dim": "#e8c175",
+                    "secondary": "#775a17",
+                    "on-surface": "#2e1509",
+                    "surface-tint": "#964450",
+                    "error": "#ba1a1a",
+                    "surface-bright": "#fff8f6",
+                    "on-tertiary-container": "#739389",
+                    "error-container": "#ffdad6",
+                    "on-error-container": "#93000a",
+                    "outline": "#877273",
+                    "surface-container-highest": "#ffdbcd",
+                    "on-tertiary-fixed": "#01201a",
+                    "surface-container-high": "#ffe2d7",
+                    "surface-container": "#ffe9e2",
+                    "on-tertiary-fixed-variant": "#2e4c45",
+                    "on-secondary": "#ffffff",
+                    "secondary-container": "#fdd586",
+                    "tertiary": "#00130f",
+                    "primary-container": "#4c0a19"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Noto Serif"],
+                    "body": ["Manrope"],
+                    "label": ["Manrope"]
+            }
+          },
+        },
+      }
+    </script>
+<style>.material-symbols-outlined {
+    font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24
+    }
+.silk-texture {
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuAVFzrXBWGW8VaWewkjbhcuDgUyJuhp5o5JOhDYleaq1mYz0ZzSvZZtVXLq_9914lk5rie4XdjbfCsD6LXNJggpTOS8xEHTs2fzIachho0N-KeJYRRCsElzwqbDOEuc2tEUCij-_LygkHmprrMxWE0dG8ff9ZQldFFxTo7IQvY8_tRcOFYpgoMQZ2y-LXmGwaJGDIvbBtTosDpNr9aAJKDme_PqzE0Ari12KlP4XJAkp_WlZi8i4wQbc88nxagJmynThxDlr24GKQE);
+    opacity: 0.03;
+    pointer-events: none
+    }</style>
 </head>
-
-<body>
-    <div class="catagories-side-menu">
-        <!-- Close Icon -->
-        <div id="sideMenuClose">
-            <i class="ti-close"></i>
-        </div>
-        <!--  Side Nav  -->
-        <div class="nav-side-menu">
-            <div class="menu-list">
-                <h6>Categories</h6>
-                <ul id="menu-content" class="menu-content collapse out">
-                    <!-- Single Item -->
-                    <li data-toggle="collapse" data-target="#women" class="collapsed active">
-                        <a href="#">Woman wear <span class="arrow"></span></a>
-                        <ul class="sub-menu collapse" id="women">
-                            <li><a href="#">Midi Dresses</a></li>
-                            <li><a href="#">Maxi Dresses</a></li>
-                            <li><a href="#">Prom Dresses</a></li>
-                            <li><a href="#">Little Black Dresses</a></li>
-                            <li><a href="#">Mini Dresses</a></li>
-                        </ul>
-                    </li>
-                    <!-- Single Item -->
-                    <li data-toggle="collapse" data-target="#man" class="collapsed">
-                        <a href="#">Man Wear <span class="arrow"></span></a>
-                        <ul class="sub-menu collapse" id="man">
-                            <li><a href="#">Man Dresses</a></li>
-                            <li><a href="#">Man Black Dresses</a></li>
-                            <li><a href="#">Man Mini Dresses</a></li>
-                        </ul>
-                    </li>
-                    <!-- Single Item -->
-                    <li data-toggle="collapse" data-target="#kids" class="collapsed">
-                        <a href="#">Children <span class="arrow"></span></a>
-                        <ul class="sub-menu collapse" id="kids">
-                            <li><a href="#">Children Dresses</a></li>
-                            <li><a href="#">Mini Dresses</a></li>
-                        </ul>
-                    </li>
-                    <!-- Single Item -->
-                    <li data-toggle="collapse" data-target="#bags" class="collapsed">
-                        <a href="#">Bags &amp; Purses <span class="arrow"></span></a>
-                        <ul class="sub-menu collapse" id="bags">
-                            <li><a href="#">Bags</a></li>
-                            <li><a href="#">Purses</a></li>
-                        </ul>
-                    </li>
-                    <!-- Single Item -->
-                    <li data-toggle="collapse" data-target="#eyewear" class="collapsed">
-                        <a href="#">Eyewear <span class="arrow"></span></a>
-                        <ul class="sub-menu collapse" id="eyewear">
-                            <li><a href="#">Eyewear Style 1</a></li>
-                            <li><a href="#">Eyewear Style 2</a></li>
-                            <li><a href="#">Eyewear Style 3</a></li>
-                        </ul>
-                    </li>
-                    <!-- Single Item -->
-                    <li data-toggle="collapse" data-target="#footwear" class="collapsed">
-                        <a href="#">Footwear <span class="arrow"></span></a>
-                        <ul class="sub-menu collapse" id="footwear">
-                            <li><a href="#">Footwear 1</a></li>
-                            <li><a href="#">Footwear 2</a></li>
-                            <li><a href="#">Footwear 3</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-
-    <div id="wrapper">
-
-        <!-- ****** Header Area Start ****** -->
-        <header class="header_area bg-img background-overlay-white" style="background-image: url(img/bg-img/bg-1.jpg);">
-            <!-- Top Header Area Start -->
-            <div class="top_header_area">
-                <div class="container h-100">
-                    <div class="row h-100 align-items-center justify-content-end">
-
-                        <div class="col-12 col-lg-7">
-                            <div class="top_single_area d-flex align-items-center">
-                                <!-- Logo Area -->
-                                <div class="top_logo">
-                                    <a href="#"><img src="img/core-img/logo.png" alt=""></a>
-                                </div>
-                                <!-- Cart & Menu Area -->
-                                <div class="header-cart-menu d-flex align-items-center ml-auto">
-                                    <!-- Cart Area -->
-                                    <div class="cart">
-                                        <a href="#" id="header-cart-btn" target="_blank"><span class="cart_quantity">2</span> <i class="ti-bag"></i> Your Bag $20</a>
-                                        <!-- Cart List Area Start -->
-                                        <ul class="cart-list">
-                                            <li>
-                                                <a href="#" class="image"><img src="img/product-img/product-10.jpg" class="cart-thumb" alt=""></a>
-                                                <div class="cart-item-desc">
-                                                    <h6><a href="#">Women's Fashion</a></h6>
-                                                    <p>1x - <span class="price">$10</span></p>
-                                                </div>
-                                                <span class="dropdown-product-remove"><i class="icon-cross"></i></span>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="image"><img src="img/product-img/product-11.jpg" class="cart-thumb" alt=""></a>
-                                                <div class="cart-item-desc">
-                                                    <h6><a href="#">Women's Fashion</a></h6>
-                                                    <p>1x - <span class="price">$10</span></p>
-                                                </div>
-                                                <span class="dropdown-product-remove"><i class="icon-cross"></i></span>
-                                            </li>
-                                            <li class="total">
-                                                <span class="pull-right">Total: $20.00</span>
-                                                <a href="cart.html" class="btn btn-sm btn-cart">Cart</a>
-                                                <a href="checkout-1.html" class="btn btn-sm btn-checkout">Checkout</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="header-right-side-menu ml-15">
-                                        <a href="#" id="sideMenuBtn"><i class="ti-menu" aria-hidden="true"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-
-            <!-- Top Header Area End -->
-            <div class="main_header_area">
-                <div class="container h-100">
-                    <div class="row h-100">
-                        <div class="col-12 d-md-flex justify-content-between">
-                            <!-- Header Social Area -->
-                            <div class="header-social-area">
-                                <a href="#"><span class="karl-level">Share</span> <i class="fa fa-pinterest" aria-hidden="true"></i></a>
-                                <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                                <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                                <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                            </div>
-                            <!-- Menu Area -->
-                            <div class="main-menu-area">
-                                <nav class="navbar navbar-expand-lg align-items-start">
-
-                                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#karl-navbar" aria-controls="karl-navbar" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"><i class="ti-menu"></i></span></button>
-
-                                    <div class="collapse navbar-collapse align-items-start collapse" id="karl-navbar">
-                                        <ul class="navbar-nav animated" id="nav">
-                                            <li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
-                                            <li class="nav-item dropdown">
-                                                <a class="nav-link dropdown-toggle" href="#" id="karlDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Pages</a>
-                                                <div class="dropdown-menu" aria-labelledby="karlDropdown">
-                                                    <a class="dropdown-item" href="index.html">Home</a>
-                                                    <a class="dropdown-item" href="shop.html">Shop</a>
-                                                    <a class="dropdown-item" href="product-details.html">Product Details</a>
-                                                    <a class="dropdown-item" href="cart.html">Cart</a>
-                                                    <a class="dropdown-item" href="checkout.html">Checkout</a>
-                                                </div>
-                                            </li>
-                                            <li class="nav-item"><a class="nav-link" href="#">Dresses</a></li>
-                                            <li class="nav-item"><a class="nav-link" href="#"><span class="karl-level">hot</span> Shoes</a></li>
-                                            <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
-                                        </ul>
-                                    </div>
-                                </nav>
-                            </div>
-                            <!-- Help Line -->
-                            <div class="help-line">
-                                <a href="tel:+346573556778"><i class="ti-headphone-alt"></i> +34 657 3556 778</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </header>
-        <!-- ****** Header Area End ****** -->
-
-        <section class="top-discount-area d-md-flex align-items-center">
-            <!-- Single Discount Area -->
-            <div class="single-discount-area">
-                <h5>Free Shipping &amp; Returns</h5>
-                <h6><a href="#">BUY NOW</a></h6>
-            </div>
-            <!-- Single Discount Area -->
-            <div class="single-discount-area">
-                <h5>20% Discount for all dresses</h5>
-                <h6>USE CODE: Colorlib</h6>
-            </div>
-            <!-- Single Discount Area -->
-            <div class="single-discount-area">
-                <h5>20% Discount for students</h5>
-                <h6>USE CODE: Colorlib</h6>
-            </div>
-        </section>
-
-        <!-- <<<<<<<<<<<<<<<<<<<< Breadcumb Area Start <<<<<<<<<<<<<<<<<<<< -->
-        <div class="breadcumb_area">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <ol class="breadcrumb d-flex align-items-center">
-                            <li class="breadcrumb-item"><a href="#">Home</a></li>
-                            <li class="breadcrumb-item"><a href="#">Dresses</a></li>
-                            <li class="breadcrumb-item active">Long Dress</li>
-                        </ol>
-                        <!-- btn -->
-                        <a href="#" class="backToHome d-block"><i class="fa fa-angle-double-left"></i> Back to Category</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- <<<<<<<<<<<<<<<<<<<< Breadcumb Area End <<<<<<<<<<<<<<<<<<<< -->
-
-        <!-- <<<<<<<<<<<<<<<<<<<< Single Product Details Area Start >>>>>>>>>>>>>>>>>>>>>>>>> -->
-        <section class="single_product_details_area section_padding_0_100">
-            <div class="container">
-                <div class="row">
-
-                    <div class="col-12 col-md-6">
-                        <div class="single_product_thumb">
-                            <div id="product_details_slider" class="carousel slide" data-ride="carousel">
-
-                                <ol class="carousel-indicators">
-                                    <li class="active" data-target="#product_details_slider" data-slide-to="0" style="background-image: url(img/product-img/product-9.jpg);">
-                                    </li>
-                                    <li data-target="#product_details_slider" data-slide-to="1" style="background-image: url(img/product-img/product-2.jpg);">
-                                    </li>
-                                    <li data-target="#product_details_slider" data-slide-to="2" style="background-image: url(img/product-img/product-3.jpg);">
-                                    </li>
-                                    <li data-target="#product_details_slider" data-slide-to="3" style="background-image: url(img/product-img/product-4.jpg);">
-                                    </li>
-                                </ol>
-
-                                <div class="carousel-inner">
-                                    <div class="carousel-item active">
-                                        <a class="gallery_img" href="img/product-img/product-9.jpg">
-                                        <img class="d-block w-100" src="img/product-img/product-9.jpg" alt="First slide">
-                                    </a>
-                                    </div>
-                                    <div class="carousel-item">
-                                        <a class="gallery_img" href="img/product-img/product-2.jpg">
-                                        <img class="d-block w-100" src="img/product-img/product-2.jpg" alt="Second slide">
-                                    </a>
-                                    </div>
-                                    <div class="carousel-item">
-                                        <a class="gallery_img" href="img/product-img/product-3.jpg">
-                                        <img class="d-block w-100" src="img/product-img/product-3.jpg" alt="Third slide">
-                                    </a>
-                                    </div>
-                                    <div class="carousel-item">
-                                        <a class="gallery_img" href="img/product-img/product-4.jpg">
-                                        <img class="d-block w-100" src="img/product-img/product-4.jpg" alt="Fourth slide">
-                                    </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-12 col-md-6">
-                        <div class="single_product_desc">
-
-                            <h4 class="title"><a href="#">Long Yellow Dress</a></h4>
-
-                            <h4 class="price">$ 39.99</h4>
-
-                            <p class="available">Available: <span class="text-muted">In Stock</span></p>
-
-                            <div class="single_product_ratings mb-15">
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star-o" aria-hidden="true"></i>
-                            </div>
-
-                            <div class="widget size mb-50">
-                                <h6 class="widget-title">Size</h6>
-                                <div class="widget-desc">
-                                    <ul>
-                                        <li><a href="#">32</a></li>
-                                        <li><a href="#">34</a></li>
-                                        <li><a href="#">36</a></li>
-                                        <li><a href="#">38</a></li>
-                                        <li><a href="#">40</a></li>
-                                        <li><a href="#">42</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                            <!-- Add to Cart Form -->
-                            <form class="cart clearfix mb-50 d-flex" method="post">
-                                <div class="quantity">
-                                    <span class="qty-minus" onclick="var effect = document.getElementById('qty'); var qty = effect.value; if( !isNaN( qty ) &amp;&amp; qty &gt; 1 ) effect.value--;return false;"><i class="fa fa-minus" aria-hidden="true"></i></span>
-                                    <input type="number" class="qty-text" id="qty" step="1" min="1" max="12" name="quantity" value="1">
-                                    <span class="qty-plus" onclick="var effect = document.getElementById('qty'); var qty = effect.value; if( !isNaN( qty )) effect.value++;return false;"><i class="fa fa-plus" aria-hidden="true"></i></span>
-                                </div>
-                                <button type="submit" name="addtocart" value="5" class="btn cart-submit d-block">Add to cart</button>
-                            </form>
-
-                            <div id="accordion" role="tablist">
-                                <div class="card">
-                                    <div class="card-header" role="tab" id="headingOne">
-                                        <h6 class="mb-0">
-                                            <a data-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Information</a>
-                                        </h6>
-                                    </div>
-
-                                    <div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">
-                                        <div class="card-body">
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pharetra tempor so dales. Phasellus sagittis auctor gravida. Integ er bibendum sodales arcu id te mpus. Ut consectetur lacus.</p>
-                                            <p>Approx length 66cm/26" (Based on a UK size 8 sample) Mixed fibres</p>
-                                            <p>The Model wears a UK size 8/ EU size 36/ US size 4 and her height is 5'8"</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <div class="card-header" role="tab" id="headingTwo">
-                                        <h6 class="mb-0">
-                                            <a class="collapsed" data-toggle="collapse" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">Cart Details</a>
-                                        </h6>
-                                    </div>
-                                    <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo" data-parent="#accordion">
-                                        <div class="card-body">
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo quis in veritatis officia inventore, tempore provident dignissimos nemo, nulla quaerat. Quibusdam non, eos, voluptatem reprehenderit hic nam! Laboriosam, sapiente! Praesentium.</p>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia magnam laborum eaque.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <div class="card-header" role="tab" id="headingThree">
-                                        <h6 class="mb-0">
-                                            <a class="collapsed" data-toggle="collapse" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">shipping &amp; Returns</a>
-                                        </h6>
-                                    </div>
-                                    <div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree" data-parent="#accordion">
-                                        <div class="card-body">
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse quo sint repudiandae suscipit ab soluta delectus voluptate, vero vitae, tempore maxime rerum iste dolorem mollitia perferendis distinctio. Quibusdam laboriosam rerum distinctio. Repudiandae fugit odit, sequi id!</p>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae qui maxime consequatur laudantium temporibus ad et. A optio inventore deleniti ipsa.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- <<<<<<<<<<<<<<<<<<<< Single Product Details Area End >>>>>>>>>>>>>>>>>>>>>>>>> -->
-
-        <!-- ****** Quick View Modal Area Start ****** -->
-        <div class="modal fade" id="quickview" tabindex="-1" role="dialog" aria-labelledby="quickview" aria-hidden="true">
-            <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-                <div class="modal-content">
-                    <button type="button" class="close btn" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-                    <div class="modal-body">
-                        <div class="quickview_body">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-12 col-lg-5">
-                                        <div class="quickview_pro_img">
-                                            <img src="img/product-img/product-1.jpg" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="col-12 col-lg-7">
-                                        <div class="quickview_pro_des">
-                                            <h4 class="title">Boutique Silk Dress</h4>
-                                            <div class="top_seller_product_rating mb-15">
-                                                <i class="fa fa-star" aria-hidden="true"></i>
-                                                <i class="fa fa-star" aria-hidden="true"></i>
-                                                <i class="fa fa-star" aria-hidden="true"></i>
-                                                <i class="fa fa-star" aria-hidden="true"></i>
-                                                <i class="fa fa-star" aria-hidden="true"></i>
-                                            </div>
-                                            <h5 class="price">$120.99 <span>$130</span></h5>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia expedita quibusdam aspernatur, sapiente consectetur accusantium perspiciatis praesentium eligendi, in fugiat?</p>
-                                            <a href="#">View Full Product Details</a>
-                                        </div>
-                                        <!-- Add to Cart Form -->
-                                        <form class="cart" method="post">
-                                            <div class="quantity">
-                                                <span class="qty-minus" onclick="var effect = document.getElementById('qty'); var qty = effect.value; if( !isNaN( qty ) &amp;&amp; qty &gt; 1 ) effect.value--;return false;"><i class="fa fa-minus" aria-hidden="true"></i></span>
-
-                                                <input type="number" class="qty-text" id="qty2" step="1" min="1" max="12" name="quantity" value="1">
-
-                                                <span class="qty-plus" onclick="var effect = document.getElementById('qty'); var qty = effect.value; if( !isNaN( qty )) effect.value++;return false;"><i class="fa fa-plus" aria-hidden="true"></i></span>
-                                            </div>
-                                            <button type="submit" name="addtocart" value="5" class="cart-submit">Add to cart</button>
-                                            <!-- Wishlist -->
-                                            <div class="modal_pro_wishlist">
-                                                <a href="wishlist.html" target="_blank"><i class="ti-heart"></i></a>
-                                            </div>
-                                            <!-- Compare -->
-                                            <div class="modal_pro_compare">
-                                                <a href="compare.html" target="_blank"><i class="ti-stats-up"></i></a>
-                                            </div>
-                                        </form>
-
-                                        <div class="share_wf mt-30">
-                                            <p>Share With Friend</p>
-                                            <div class="_icon">
-                                                <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                                                <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                                                <a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
-                                                <a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- ****** Quick View Modal Area End ****** -->
-
-        <section class="you_may_like_area clearfix">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="section_heading text-center">
-                            <h2>related Products</h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-12">
-                        <div class="you_make_like_slider owl-carousel">
-
-                            <!-- Single gallery Item -->
-                            <div class="single_gallery_item">
-                                <!-- Product Image -->
-                                <div class="product-img">
-                                    <img src="img/product-img/product-1.jpg" alt="">
-                                    <div class="product-quicview">
-                                        <a href="#" data-toggle="modal" data-target="#quickview"><i class="ti-plus"></i></a>
-                                    </div>
-                                </div>
-                                <!-- Product Description -->
-                                <div class="product-description">
-                                    <h4 class="product-price">$39.90</h4>
-                                    <p>Jeans midi cocktail dress</p>
-                                    <!-- Add to Cart -->
-                                    <a href="#" class="add-to-cart-btn">ADD TO CART</a>
-                                </div>
-                            </div>
-
-                            <!-- Single gallery Item -->
-                            <div class="single_gallery_item">
-                                <!-- Product Image -->
-                                <div class="product-img">
-                                    <img src="img/product-img/product-2.jpg" alt="">
-                                    <div class="product-quicview">
-                                        <a href="#" data-toggle="modal" data-target="#quickview"><i class="ti-plus"></i></a>
-                                    </div>
-                                </div>
-                                <!-- Product Description -->
-                                <div class="product-description">
-                                    <h4 class="product-price">$39.90</h4>
-                                    <p>Jeans midi cocktail dress</p>
-                                    <!-- Add to Cart -->
-                                    <a href="#" class="add-to-cart-btn">ADD TO CART</a>
-                                </div>
-                            </div>
-
-                            <!-- Single gallery Item -->
-                            <div class="single_gallery_item">
-                                <!-- Product Image -->
-                                <div class="product-img">
-                                    <img src="img/product-img/product-3.jpg" alt="">
-                                    <div class="product-quicview">
-                                        <a href="#" data-toggle="modal" data-target="#quickview"><i class="ti-plus"></i></a>
-                                    </div>
-                                </div>
-                                <!-- Product Description -->
-                                <div class="product-description">
-                                    <h4 class="product-price">$39.90</h4>
-                                    <p>Jeans midi cocktail dress</p>
-                                    <!-- Add to Cart -->
-                                    <a href="#" class="add-to-cart-btn">ADD TO CART</a>
-                                </div>
-                            </div>
-
-                            <!-- Single gallery Item -->
-                            <div class="single_gallery_item">
-                                <!-- Product Image -->
-                                <div class="product-img">
-                                    <img src="img/product-img/product-4.jpg" alt="">
-                                    <div class="product-quicview">
-                                        <a href="#" data-toggle="modal" data-target="#quickview"><i class="ti-plus"></i></a>
-                                    </div>
-                                </div>
-                                <!-- Product Description -->
-                                <div class="product-description">
-                                    <h4 class="product-price">$39.90</h4>
-                                    <p>Jeans midi cocktail dress</p>
-                                    <!-- Add to Cart -->
-                                    <a href="#" class="add-to-cart-btn">ADD TO CART</a>
-                                </div>
-                            </div>
-
-                            <!-- Single gallery Item -->
-                            <div class="single_gallery_item">
-                                <!-- Product Image -->
-                                <div class="product-img">
-                                    <img src="img/product-img/product-5.jpg" alt="">
-                                    <div class="product-quicview">
-                                        <a href="#" data-toggle="modal" data-target="#quickview"><i class="ti-plus"></i></a>
-                                    </div>
-                                </div>
-                                <!-- Product Description -->
-                                <div class="product-description">
-                                    <h4 class="product-price">$39.90</h4>
-                                    <p>Jeans midi cocktail dress</p>
-                                    <!-- Add to Cart -->
-                                    <a href="#" class="add-to-cart-btn">ADD TO CART</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ****** Footer Area Start ****** -->
-        <footer class="footer_area">
-            <div class="container">
-                <div class="row">
-                    <!-- Single Footer Area Start -->
-                    <div class="col-12 col-md-6 col-lg-3">
-                        <div class="single_footer_area">
-                            <div class="footer-logo">
-                                <img src="img/core-img/logo.png" alt="">
-                            </div>
-                            <div class="copywrite_text d-flex align-items-center">
-                                <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://www.dualsparkstudio.com/" target="_blank">DualSpark Studio</a> 
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Single Footer Area Start -->
-                    <div class="col-12 col-sm-6 col-md-3 col-lg-2">
-                        <div class="single_footer_area">
-                            <ul class="footer_widget_menu">
-                                <li><a href="#">About</a></li>
-                                <li><a href="#">Blog</a></li>
-                                <li><a href="#">Faq</a></li>
-                                <li><a href="#">Returns</a></li>
-                                <li><a href="#">Contact</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <!-- Single Footer Area Start -->
-                    <div class="col-12 col-sm-6 col-md-3 col-lg-2">
-                        <div class="single_footer_area">
-                            <ul class="footer_widget_menu">
-                                <li><a href="#">My Account</a></li>
-                                <li><a href="#">Shipping</a></li>
-                                <li><a href="#">Our Policies</a></li>
-                                <li><a href="#">Afiliates</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <!-- Single Footer Area Start -->
-                    <div class="col-12 col-lg-5">
-                        <div class="single_footer_area">
-                            <div class="footer_heading mb-30">
-                                <h6>Subscribe to our newsletter</h6>
-                            </div>
-                            <div class="subscribtion_form">
-                                <form action="#" method="post">
-                                    <input type="email" name="mail" class="mail" placeholder="Your email here">
-                                    <button type="submit" class="submit">Subscribe</button>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="line"></div>
-
-                <!-- Footer Bottom Area Start -->
-                <div class="footer_bottom_area">
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="footer_social_area text-center">
-                                <a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
-                                <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                                <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                                <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </footer>
-        <!-- ****** Footer Area End ****** -->
-    </div>
-    <!-- /.wrapper end -->
-
-    <!-- jQuery (Necessary for All JavaScript Plugins) -->
-    <script src="js/jquery/jquery-2.2.4.min.js"></script>
-    <!-- Popper js -->
-    <script src="js/popper.min.js"></script>
-    <!-- Bootstrap js -->
-    <script src="js/bootstrap.min.js"></script>
-    <!-- Plugins js -->
-    <script src="js/plugins.js"></script>
-    <!-- Active js -->
-    <script src="js/active.js"></script>
-
-</body>
-
-</html>
+<body class="bg-surface font-body text-on-surface">
+<!-- Top Navigation Bar -->
+<nav class="bg-white/80 dark:bg-rose-950/80 backdrop-blur-xl docked full-width top-0 sticky z-50 flex justify-between items-center px-8 py-4 max-w-full mx-auto">
+<div class="flex items-center gap-3">
+<img alt="GauriNandan Silk Brand Identity Logo featuring a regal peacock motif" class="h-10 w-auto" data-alt="high-end minimalist brand logo for a luxury silk boutique featuring a gold peacock icon on a deep maroon background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2ytbm13dqTg3JqG6xJ8LbX0NXq56JTXEXeCoadGBvwma5wGoNxYG0oBcZy0O-re5Eqfr3FJZW-uk81H6likNoxTV4uYXB621deTxHpDgA289FRuZKqKDm1MrpvO9Qd339HN7nS7ObURBq9hN9i7fQJE3R19GRp_BOUfuuqIsQcILph6f0LHibxApoVGeUN43pVRHeTepr3S0iUXGgmebxqJzw2eVK8WhJd8qmcYhXauErRTo9uPXCbHLTY3EhpGJ2bKvjPurbdj8"/>
+<span class="text-2xl font-serif font-bold text-rose-900 dark:text-rose-100 tracking-tighter">GauriNandan Silk</span>
+</div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="text-rose-800/70 dark:text-rose-200/70 hover:text-rose-900 dark:hover:text-rose-100 transition-all duration-300 font-sans text-sm tracking-wide" href="index.html">Home</a>
+<a class="text-rose-900 dark:text-amber-400 font-bold border-b-2 border-amber-400 pb-1 font-sans text-sm tracking-wide" href="shop.html">Collections</a>
+<a class="text-rose-800/70 dark:text-rose-200/70 hover:text-rose-900 dark:hover:text-rose-100 transition-all duration-300 font-sans text-sm tracking-wide" href="#">About Us</a>
+<a class="text-rose-800/70 dark:text-rose-200/70 hover:text-rose-900 dark:hover:text-rose-100 transition-all duration-300 font-sans text-sm tracking-wide" href="contact.html">Contact</a>
+</div>
+<div class="flex gap-4 items-center">
+<button class="text-rose-900 dark:text-rose-100 hover:opacity-80 transition-all duration-300 scale-95">
+<span class="material-symbols-outlined">favorite</span>
+</button>
+<button class="text-rose-900 dark:text-rose-100 hover:opacity-80 transition-all duration-300 scale-95">
+<span class="material-symbols-outlined">shopping_bag</span>
+</button>
+</div>
+</nav>
+<main class="relative">
+<!-- Silk Texture Overlay -->
+<div class="absolute inset-0 silk-texture"></div>
+<!-- Product Hero Section -->
+<section class="max-w-7xl mx-auto px-6 py-12 md:py-20">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+<!-- Gallery Section -->
+<div class="lg:col-span-7 grid grid-cols-12 gap-4">
+<!-- Main Image (Asymmetric Placement) -->
+<div class="col-span-12 md:col-span-10 order-1 md:order-2">
+<div class="aspect-[4/5] bg-surface-container-low rounded-lg overflow-hidden shadow-sm relative group">
+<img alt="Royal Maroon Hand-Woven Silk Saree with gold embroidery" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="cinematic close-up of a luxurious deep maroon silk saree draped elegantly, revealing intricate gold zari embroidery under soft ambient lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCpckdUgdQgApzPETBNG3rzfDPQrFI1m3Fe1CULr5EqanLRzLC8jVFa1bSk_oVdTcwNE4hK3jTTsNkp1u0Rsrc_GytOsYFCOmJDQPxUGvCNaEEmSK06LM-hYu6vBZw3qUCXmHITR1_rXxO5b9TReMx7ZbMgYRME0btVGV4EX6N-4OwgqLbh5sCpz33YGMdhV87f5BkHeTTUlVHJQlGGUYgvHvt5OX3DpZIrh1caQt2owiayJAcdsVgXs2KFhy1V6QDu3pBgaTd0jQ4"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent pointer-events-none"></div>
+</div>
+</div>
+<!-- Thumbnails -->
+<div class="col-span-12 md:col-span-2 order-2 md:order-1 flex md:flex-col gap-4">
+<div class="aspect-square bg-surface-container-highest rounded border-2 border-secondary overflow-hidden cursor-pointer">
+<img alt="Thumbnail 1" class="w-full h-full object-cover" data-alt="macro shot of silk fabric texture showing fine weave patterns and deep burgundy color" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAY4CJ6pJGzqLGL-q4Xn4mTtwzj4sxmQ0cBWOp4Xjeu-7fV0ijjrE54oESgJwv3wBnV5NbtJveE7CU1iajzEsnDLE0tzv6MwgfMWKQb61WLAOKk8yapduroBNxUakc5tB6SImA1d0N5wEdQaMMzHSZVyi-G5aa8-bWg9qtklULIU2h6im8XP3DVqLvTj6SmDc6RsTBffcWcAo74hyrI3qb0XeToUKEY99-YGhqbX7mrKMEIAhhH7htHvz3jRm1A_dHSew9cHKwfIpY"/>
+</div>
+<div class="aspect-square bg-surface-container-low rounded overflow-hidden cursor-pointer hover:opacity-80 transition-opacity">
+<img alt="Thumbnail 2" class="w-full h-full object-cover" data-alt="detailed close-up of intricate gold zari work on the border of a traditional silk saree" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA7nwWYpVbssDba8t-SN9KgjtvgHcCA6Y98xFwOxvbkHE7_LnxvIWkeSdEeHjOnopshrabHkYn764bppcbzI1lq9WoIthEZmlcKdkWnDjEokx0hH99ll2FBzeowBkApD-IE4GZbkmB6rgb16n4X5wPmmL_w_nTRbhx9-989-fFhYjrsl-ImFCTPb0GfeP_bazg6RJcCjXzj3Mgb-9GqoPFpqkE6bEAURWwIAoz6Q_HrPLpZ4VI1R7lEUM3nX6n53GMrE_Cg9sAOSbs"/>
+</div>
+<div class="aspect-square bg-surface-container-low rounded overflow-hidden cursor-pointer hover:opacity-80 transition-opacity">
+<img alt="Thumbnail 3" class="w-full h-full object-cover" data-alt="the pallu of a silk saree spread out to show expansive gold embroidery patterns and craftsmanship" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCEZFH9D8yB9kGCBMmo1piI7HLGA-_XIs_Zd9UHl2-I3S1bCEnxK2351xYmEx4cLgUAmc64rxBqrmBy5kz-Zu-DVXFBsQH8FUPU-P9cAjQ9WsHncTUaedTavy7LsN4LrXxiAD34EaELA3AmwZ_tbTBrzYm2MoYmG6EFnVSd7FVWvAHYOLjSzyVgk_aN7vEuEVkuINvmdmo2n9dMfnMk_UbmhePrVi1qp80A3kljhxEdegrt4hRuNZcWgHHsSJC5bdT8PERWAQpVQqw"/>
+</div>
+</div>
+</div>
+<!-- Product Content Section -->
+<div class="lg:col-span-5 flex flex-col space-y-8 sticky top-32">
+<div>
+<span class="font-label text-secondary tracking-widest text-xs font-bold mb-2 block">HERITAGE COLLECTION</span>
+<h1 class="font-headline text-4xl md:text-5xl text-primary leading-tight font-bold tracking-tight">Royal Maroon Hand-Woven Silk Saree</h1>
+<p class="text-on-surface-variant mt-4 font-body text-lg leading-relaxed">
+                            A masterpiece of artisanal craftsmanship, this saree features the signature depth of GauriNandan silk, meticulously hand-loomed to drape with effortless grace.
+                        </p>
+</div>
+<!-- Technical Details (Tonal Layering) -->
+<div class="bg-surface-container-low p-6 rounded-lg space-y-4">
+<div class="flex justify-between items-center border-b border-outline-variant/15 pb-3">
+<span class="font-label text-on-surface-variant uppercase text-xs tracking-wider">Fabric</span>
+<span class="font-body font-semibold text-primary">Pure Silk</span>
+</div>
+<div class="flex justify-between items-center border-b border-outline-variant/15 pb-3">
+<span class="font-label text-on-surface-variant uppercase text-xs tracking-wider">Origin</span>
+<span class="font-body font-semibold text-primary">Pune Heritage</span>
+</div>
+<div class="flex justify-between items-center pb-1">
+<span class="font-label text-on-surface-variant uppercase text-xs tracking-wider">Craft</span>
+<span class="font-body font-semibold text-primary">Hand-loomed Gold Zari</span>
+</div>
+</div>
+<!-- Action Buttons -->
+<div class="flex flex-col gap-4">
+<a class="bg-primary-container text-white px-8 py-4 rounded-sm font-bold text-center flex items-center justify-center gap-3 hover:translate-y-[-4px] transition-all duration-300 shadow-md" href="https://wa.me/919823894289" target="_blank">
+<span class="material-symbols-outlined">chat</span>
+                            Chat on WhatsApp
+                        </a>
+<a href="shop.html" class="border border-secondary/30 text-secondary px-8 py-4 rounded-sm font-bold text-center hover:bg-secondary/5 transition-all">
+                            View Collection
+                        </a>
+</div>
+<!-- Availability Note -->
+<div class="flex items-center gap-2 text-on-tertiary-fixed-variant bg-tertiary-fixed/30 p-3 rounded text-sm">
+<span class="material-symbols-outlined scale-75">verified_user</span>
+<span>Inquiry for bespoke tailoring &amp; price via WhatsApp.</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Product Story / Bento Grid Details -->
+<section class="bg-surface-container-lowest py-20 px-6">
+<div class="max-w-7xl mx-auto">
+<h2 class="font-headline text-3xl text-primary text-center mb-16">The Art of the Weave</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="bg-surface p-10 rounded-lg shadow-sm border border-outline-variant/10">
+<span class="material-symbols-outlined text-secondary text-4xl mb-4">diamond</span>
+<h3 class="font-headline text-xl text-primary mb-3">Authentic Zari</h3>
+<p class="font-body text-on-surface-variant text-sm leading-relaxed">Woven with genuine gold threads that shimmer with every movement, creating a luminous finish that defines Pune's weaving heritage.</p>
+</div>
+<div class="bg-surface p-10 rounded-lg shadow-sm border border-outline-variant/10">
+<span class="material-symbols-outlined text-secondary text-4xl mb-4">pan_tool</span>
+<h3 class="font-headline text-xl text-primary mb-3">Handcrafted Integrity</h3>
+<p class="font-body text-on-surface-variant text-sm leading-relaxed">Each piece takes 2-3 weeks to complete on a traditional pit loom, ensuring no two sarees are ever identical.</p>
+</div>
+<div class="bg-surface p-10 rounded-lg shadow-sm border border-outline-variant/10">
+<span class="material-symbols-outlined text-secondary text-4xl mb-4">eco</span>
+<h3 class="font-headline text-xl text-primary mb-3">Natural Dyes</h3>
+<p class="font-body text-on-surface-variant text-sm leading-relaxed">Our rich maroon pigment is derived from sustainable, natural sources, ensuring the fabric is as kind to the skin as it is beautiful.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Related Products Section -->
+<section class="max-w-7xl mx-auto px-6 py-24">
+<div class="flex justify-between items-end mb-12">
+<div>
+<h2 class="font-headline text-3xl text-primary">Similar Masterpieces</h2>
+<p class="text-on-surface-variant font-body">Handpicked from our Heritage Silk series.</p>
+</div>
+<a class="text-secondary font-bold hover:underline" href="shop.html">Explore All</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Related 1 -->
+<div class="group cursor-pointer">
+<div class="aspect-[3/4] overflow-hidden rounded-lg bg-surface-container-low mb-4 relative">
+<img alt="Emerald Green Silk Saree" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="luxurious emerald green silk saree displayed on a mannequin in a sunlit boutique studio" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAkHMhZZhuFAQYO5yBKK27fd6syEmFGbpmi64FDqXhsSJJl7XVdkc0F05PUYpIeQliDk7ZDXc8ihx5uVGNtKeduUsCo9v4g5AmWXBmHyPRA6RfaqUyQewmTdtm-odPU0W7Ew2mRlWqLOMWq3PBDHS0_KUHlYtFuwx8i-Kl15JDdjF_HTfqUBJBt_rkj5FUCtgr-eQMG4Z_9PX2hOmSisaRTLbbxtJg3rVioW87bxchQhtLRcGSFtiVaeRJIWmyl4ucv_4-mqmCEbxg"/>
+<div class="absolute top-4 right-4 bg-white/90 backdrop-blur p-2 rounded-full shadow-sm text-primary opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined">favorite</span>
+</div>
+</div>
+<h3 class="font-headline text-lg text-primary">Emerald Green Heritage</h3>
+<p class="text-on-surface-variant text-sm uppercase tracking-widest mt-1">Pune Hand-loom</p>
+</div>
+<!-- Related 2 -->
+<div class="group cursor-pointer">
+<div class="aspect-[3/4] overflow-hidden rounded-lg bg-surface-container-low mb-4 relative">
+<img alt="Deep Indigo Silk Saree" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="deep indigo blue hand-woven silk saree with silver zari borders, draped over a vintage wooden trunk" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_TMOlZRbZemAEtTAkDhyxU6LZ9H53bMcxuI4rWeO7-NF3ggxSPb7ztjNmHIXBT6JDLBVZCZP2XSvR8YYWUSasjTv7oTp6Yul_MkemTE_EbnOnF83AHMZWHZ8cn4VSkrhevdRnLIDMw42_mrGjMYN0wgYspsVE_9uMUyGsbp4idnagnw3yRKE7b14yLc0R806y35fyFV0_JR2ph9UmqSBa9RqmeGqp7wyDEu71-G5LCt_P96-XlctGJi30awq2Ja98msc53tkwZcc"/>
+<div class="absolute top-4 right-4 bg-white/90 backdrop-blur p-2 rounded-full shadow-sm text-primary opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined">favorite</span>
+</div>
+</div>
+<h3 class="font-headline text-lg text-primary">Midnight Indigo Drape</h3>
+<p class="text-on-surface-variant text-sm uppercase tracking-widest mt-1">Silver Zari Series</p>
+</div>
+<!-- Related 3 -->
+<div class="group cursor-pointer">
+<div class="aspect-[3/4] overflow-hidden rounded-lg bg-surface-container-low mb-4 relative">
+<img alt="Sunset Amber Silk Saree" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="bright golden-orange sunset silk saree with delicate floral embroidery, folded neatly on a white marble surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAt7DDBgGR76764gUASxXYumeIW7hrNDWtrDDqBO3FjpQ0lOCSHxTp6ZJDnJxSEFd8pCsA5qhgOXr1Yx7ajAKDjX_o4N7iAw9CZT9mcVPd4yfywtB12NoUYXsE-rUWiIcoVg0COfQVpXdn-j-4Y_R2SU2fwHi094xuca1caFgw5KsiiLiGTs48U0I8S1Vb5M__O0dIvrfBoM2YooYvZEWixT9nCSQE5oLouJr83v5ZvWugi2J5fqM4RmWo5g1GJtzqRGu8CP35Lvzs"/>
+<div class="absolute top-4 right-4 bg-white/90 backdrop-blur p-2 rounded-full shadow-sm text-primary opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined">favorite</span>
+</div>
+</div>
+<h3 class="font-headline text-lg text-primary">Sunset Amber Gold</h3>
+<p class="text-on-surface-variant text-sm uppercase tracking-widest mt-1">Festive Special</p>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-rose-50 dark:bg-stone-950 w-full border-t border-rose-100 dark:border-stone-800">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 px-12 py-16 w-full max-w-7xl mx-auto">
+<div class="space-y-4">
+<span class="text-xl font-serif text-rose-900 dark:text-rose-100 block">GauriNandan Silk</span>
+<p class="text-rose-800/60 font-sans text-sm tracking-wide leading-relaxed">
+                    Crafting timeless elegance since decades, GauriNandan Silk brings the heritage of Pune's hand-loom mastery to the modern world.
+                </p>
+</div>
+<div class="space-y-4">
+<h4 class="font-headline text-sm font-bold text-rose-900 dark:text-rose-100 uppercase tracking-widest">Visit Us</h4>
+<p class="text-rose-800/60 font-sans text-sm tracking-wide leading-relaxed">
+                    Sr No 32/10, Sneha Niwas,<br/>
+                    Nilgiri Chowk Road, Shriram Nagar,<br/>
+                    Pune, Maharashtra 411046
+                </p>
+</div>
+<div class="space-y-4">
+<h4 class="font-headline text-sm font-bold text-rose-900 dark:text-rose-100 uppercase tracking-widest">Contact</h4>
+<p class="text-rose-800/60 font-sans text-sm tracking-wide">
+                    gaurinandan.vedstack.in
+                </p>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-rose-900/40">language</span>
+<span class="material-symbols-outlined text-rose-900/40">mail</span>
+</div>
+</div>
+</div>
+<div class="text-center py-6 border-t border-rose-100 dark:border-stone-900">
+<p class="font-sans text-sm tracking-wide text-rose-800/60">
+                © 2024 GauriNandan Silk. All rights reserved.
+            </p>
+</div>
+</footer>
+</body></html>

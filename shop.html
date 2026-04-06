@@ -1,713 +1,343 @@
 <!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="description" content="">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-
-    <!-- Title  -->
-    <title>Karl - Fashion Ecommerce Template | Shop</title>
-
-    <!-- Favicon  -->
-    <link rel="icon" href="img/core-img/favicon.ico">
-
-    <!-- Core Style CSS -->
-    <link rel="stylesheet" href="css/core-style.css">
-    <link rel="stylesheet" href="style.css">
-
-    <!-- Responsive CSS -->
-    <link href="css/responsive.css" rel="stylesheet">
-
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>GauriNandan Silk | Saree Collections Catalog</title>
+<!-- Fonts & Icons -->
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&amp;family=Manrope:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary-fixed": "#ffdadc",
+                    "surface-container-low": "#fff1ec",
+                    "primary-fixed-dim": "#ffb2b9",
+                    "on-secondary-fixed-variant": "#5c4200",
+                    "surface-dim": "#ffd0bd",
+                    "inverse-primary": "#ffb2b9",
+                    "surface": "#fff8f6",
+                    "on-primary-fixed-variant": "#792d39",
+                    "tertiary-fixed": "#c8eadf",
+                    "tertiary-fixed-dim": "#adcec3",
+                    "surface-container-lowest": "#ffffff",
+                    "background": "#fff8f6",
+                    "on-error": "#ffffff",
+                    "on-primary": "#ffffff",
+                    "on-background": "#2e1509",
+                    "tertiary-container": "#0a2a23",
+                    "on-surface-variant": "#544244",
+                    "on-primary-container": "#ce707b",
+                    "inverse-surface": "#47291b",
+                    "inverse-on-surface": "#ffede7",
+                    "secondary-fixed": "#ffdea2",
+                    "on-secondary-fixed": "#261900",
+                    "on-primary-fixed": "#3f0110",
+                    "surface-variant": "#ffdbcd",
+                    "primary": "#2a0008",
+                    "outline-variant": "#d9c1c2",
+                    "on-secondary-container": "#785a18",
+                    "on-tertiary": "#ffffff",
+                    "secondary-fixed-dim": "#e8c175",
+                    "secondary": "#775a17",
+                    "on-surface": "#2e1509",
+                    "surface-tint": "#964450",
+                    "error": "#ba1a1a",
+                    "surface-bright": "#fff8f6",
+                    "on-tertiary-container": "#739389",
+                    "error-container": "#ffdad6",
+                    "on-error-container": "#93000a",
+                    "outline": "#877273",
+                    "surface-container-highest": "#ffdbcd",
+                    "on-tertiary-fixed": "#01201a",
+                    "surface-container-high": "#ffe2d7",
+                    "surface-container": "#ffe9e2",
+                    "on-tertiary-fixed-variant": "#2e4c45",
+                    "on-secondary": "#ffffff",
+                    "secondary-container": "#fdd586",
+                    "tertiary": "#00130f",
+                    "primary-container": "#4c0a19"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Noto Serif"],
+                    "body": ["Manrope"],
+                    "label": ["Manrope"]
+            }
+          },
+        },
+      }
+    </script>
+<style>body {
+    font-family: "Manrope", sans-serif;
+    background-color: #fff8f6;
+    color: #2e1509
+    }
+.font-serif {
+    font-family: "Noto Serif", serif
+    }
+.material-symbols-outlined {
+    font-variation-settings: "FILL" 0, "wght" 300, "GRAD" 0, "opsz" 24
+    }
+.silk-texture {
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuBmAl1OJOGqfjMtpEy6QrHQFo9Wt_pMO_Fc-lGO5aRG6uuo77boqH_P0-IrLpAj28ehd3bMqtitKxeke4MhtPuWUqXjoYxLABxrxH0blPDEwFMKhgeMQhDu1jM6JGnZRFE6Oi3sH35w8j_ffpMUilWf7LENZ99pIJVaUNGgOtDjfzK07VpbupXOQm4LqmzjDUewg8qOx7loZ_eCx5o6DL6LzE1ynDXChBBkwmj8dJVawWXpXHG2b7SY4d8aJ3ydK8Q0pg4InE_qByA);
+    opacity: 0.03
+    }</style>
 </head>
-
-<body>
-    <div class="catagories-side-menu">
-        <!-- Close Icon -->
-        <div id="sideMenuClose">
-            <i class="ti-close"></i>
-        </div>
-        <!--  Side Nav  -->
-        <div class="nav-side-menu">
-            <div class="menu-list">
-                <h6>Categories</h6>
-                <ul id="menu-content" class="menu-content collapse out">
-                    <!-- Single Item -->
-                    <li data-toggle="collapse" data-target="#women" class="collapsed active">
-                        <a href="#">Woman wear <span class="arrow"></span></a>
-                        <ul class="sub-menu collapse" id="women">
-                            <li><a href="#">Midi Dresses</a></li>
-                            <li><a href="#">Maxi Dresses</a></li>
-                            <li><a href="#">Prom Dresses</a></li>
-                            <li><a href="#">Little Black Dresses</a></li>
-                            <li><a href="#">Mini Dresses</a></li>
-                        </ul>
-                    </li>
-                    <!-- Single Item -->
-                    <li data-toggle="collapse" data-target="#man" class="collapsed">
-                        <a href="#">Man Wear <span class="arrow"></span></a>
-                        <ul class="sub-menu collapse" id="man">
-                            <li><a href="#">Man Dresses</a></li>
-                            <li><a href="#">Man Black Dresses</a></li>
-                            <li><a href="#">Man Mini Dresses</a></li>
-                        </ul>
-                    </li>
-                    <!-- Single Item -->
-                    <li data-toggle="collapse" data-target="#kids" class="collapsed">
-                        <a href="#">Children <span class="arrow"></span></a>
-                        <ul class="sub-menu collapse" id="kids">
-                            <li><a href="#">Children Dresses</a></li>
-                            <li><a href="#">Mini Dresses</a></li>
-                        </ul>
-                    </li>
-                    <!-- Single Item -->
-                    <li data-toggle="collapse" data-target="#bags" class="collapsed">
-                        <a href="#">Bags &amp; Purses <span class="arrow"></span></a>
-                        <ul class="sub-menu collapse" id="bags">
-                            <li><a href="#">Bags</a></li>
-                            <li><a href="#">Purses</a></li>
-                        </ul>
-                    </li>
-                    <!-- Single Item -->
-                    <li data-toggle="collapse" data-target="#eyewear" class="collapsed">
-                        <a href="#">Eyewear <span class="arrow"></span></a>
-                        <ul class="sub-menu collapse" id="eyewear">
-                            <li><a href="#">Eyewear Style 1</a></li>
-                            <li><a href="#">Eyewear Style 2</a></li>
-                            <li><a href="#">Eyewear Style 3</a></li>
-                        </ul>
-                    </li>
-                    <!-- Single Item -->
-                    <li data-toggle="collapse" data-target="#footwear" class="collapsed">
-                        <a href="#">Footwear <span class="arrow"></span></a>
-                        <ul class="sub-menu collapse" id="footwear">
-                            <li><a href="#">Footwear 1</a></li>
-                            <li><a href="#">Footwear 2</a></li>
-                            <li><a href="#">Footwear 3</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-
-    <div id="wrapper">
-
-        <!-- ****** Header Area Start ****** -->
-        <header class="header_area bg-img background-overlay-white" style="background-image: url(img/bg-img/bg-1.jpg);">
-            <!-- Top Header Area Start -->
-            <div class="top_header_area">
-                <div class="container h-100">
-                    <div class="row h-100 align-items-center justify-content-end">
-
-                        <div class="col-12 col-lg-7">
-                            <div class="top_single_area d-flex align-items-center">
-                                <!-- Logo Area -->
-                                <div class="top_logo">
-                                    <a href="#"><img src="img/core-img/logo.png" alt=""></a>
-                                </div>
-                                <!-- Cart & Menu Area -->
-                                <div class="header-cart-menu d-flex align-items-center ml-auto">
-                                    <!-- Cart Area -->
-                                    <div class="cart">
-                                        <a href="#" id="header-cart-btn" target="_blank"><span class="cart_quantity">2</span> <i class="ti-bag"></i> Your Bag $20</a>
-                                        <!-- Cart List Area Start -->
-                                        <ul class="cart-list">
-                                            <li>
-                                                <a href="#" class="image"><img src="img/product-img/product-10.jpg" class="cart-thumb" alt=""></a>
-                                                <div class="cart-item-desc">
-                                                    <h6><a href="#">Women's Fashion</a></h6>
-                                                    <p>1x - <span class="price">$10</span></p>
-                                                </div>
-                                                <span class="dropdown-product-remove"><i class="icon-cross"></i></span>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="image"><img src="img/product-img/product-11.jpg" class="cart-thumb" alt=""></a>
-                                                <div class="cart-item-desc">
-                                                    <h6><a href="#">Women's Fashion</a></h6>
-                                                    <p>1x - <span class="price">$10</span></p>
-                                                </div>
-                                                <span class="dropdown-product-remove"><i class="icon-cross"></i></span>
-                                            </li>
-                                            <li class="total">
-                                                <span class="pull-right">Total: $20.00</span>
-                                                <a href="cart.html" class="btn btn-sm btn-cart">Cart</a>
-                                                <a href="checkout-1.html" class="btn btn-sm btn-checkout">Checkout</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="header-right-side-menu ml-15">
-                                        <a href="#" id="sideMenuBtn"><i class="ti-menu" aria-hidden="true"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
+<body class="bg-surface text-on-surface selection:bg-primary-fixed selection:text-primary">
+<!-- TopNavBar -->
+<nav class="bg-white/80 dark:bg-rose-950/80 backdrop-blur-xl flex justify-between items-center px-8 py-4 max-w-full mx-auto docked full-width top-0 sticky z-50 bg-gradient-to-b from-rose-50 to-transparent flat no shadows">
+<div class="text-2xl font-serif font-bold text-rose-900 dark:text-rose-100 tracking-tighter">GauriNandan Silk</div>
+<div class="hidden md:flex items-center space-x-10">
+<a class="text-rose-800/70 dark:text-rose-200/70 hover:text-rose-900 dark:hover:text-rose-100 font-sans text-sm tracking-wide transition-all duration-300" href="index.html">Home</a>
+<a class="text-rose-900 dark:text-amber-400 font-bold border-b-2 border-amber-400 pb-1 font-serif tracking-tight transition-all duration-300" href="shop.html">Collections</a>
+<a class="text-rose-800/70 dark:text-rose-200/70 hover:text-rose-900 dark:hover:text-rose-100 font-sans text-sm tracking-wide transition-all duration-300" href="#">About Us</a>
+<a class="text-rose-800/70 dark:text-rose-200/70 hover:text-rose-900 dark:hover:text-rose-100 font-sans text-sm tracking-wide transition-all duration-300" href="contact.html">Contact</a>
+</div>
+<div class="flex items-center space-x-6 text-rose-900 dark:text-rose-100">
+<button class="hover:opacity-80 transition-all duration-300 scale-95 duration-200">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+</button>
+<button class="hover:opacity-80 transition-all duration-300 scale-95 duration-200">
+<span class="material-symbols-outlined" data-icon="favorite">favorite</span>
+</button>
+<button class="hover:opacity-80 transition-all duration-300 scale-95 duration-200">
+<span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
+</button>
+</div>
+</nav>
+<main class="relative">
+<div class="silk-texture absolute inset-0 pointer-events-none"></div>
+<!-- Hero Header -->
+<header class="pt-16 pb-12 px-8 max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end gap-6">
+<div class="max-w-2xl">
+<span class="label-md uppercase tracking-[0.2em] text-secondary font-semibold mb-4 block">The Heritage Loom</span>
+<h1 class="text-5xl md:text-7xl font-serif text-primary leading-tight tracking-tight">Explore Our <br/>Exquisite Collections</h1>
+</div>
+<div class="text-on-surface-variant font-body text-lg max-w-xs italic border-l border-outline-variant/30 pl-6">
+                    A curated selection of timeless drapes, woven with the threads of tradition and elegance.
                 </div>
-            </div>
-
-            <!-- Top Header Area End -->
-            <div class="main_header_area">
-                <div class="container h-100">
-                    <div class="row h-100">
-                        <div class="col-12 d-md-flex justify-content-between">
-                            <!-- Header Social Area -->
-                            <div class="header-social-area">
-                                <a href="#"><span class="karl-level">Share</span> <i class="fa fa-pinterest" aria-hidden="true"></i></a>
-                                <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                                <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                                <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                            </div>
-                            <!-- Menu Area -->
-                            <div class="main-menu-area">
-                                <nav class="navbar navbar-expand-lg align-items-start">
-
-                                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#karl-navbar" aria-controls="karl-navbar" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"><i class="ti-menu"></i></span></button>
-
-                                    <div class="collapse navbar-collapse align-items-start collapse" id="karl-navbar">
-                                        <ul class="navbar-nav animated" id="nav">
-                                            <li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
-                                            <li class="nav-item dropdown">
-                                                <a class="nav-link dropdown-toggle" href="#" id="karlDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Pages</a>
-                                                <div class="dropdown-menu" aria-labelledby="karlDropdown">
-                                                    <a class="dropdown-item" href="index.html">Home</a>
-                                                    <a class="dropdown-item" href="shop.html">Shop</a>
-                                                    <a class="dropdown-item" href="product-details.html">Product Details</a>
-                                                    <a class="dropdown-item" href="cart.html">Cart</a>
-                                                    <a class="dropdown-item" href="checkout.html">Checkout</a>
-                                                </div>
-                                            </li>
-                                            <li class="nav-item"><a class="nav-link" href="#">Dresses</a></li>
-                                            <li class="nav-item"><a class="nav-link" href="#"><span class="karl-level">hot</span> Shoes</a></li>
-                                            <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
-                                        </ul>
-                                    </div>
-                                </nav>
-                            </div>
-                            <!-- Help Line -->
-                            <div class="help-line">
-                                <a href="tel:+346573556778"><i class="ti-headphone-alt"></i> +34 657 3556 778</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </header>
-        <!-- ****** Header Area End ****** -->
-
-        <section class="top-discount-area d-md-flex align-items-center">
-            <!-- Single Discount Area -->
-            <div class="single-discount-area">
-                <h5>Free Shipping &amp; Returns</h5>
-                <h6><a href="#">BUY NOW</a></h6>
-            </div>
-            <!-- Single Discount Area -->
-            <div class="single-discount-area">
-                <h5>20% Discount for all dresses</h5>
-                <h6>USE CODE: Colorlib</h6>
-            </div>
-            <!-- Single Discount Area -->
-            <div class="single-discount-area">
-                <h5>20% Discount for students</h5>
-                <h6>USE CODE: Colorlib</h6>
-            </div>
-        </section>
-
-        <!-- ****** Quick View Modal Area Start ****** -->
-        <div class="modal fade" id="quickview" tabindex="-1" role="dialog" aria-labelledby="quickview" aria-hidden="true">
-            <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-                <div class="modal-content">
-                    <button type="button" class="close btn" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-
-                    <div class="modal-body">
-                        <div class="quickview_body">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-12 col-lg-5">
-                                        <div class="quickview_pro_img">
-                                            <img src="img/product-img/product-1.jpg" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="col-12 col-lg-7">
-                                        <div class="quickview_pro_des">
-                                            <h4 class="title">Boutique Silk Dress</h4>
-                                            <div class="top_seller_product_rating mb-15">
-                                                <i class="fa fa-star" aria-hidden="true"></i>
-                                                <i class="fa fa-star" aria-hidden="true"></i>
-                                                <i class="fa fa-star" aria-hidden="true"></i>
-                                                <i class="fa fa-star" aria-hidden="true"></i>
-                                                <i class="fa fa-star" aria-hidden="true"></i>
-                                            </div>
-                                            <h5 class="price">$120.99 <span>$130</span></h5>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia expedita quibusdam aspernatur, sapiente consectetur accusantium perspiciatis praesentium eligendi, in fugiat?</p>
-                                            <a href="#">View Full Product Details</a>
-                                        </div>
-                                        <!-- Add to Cart Form -->
-                                        <form class="cart" method="post">
-                                            <div class="quantity">
-                                                <span class="qty-minus" onclick="var effect = document.getElementById('qty'); var qty = effect.value; if( !isNaN( qty ) &amp;&amp; qty &gt; 1 ) effect.value--;return false;"><i class="fa fa-minus" aria-hidden="true"></i></span>
-
-                                                <input type="number" class="qty-text" id="qty" step="1" min="1" max="12" name="quantity" value="1">
-
-                                                <span class="qty-plus" onclick="var effect = document.getElementById('qty'); var qty = effect.value; if( !isNaN( qty )) effect.value++;return false;"><i class="fa fa-plus" aria-hidden="true"></i></span>
-                                            </div>
-                                            <button type="submit" name="addtocart" value="5" class="cart-submit">Add to cart</button>
-                                            <!-- Wishlist -->
-                                            <div class="modal_pro_wishlist">
-                                                <a href="wishlist.html" target="_blank"><i class="ti-heart"></i></a>
-                                            </div>
-                                            <!-- Compare -->
-                                            <div class="modal_pro_compare">
-                                                <a href="compare.html" target="_blank"><i class="ti-stats-up"></i></a>
-                                            </div>
-                                        </form>
-
-                                        <div class="share_wf mt-30">
-                                            <p>Share With Friend</p>
-                                            <div class="_icon">
-                                                <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                                                <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                                                <a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
-                                                <a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- ****** Quick View Modal Area End ****** -->
-
-        <section class="shop_grid_area section_padding_100">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12 col-md-4 col-lg-3">
-                        <div class="shop_sidebar_area">
-                           
-                            <div class="widget catagory mb-50">
-                                <!--  Side Nav  -->
-                                <div class="nav-side-menu">
-                                    <h6 class="mb-0">Catagories</h6>
-                                    <div class="menu-list">
-                                        <ul id="menu-content2" class="menu-content collapse out">
-                                            <!-- Single Item -->
-                                            <li data-toggle="collapse" data-target="#women2">
-                                                <a href="#">Woman wear</a>
-                                                <ul class="sub-menu collapse show" id="women2">
-                                                    <li><a href="#">Midi Dresses</a></li>
-                                                    <li><a href="#">Maxi Dresses</a></li>
-                                                    <li><a href="#">Prom Dresses</a></li>
-                                                    <li><a href="#">Little Black Dresses</a></li>
-                                                    <li><a href="#">Mini Dresses</a></li>
-                                                </ul>
-                                            </li>
-                                            <!-- Single Item -->
-                                            <li data-toggle="collapse" data-target="#man2" class="collapsed">
-                                                <a href="#">Man Wear</a>
-                                                <ul class="sub-menu collapse" id="man2">
-                                                    <li><a href="#">Man Dresses</a></li>
-                                                    <li><a href="#">Man Black Dresses</a></li>
-                                                    <li><a href="#">Man Mini Dresses</a></li>
-                                                </ul>
-                                            </li>
-                                            <!-- Single Item -->
-                                            <li data-toggle="collapse" data-target="#kids2" class="collapsed">
-                                                <a href="#">Children</a>
-                                                <ul class="sub-menu collapse" id="kids2">
-                                                    <li><a href="#">Children Dresses</a></li>
-                                                    <li><a href="#">Mini Dresses</a></li>
-                                                </ul>
-                                            </li>
-                                            <!-- Single Item -->
-                                            <li data-toggle="collapse" data-target="#bags2" class="collapsed">
-                                                <a href="#">Bags &amp; Purses</a>
-                                                <ul class="sub-menu collapse" id="bags2">
-                                                    <li><a href="#">Bags</a></li>
-                                                    <li><a href="#">Purses</a></li>
-                                                </ul>
-                                            </li>
-                                            <!-- Single Item -->
-                                            <li data-toggle="collapse" data-target="#eyewear2" class="collapsed">
-                                                <a href="#">Eyewear</a>
-                                                <ul class="sub-menu collapse" id="eyewear2">
-                                                    <li><a href="#">Eyewear Style 1</a></li>
-                                                    <li><a href="#">Eyewear Style 2</a></li>
-                                                    <li><a href="#">Eyewear Style 3</a></li>
-                                                </ul>
-                                            </li>
-                                            <!-- Single Item -->
-                                            <li data-toggle="collapse" data-target="#footwear2" class="collapsed">
-                                                <a href="#">Footwear</a>
-                                                <ul class="sub-menu collapse" id="footwear2">
-                                                    <li><a href="#">Footwear 1</a></li>
-                                                    <li><a href="#">Footwear 2</a></li>
-                                                    <li><a href="#">Footwear 3</a></li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="widget price mb-50">
-                                <h6 class="widget-title mb-30">Filter by Price</h6>
-                                <div class="widget-desc">
-                                    <div class="slider-range">
-                                        <div data-min="0" data-max="3000" data-unit="$" class="slider-range-price ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all" data-value-min="0" data-value-max="1350" data-label-result="Price:">
-                                            <div class="ui-slider-range ui-widget-header ui-corner-all"></div>
-                                            <span class="ui-slider-handle ui-state-default ui-corner-all" tabindex="0"></span>
-                                            <span class="ui-slider-handle ui-state-default ui-corner-all" tabindex="0"></span>
-                                        </div>
-                                        <div class="range-price">Price: 0 - 1350</div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="widget color mb-70">
-                                <h6 class="widget-title mb-30">Filter by Color</h6>
-                                <div class="widget-desc">
-                                    <ul class="d-flex justify-content-between">
-                                        <li class="gray"><a href="#"><span>(3)</span></a></li>
-                                        <li class="red"><a href="#"><span>(25)</span></a></li>
-                                        <li class="yellow"><a href="#"><span>(112)</span></a></li>
-                                        <li class="green"><a href="#"><span>(72)</span></a></li>
-                                        <li class="teal"><a href="#"><span>(9)</span></a></li>
-                                        <li class="cyan"><a href="#"><span>(29)</span></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                            <div class="widget size mb-50">
-                                <h6 class="widget-title mb-30">Filter by Size</h6>
-                                <div class="widget-desc">
-                                    <ul class="d-flex justify-content-between">
-                                        <li><a href="#">XS</a></li>
-                                        <li><a href="#">S</a></li>
-                                        <li><a href="#">M</a></li>
-                                        <li><a href="#">L</a></li>
-                                        <li><a href="#">XL</a></li>
-                                        <li><a href="#">XXL</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                            <div class="widget recommended">
-                                <h6 class="widget-title mb-30">Recommended</h6>
-
-                                <div class="widget-desc">
-                                    <!-- Single Recommended Product -->
-                                    <div class="single-recommended-product d-flex mb-30">
-                                        <div class="single-recommended-thumb mr-3">
-                                            <img src="img/product-img/product-10.jpg" alt="">
-                                        </div>
-                                        <div class="single-recommended-desc">
-                                            <h6>Men’s T-shirt</h6>
-                                            <p>$ 39.99</p>
-                                        </div>
-                                    </div>
-                                    <!-- Single Recommended Product -->
-                                    <div class="single-recommended-product d-flex mb-30">
-                                        <div class="single-recommended-thumb mr-3">
-                                            <img src="img/product-img/product-11.jpg" alt="">
-                                        </div>
-                                        <div class="single-recommended-desc">
-                                            <h6>Blue mini top</h6>
-                                            <p>$ 19.99</p>
-                                        </div>
-                                    </div>
-                                    <!-- Single Recommended Product -->
-                                    <div class="single-recommended-product d-flex">
-                                        <div class="single-recommended-thumb mr-3">
-                                            <img src="img/product-img/product-12.jpg" alt="">
-                                        </div>
-                                        <div class="single-recommended-desc">
-                                            <h6>Women’s T-shirt</h6>
-                                            <p>$ 39.99</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-12 col-md-8 col-lg-9">
-                        <div class="shop_grid_product_area">
-                            <div class="row">
-
-                                <!-- Single gallery Item -->
-                                <div class="col-12 col-sm-6 col-lg-4 single_gallery_item wow fadeInUpBig" data-wow-delay="0.2s">
-                                    <!-- Product Image -->
-                                    <div class="product-img">
-                                        <img src="img/product-img/product-1.jpg" alt="">
-                                        <div class="product-quicview">
-                                            <a href="#" data-toggle="modal" data-target="#quickview"><i class="ti-plus"></i></a>
-                                        </div>
-                                    </div>
-                                    <!-- Product Description -->
-                                    <div class="product-description">
-                                        <h4 class="product-price">$39.90</h4>
-                                        <p>Jeans midi cocktail dress</p>
-                                        <!-- Add to Cart -->
-                                        <a href="#" class="add-to-cart-btn">ADD TO CART</a>
-                                    </div>
-                                </div>
-
-                                <!-- Single gallery Item -->
-                                <div class="col-12 col-sm-6 col-lg-4 single_gallery_item wow fadeInUpBig" data-wow-delay="0.3s">
-                                    <!-- Product Image -->
-                                    <div class="product-img">
-                                        <img src="img/product-img/product-2.jpg" alt="">
-                                        <div class="product-quicview">
-                                            <a href="#" data-toggle="modal" data-target="#quickview"><i class="ti-plus"></i></a>
-                                        </div>
-                                    </div>
-                                    <!-- Product Description -->
-                                    <div class="product-description">
-                                        <h4 class="product-price">$39.90</h4>
-                                        <p>Jeans midi cocktail dress</p>
-                                        <!-- Add to Cart -->
-                                        <a href="#" class="add-to-cart-btn">ADD TO CART</a>
-                                    </div>
-                                </div>
-
-                                <!-- Single gallery Item -->
-                                <div class="col-12 col-sm-6 col-lg-4 single_gallery_item wow fadeInUpBig" data-wow-delay="0.4s">
-                                    <!-- Product Image -->
-                                    <div class="product-img">
-                                        <img src="img/product-img/product-3.jpg" alt="">
-                                        <div class="product-quicview">
-                                            <a href="#" data-toggle="modal" data-target="#quickview"><i class="ti-plus"></i></a>
-                                        </div>
-                                    </div>
-                                    <!-- Product Description -->
-                                    <div class="product-description">
-                                        <h4 class="product-price">$39.90</h4>
-                                        <p>Jeans midi cocktail dress</p>
-                                        <!-- Add to Cart -->
-                                        <a href="#" class="add-to-cart-btn">ADD TO CART</a>
-                                    </div>
-                                </div>
-
-                                <!-- Single gallery Item -->
-                                <div class="col-12 col-sm-6 col-lg-4 single_gallery_item wow fadeInUpBig" data-wow-delay="0.5s">
-                                    <!-- Product Image -->
-                                    <div class="product-img">
-                                        <img src="img/product-img/product-4.jpg" alt="">
-                                        <div class="product-quicview">
-                                            <a href="#" data-toggle="modal" data-target="#quickview"><i class="ti-plus"></i></a>
-                                        </div>
-                                    </div>
-                                    <!-- Product Description -->
-                                    <div class="product-description">
-                                        <h4 class="product-price">$39.90</h4>
-                                        <p>Jeans midi cocktail dress</p>
-                                        <!-- Add to Cart -->
-                                        <a href="#" class="add-to-cart-btn">ADD TO CART</a>
-                                    </div>
-                                </div>
-
-                                <!-- Single gallery Item -->
-                                <div class="col-12 col-sm-6 col-lg-4 single_gallery_item wow fadeInUpBig" data-wow-delay="0.6s">
-                                    <!-- Product Image -->
-                                    <div class="product-img">
-                                        <img src="img/product-img/product-5.jpg" alt="">
-                                        <div class="product-quicview">
-                                            <a href="#" data-toggle="modal" data-target="#quickview"><i class="ti-plus"></i></a>
-                                        </div>
-                                    </div>
-                                    <!-- Product Description -->
-                                    <div class="product-description">
-                                        <h4 class="product-price">$39.90</h4>
-                                        <p>Jeans midi cocktail dress</p>
-                                        <!-- Add to Cart -->
-                                        <a href="#" class="add-to-cart-btn">ADD TO CART</a>
-                                    </div>
-                                </div>
-
-                                <!-- Single gallery Item -->
-                                <div class="col-12 col-sm-6 col-lg-4 single_gallery_item wow fadeInUpBig" data-wow-delay="0.7s">
-                                    <!-- Product Image -->
-                                    <div class="product-img">
-                                        <img src="img/product-img/product-6.jpg" alt="">
-                                        <div class="product-quicview">
-                                            <a href="#" data-toggle="modal" data-target="#quickview"><i class="ti-plus"></i></a>
-                                        </div>
-                                    </div>
-                                    <!-- Product Description -->
-                                    <div class="product-description">
-                                        <h4 class="product-price">$39.90</h4>
-                                        <p>Jeans midi cocktail dress</p>
-                                        <!-- Add to Cart -->
-                                        <a href="#" class="add-to-cart-btn">ADD TO CART</a>
-                                    </div>
-                                </div>
-
-                                <!-- Single gallery Item -->
-                                <div class="col-12 col-sm-6 col-lg-4 single_gallery_item wow fadeInUpBig" data-wow-delay="0.8s">
-                                    <!-- Product Image -->
-                                    <div class="product-img">
-                                        <img src="img/product-img/product-7.jpg" alt="">
-                                        <div class="product-quicview">
-                                            <a href="#" data-toggle="modal" data-target="#quickview"><i class="ti-plus"></i></a>
-                                        </div>
-                                    </div>
-                                    <!-- Product Description -->
-                                    <div class="product-description">
-                                        <h4 class="product-price">$39.90</h4>
-                                        <p>Jeans midi cocktail dress</p>
-                                        <!-- Add to Cart -->
-                                        <a href="#" class="add-to-cart-btn">ADD TO CART</a>
-                                    </div>
-                                </div>
-
-                                <!-- Single gallery Item -->
-                                <div class="col-12 col-sm-6 col-lg-4 single_gallery_item wow fadeInUpBig" data-wow-delay="0.9s">
-                                    <!-- Product Image -->
-                                    <div class="product-img">
-                                        <img src="img/product-img/product-8.jpg" alt="">
-                                        <div class="product-quicview">
-                                            <a href="#" data-toggle="modal" data-target="#quickview"><i class="ti-plus"></i></a>
-                                        </div>
-                                    </div>
-                                    <!-- Product Description -->
-                                    <div class="product-description">
-                                        <h4 class="product-price">$39.90</h4>
-                                        <p>Jeans midi cocktail dress</p>
-                                        <!-- Add to Cart -->
-                                        <a href="#" class="add-to-cart-btn">ADD TO CART</a>
-                                    </div>
-                                </div>
-
-                                <!-- Single gallery Item -->
-                                <div class="col-12 col-sm-6 col-lg-4 single_gallery_item wow fadeInUpBig" data-wow-delay="1s">
-                                    <!-- Product Image -->
-                                    <div class="product-img">
-                                        <img src="img/product-img/product-9.jpg" alt="">
-                                        <div class="product-quicview">
-                                            <a href="#" data-toggle="modal" data-target="#quickview"><i class="ti-plus"></i></a>
-                                        </div>
-                                    </div>
-                                    <!-- Product Description -->
-                                    <div class="product-description">
-                                        <h4 class="product-price">$39.90</h4>
-                                        <p>Jeans midi cocktail dress</p>
-                                        <!-- Add to Cart -->
-                                        <a href="#" class="add-to-cart-btn">ADD TO CART</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="shop_pagination_area wow fadeInUp" data-wow-delay="1.1s">
-                            <nav aria-label="Page navigation">
-                                <ul class="pagination pagination-sm">
-                                    <li class="page-item active"><a class="page-link" href="#">01</a></li>
-                                    <li class="page-item"><a class="page-link" href="#">02</a></li>
-                                    <li class="page-item"><a class="page-link" href="#">03</a></li>
-                                </ul>
-                            </nav>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ****** Footer Area Start ****** -->
-        <footer class="footer_area">
-            <div class="container">
-                <div class="row">
-                    <!-- Single Footer Area Start -->
-                    <div class="col-12 col-md-6 col-lg-3">
-                        <div class="single_footer_area">
-                            <div class="footer-logo">
-                                <img src="img/core-img/logo.png" alt="">
-                            </div>
-                            <div class="copywrite_text d-flex align-items-center">
-                                <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://www.dualsparkstudio.com/" target="_blank">DualSpark Studio</a> 
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Single Footer Area Start -->
-                    <div class="col-12 col-sm-6 col-md-3 col-lg-2">
-                        <div class="single_footer_area">
-                            <ul class="footer_widget_menu">
-                                <li><a href="#">About</a></li>
-                                <li><a href="#">Blog</a></li>
-                                <li><a href="#">Faq</a></li>
-                                <li><a href="#">Returns</a></li>
-                                <li><a href="#">Contact</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <!-- Single Footer Area Start -->
-                    <div class="col-12 col-sm-6 col-md-3 col-lg-2">
-                        <div class="single_footer_area">
-                            <ul class="footer_widget_menu">
-                                <li><a href="#">My Account</a></li>
-                                <li><a href="#">Shipping</a></li>
-                                <li><a href="#">Our Policies</a></li>
-                                <li><a href="#">Afiliates</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <!-- Single Footer Area Start -->
-                    <div class="col-12 col-lg-5">
-                        <div class="single_footer_area">
-                            <div class="footer_heading mb-30">
-                                <h6>Subscribe to our newsletter</h6>
-                            </div>
-                            <div class="subscribtion_form">
-                                <form action="#" method="post">
-                                    <input type="email" name="mail" class="mail" placeholder="Your email here">
-                                    <button type="submit" class="submit">Subscribe</button>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="line"></div>
-
-                <!-- Footer Bottom Area Start -->
-                <div class="footer_bottom_area">
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="footer_social_area text-center">
-                                <a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
-                                <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                                <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                                <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </footer>
-        <!-- ****** Footer Area End ****** -->
-    </div>
-    <!-- /.wrapper end -->
-
-    <!-- jQuery (Necessary for All JavaScript Plugins) -->
-    <script src="js/jquery/jquery-2.2.4.min.js"></script>
-    <!-- Popper js -->
-    <script src="js/popper.min.js"></script>
-    <!-- Bootstrap js -->
-    <script src="js/bootstrap.min.js"></script>
-    <!-- Plugins js -->
-    <script src="js/plugins.js"></script>
-    <!-- Active js -->
-    <script src="js/active.js"></script>
-
-</body>
-
-</html>
+</div>
+</header>
+<!-- Catalog Section -->
+<section class="max-w-7xl mx-auto px-8 pb-24 flex flex-col lg:flex-row gap-12">
+<!-- Filters Sidebar -->
+<aside class="w-full lg:w-64 space-y-10">
+<div class="space-y-8">
+<!-- Material Filter -->
+<div>
+<h4 class="font-serif text-lg text-primary mb-4">Material</h4>
+<div class="flex flex-col space-y-2">
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="w-4 h-4 border-outline-variant text-primary focus:ring-primary-container rounded-sm" type="checkbox"/>
+<span class="text-on-surface-variant group-hover:text-primary transition-colors">Silk</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="w-4 h-4 border-outline-variant text-primary focus:ring-primary-container rounded-sm" type="checkbox"/>
+<span class="text-on-surface-variant group-hover:text-primary transition-colors">Cotton</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="w-4 h-4 border-outline-variant text-primary focus:ring-primary-container rounded-sm" type="checkbox"/>
+<span class="text-on-surface-variant group-hover:text-primary transition-colors">Chiffon</span>
+</label>
+</div>
+</div>
+<!-- Work Filter -->
+<div>
+<h4 class="font-serif text-lg text-primary mb-4">Work</h4>
+<div class="flex flex-col space-y-2">
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="w-4 h-4 border-outline-variant text-primary focus:ring-primary-container rounded-sm" type="checkbox"/>
+<span class="text-on-surface-variant group-hover:text-primary transition-colors">Zari Weave</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="w-4 h-4 border-outline-variant text-primary focus:ring-primary-container rounded-sm" type="checkbox"/>
+<span class="text-on-surface-variant group-hover:text-primary transition-colors">Embroidery</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="w-4 h-4 border-outline-variant text-primary focus:ring-primary-container rounded-sm" type="checkbox"/>
+<span class="text-on-surface-variant group-hover:text-primary transition-colors">Digital Print</span>
+</label>
+</div>
+</div>
+<!-- Color Filter -->
+<div>
+<h4 class="font-serif text-lg text-primary mb-4">Color</h4>
+<div class="flex flex-wrap gap-3">
+<button class="w-8 h-8 rounded-full bg-rose-900 ring-2 ring-offset-2 ring-transparent hover:ring-outline-variant transition-all"></button>
+<button class="w-8 h-8 rounded-full bg-amber-600 ring-2 ring-offset-2 ring-transparent hover:ring-outline-variant transition-all"></button>
+<button class="w-8 h-8 rounded-full bg-emerald-800 ring-2 ring-offset-2 ring-transparent hover:ring-outline-variant transition-all"></button>
+<button class="w-8 h-8 rounded-full bg-indigo-900 ring-2 ring-offset-2 ring-transparent hover:ring-outline-variant transition-all"></button>
+<button class="w-8 h-8 rounded-full bg-stone-100 border border-outline-variant ring-2 ring-offset-2 ring-transparent hover:ring-outline-variant transition-all"></button>
+</div>
+</div>
+<!-- Price Range -->
+<div>
+<h4 class="font-serif text-lg text-primary mb-4">Price Range</h4>
+<input class="w-full h-1 bg-surface-variant rounded-lg appearance-none cursor-pointer accent-primary-container" type="range"/>
+<div class="flex justify-between text-xs mt-2 text-on-surface-variant">
+<span>₹5,000</span>
+<span>₹1,50,000+</span>
+</div>
+</div>
+</div>
+</aside>
+<!-- Product Grid -->
+<div class="flex-1">
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-y-16 gap-x-8">
+<!-- Product 1 -->
+<div class="group relative">
+<div class="aspect-[3/4] overflow-hidden rounded-lg bg-surface-container-low mb-6">
+<a href="product-details.html">
+<img alt="Banarasi Saree" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Stunning close-up of a deep maroon Banarasi silk saree with intricate gold zari weave patterns and elegant floral motifs" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqWGbW00lUuQprFFRgYD54SXxpKThM5709I6ZgVIsJRYkEpU5bd4KAX9x0q8h8gn-y04hTbmjzjZb3aOglLT2wjT9dCDa50uLwqBCBrsfvU86V9rN4Olo3UKzCacp42zb7V8nrnvtSS14yZcdxCjpZuhV4vCeAfJpt3EZ2U42NicXt7klp8884FDuUSpnyR4tdD8SokD6h41cUIrdr6ydIoVojuJNgQwRyMwb_5M9REAT151wcjqwrGL3evUP28FEy6JlOMjBE2pE"/>
+</a>
+</div>
+<div class="space-y-1">
+<p class="label-md text-secondary font-semibold uppercase tracking-widest">Heritage Banarasi</p>
+<h3 class="font-serif text-2xl text-primary"><a href="product-details.html">Midnight Maroon Banarasi</a></h3>
+<p class="text-on-surface-variant text-sm mb-4">Handwoven pure silk with 24k gold plated zari work.</p>
+<a class="inline-flex items-center justify-between w-full mt-4 px-6 py-4 bg-primary-container text-on-primary font-body text-sm tracking-widest hover:bg-primary transition-all group/btn" href="https://wa.me/919823894289">
+<span>INQUIRE NOW</span>
+<span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Product 2 -->
+<div class="group relative">
+<div class="aspect-[3/4] overflow-hidden rounded-lg bg-surface-container-low mb-6">
+<img alt="Golden Weave Saree" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Elegant cream silk saree featuring heavy golden zari embroidery borders draped gracefully over a vintage wooden armchair" src="https://lh3.googleusercontent.com/aida-public/AB6AXuADGT6b4TfPn3I74UnadaFAkmiP3V7tGjg4KBb897LIWjC3rhfe8HccSH_fpmEZm6Jl8qAubR6_t_NG2LYNsd73Z3EG-RdLbwx98ZpLCSTz0E4xMsz2-3B6O7rGTubHNYhS2AdjCyqj36tvlSnuf_rpy0-NEBPvezT9UFevdRB0JiL05IwkguV63MavQUonj6xiyGUnHia_YHEzFRRKQubxt7SalFuhSxHg-hTK2mSjBj-NOwVOKHY4nJ9zHbikKZEYaieohua79W4"/>
+</div>
+<div class="space-y-1">
+<p class="label-md text-secondary font-semibold uppercase tracking-widest">Signature Silk</p>
+<h3 class="font-serif text-2xl text-primary">Golden Weave Kanchipuram</h3>
+<p class="text-on-surface-variant text-sm mb-4">Classic temple borders in heritage gold silk.</p>
+<a class="inline-flex items-center justify-between w-full mt-4 px-6 py-4 bg-primary-container text-on-primary font-body text-sm tracking-widest hover:bg-primary transition-all group/btn" href="https://wa.me/919823894289">
+<span>INQUIRE NOW</span>
+<span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Product 3 -->
+<div class="group relative">
+<div class="aspect-[3/4] overflow-hidden rounded-lg bg-surface-container-low mb-6">
+<img alt="Royal Emerald Saree" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Rich forest green emerald silk saree with delicate silver butta work across the body and a heavy pallu design" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBLZQ4sfp5UkBnteYZHK5_spfUmIb6p6rIlT7jHzgqyKQ9PKmjqVnO2_8MYBm6ogxvcQISSSBwczyjjGYTO_RmrEsIUt6Ui2akxtbqF1kADizlnlFqX7g6ourA_qCJDkOsmXKnDuur20nWtgaOPyC_-Sum5jlV5f1paKP6-uOPLLwaT3CxEe1PzWschIHco1igoMucLSXnsmoDNO_RErTxHiIu6imWKD3GXVcfVnM7hm5WQGJO5N1pQxfQK8vToODFiZ4wX5fVxXBk"/>
+</div>
+<div class="space-y-1">
+<p class="label-md text-secondary font-semibold uppercase tracking-widest">Royal Collection</p>
+<h3 class="font-serif text-2xl text-primary">Emerald Forest Patola</h3>
+<p class="text-on-surface-variant text-sm mb-4">Double ikkat geometric patterns in deep greens.</p>
+<a class="inline-flex items-center justify-between w-full mt-4 px-6 py-4 bg-primary-container text-on-primary font-body text-sm tracking-widest hover:bg-primary transition-all group/btn" href="https://wa.me/919823894289">
+<span>INQUIRE NOW</span>
+<span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Product 4 -->
+<div class="group relative md:translate-y-8">
+<div class="aspect-[3/4] overflow-hidden rounded-lg bg-surface-container-low mb-6">
+<img alt="Peach Chiffon Saree" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Lightweight peach chiffon saree with hand-painted floral art and delicate sequin embroidery along the borders" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBoIKQvNbtWD8aBzqE72YdxdjQb_46B0Mpuf_4vFM0ANw97ihmfIBa0u6ADuj_467mIDJJjd0Wi_r0wM25Tv37j6lBWc4DwxSvzcDMpoU4-YwVAW04b6_WjWkvGwGTSWpxgYPIzqPT1FHCn4VragC-7gVyVb6AQPQx3AV1Jn5DuhPet2fE9Y2XvaICYmvR3im5YJfjrAgdLjEUpQsDUlEIWLeQ3TSt8kP_gSXSqOQkSOhSYXzxhm3dlLJhbbM0R9Nz29ckJLL-wFik"/>
+</div>
+<div class="space-y-1">
+<p class="label-md text-secondary font-semibold uppercase tracking-widest">Contemporary Drapes</p>
+<h3 class="font-serif text-2xl text-primary">Ethereal Peach Chiffon</h3>
+<p class="text-on-surface-variant text-sm mb-4">Hand-painted floral motifs on sheer pure chiffon.</p>
+<a class="inline-flex items-center justify-between w-full mt-4 px-6 py-4 bg-primary-container text-on-primary font-body text-sm tracking-widest hover:bg-primary transition-all group/btn" href="https://wa.me/919823894289">
+<span>INQUIRE NOW</span>
+<span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Product 5 -->
+<div class="group relative md:translate-y-8">
+<div class="aspect-[3/4] overflow-hidden rounded-lg bg-surface-container-low mb-6">
+<img alt="Indigo Cotton Saree" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Deep indigo blue cotton saree with traditional block print designs and a rustic earthy texture shot in natural daylight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_rgDsKspOlOwziPHgXU_26LgR5RIxIljvHlMeDlWzdSSDZeqz0pTD8HO_DD3Zkc_Py7rvAPJ3Bqg8g58ZR2gf4uQYtuR7MZlP3ziErBg7tx2uVLbRmISIEIke3kIQBJKA3JRgNazNQC-WaQP7fzeMVAbE26xojVWrNs4Fl0YtJm1UsEJSOpR2v8iUCuZldoN0X4RyEM-JPJvN7tFyZGF8rn6f_q1VJ_NFHic5JHFfmhuFdZ5di9S3Hs6jPwxLPdyqwsQb84ieFfk"/>
+</div>
+<div class="space-y-1">
+<p class="label-md text-secondary font-semibold uppercase tracking-widest">Earth Loom</p>
+<h3 class="font-serif text-2xl text-primary">Indigo Block Print</h3>
+<p class="text-on-surface-variant text-sm mb-4">Artisanal block printed mulmul cotton for daily elegance.</p>
+<a class="inline-flex items-center justify-between w-full mt-4 px-6 py-4 bg-primary-container text-on-primary font-body text-sm tracking-widest hover:bg-primary transition-all group/btn" href="https://wa.me/919823894289">
+<span>INQUIRE NOW</span>
+<span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Product 6 -->
+<div class="group relative md:translate-y-8">
+<div class="aspect-[3/4] overflow-hidden rounded-lg bg-surface-container-low mb-6">
+<img alt="Sunset Organza Saree" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Translucent sunset orange organza saree with delicate embroidery work and a shimmering metallic finish" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDI3-mdPAnXv1pdiltDHFWPjToEQ9ycxsw4WxGkau5mQtTfHifryqjNTbIpD5tlkSr9YwI6iOHRS4kyUhaGuL7uiiYJW2dcaOT5FHGvYaUnQFEsjFSaUeSpzPHINJ_4XFDCD66EIfs6GMDydegEfdY7XiBf-JUTAcEjkkRn-t7qpQvwyZSvgZs-jGoVG-eZp10OPv-d0IiO4fUqkf_hzqRPs_8CUiwe9x_0eYnIzVPWPMBcZS8tUEv1kiC3pwmtg-Ea1m3D-j8aL2w"/>
+</div>
+<div class="space-y-1">
+<p class="label-md text-secondary font-semibold uppercase tracking-widest">Trendsetter</p>
+<h3 class="font-serif text-2xl text-primary">Sunset Ombre Organza</h3>
+<p class="text-on-surface-variant text-sm mb-4">Dual-tone translucent organza with metallic threadwork.</p>
+<a class="inline-flex items-center justify-between w-full mt-4 px-6 py-4 bg-primary-container text-on-primary font-body text-sm tracking-widest hover:bg-primary transition-all group/btn" href="https://wa.me/919823894289">
+<span>INQUIRE NOW</span>
+<span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Pagination -->
+<div class="mt-32 flex justify-center items-center gap-4">
+<button class="w-10 h-10 flex items-center justify-center rounded-sm border border-outline-variant hover:bg-primary-container hover:text-on-primary transition-all">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<span class="text-primary font-serif">1</span>
+<button class="w-10 h-10 flex items-center justify-center rounded-sm border border-outline-variant text-on-surface-variant hover:border-primary transition-all">2</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-sm border border-outline-variant text-on-surface-variant hover:border-primary transition-all">3</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-sm border border-outline-variant hover:bg-primary-container hover:text-on-primary transition-all">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Aesthetic Divider -->
+<div class="h-px w-full bg-gradient-to-r from-transparent via-outline-variant/30 to-transparent my-12"></div>
+<!-- Footer -->
+<footer class="bg-rose-50 dark:bg-stone-950 text-rose-900 dark:text-rose-100 font-sans text-sm tracking-wide w-full border-t border-rose-100 dark:border-stone-800 grid grid-cols-1 md:grid-cols-3 gap-8 px-12 py-16 w-full tonal-shift-bg flat no shadows">
+<div class="space-y-6">
+<div class="text-xl font-serif text-rose-900 dark:text-rose-100">GauriNandan Silk</div>
+<p class="max-w-xs text-rose-800/60 leading-relaxed italic">Preserving the timeless art of hand-weaving, one masterpiece at a time.</p>
+<div class="flex gap-4">
+<span class="material-symbols-outlined cursor-pointer hover:text-rose-900">social_leaderboard</span>
+<span class="material-symbols-outlined cursor-pointer hover:text-rose-900">camera</span>
+<span class="material-symbols-outlined cursor-pointer hover:text-rose-900">share</span>
+</div>
+</div>
+<div class="space-y-4">
+<h5 class="font-bold text-rose-900">Our Studio</h5>
+<p class="text-rose-800/60 leading-loose">
+                    Sr No 32/10, Sneha Niwas, Nilgiri Chowk Road, behind Trimurti Chowk, Shriram Nagar, Pune, Maharashtra 411046
+                </p>
+<p class="text-rose-800/60">gaurinandan.vedstack.in</p>
+</div>
+<div class="space-y-4">
+<h5 class="font-bold text-rose-900">Quick Links</h5>
+<ul class="space-y-2">
+<li><a class="text-rose-800/60 hover:text-rose-900 hover:underline decoration-amber-500/50 transition-colors duration-200" href="#">Shipping Policy</a></li>
+<li><a class="text-rose-800/60 hover:text-rose-900 hover:underline decoration-amber-500/50 transition-colors duration-200" href="#">Return &amp; Exchange</a></li>
+<li><a class="text-rose-800/60 hover:text-rose-900 hover:underline decoration-amber-500/50 transition-colors duration-200" href="#">Wholesale Inquiries</a></li>
+<li><a class="text-rose-800/60 hover:text-rose-900 hover:underline decoration-amber-500/50 transition-colors duration-200" href="#">Privacy Policy</a></li>
+</ul>
+</div>
+<div class="col-span-1 md:col-span-3 pt-12 border-t border-rose-100/50 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-rose-800/40 text-xs">© 2024 GauriNandan Silk. All rights reserved.</p>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-rose-300 text-base" data-icon="verified_user">verified_user</span>
+<span class="text-rose-800/40 text-xs uppercase tracking-tighter">Authentic Silk Certified</span>
+</div>
+</div>
+</footer>
+</main>
+</body></html>
