@@ -1,283 +1,378 @@
 <!DOCTYPE html>
-
-<html class="light" lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Royal Maroon Hand-Woven Silk Saree | GauriNandan Silk</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            "colors": {
-                    "primary-fixed": "#ffdadc",
-                    "surface-container-low": "#fff1ec",
-                    "primary-fixed-dim": "#ffb2b9",
-                    "on-secondary-fixed-variant": "#5c4200",
-                    "surface-dim": "#ffd0bd",
-                    "inverse-primary": "#ffb2b9",
-                    "surface": "#fff8f6",
-                    "on-primary-fixed-variant": "#792d39",
-                    "tertiary-fixed": "#c8eadf",
-                    "tertiary-fixed-dim": "#adcec3",
-                    "surface-container-lowest": "#ffffff",
-                    "background": "#fff8f6",
-                    "on-error": "#ffffff",
-                    "on-primary": "#ffffff",
-                    "on-background": "#2e1509",
-                    "tertiary-container": "#0a2a23",
-                    "on-surface-variant": "#544244",
-                    "on-primary-container": "#ce707b",
-                    "inverse-surface": "#47291b",
-                    "inverse-on-surface": "#ffede7",
-                    "secondary-fixed": "#ffdea2",
-                    "on-secondary-fixed": "#261900",
-                    "on-primary-fixed": "#3f0110",
-                    "surface-variant": "#ffdbcd",
-                    "primary": "#2a0008",
-                    "outline-variant": "#d9c1c2",
-                    "on-secondary-container": "#785a18",
-                    "on-tertiary": "#ffffff",
-                    "secondary-fixed-dim": "#e8c175",
-                    "secondary": "#775a17",
-                    "on-surface": "#2e1509",
-                    "surface-tint": "#964450",
-                    "error": "#ba1a1a",
-                    "surface-bright": "#fff8f6",
-                    "on-tertiary-container": "#739389",
-                    "error-container": "#ffdad6",
-                    "on-error-container": "#93000a",
-                    "outline": "#877273",
-                    "surface-container-highest": "#ffdbcd",
-                    "on-tertiary-fixed": "#01201a",
-                    "surface-container-high": "#ffe2d7",
-                    "surface-container": "#ffe9e2",
-                    "on-tertiary-fixed-variant": "#2e4c45",
-                    "on-secondary": "#ffffff",
-                    "secondary-container": "#fdd586",
-                    "tertiary": "#00130f",
-                    "primary-container": "#4c0a19"
-            },
-            "borderRadius": {
-                    "DEFAULT": "0.125rem",
-                    "lg": "0.25rem",
-                    "xl": "0.5rem",
-                    "full": "0.75rem"
-            },
-            "fontFamily": {
-                    "headline": ["Noto Serif"],
-                    "body": ["Manrope"],
-                    "label": ["Manrope"]
-            }
-          },
-        },
-      }
-    </script>
-<style>.material-symbols-outlined {
-    font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Royal Maroon Hand-Woven Silk Saree | GauriNandan Silk Pune</title>
+  <meta name="description" content="Handwoven Royal Maroon Silk Saree by GauriNandan Silk, Pune. Pure silk, authentic zari. Inquire via WhatsApp: +91 98238 94289."/>
+  <link rel="icon" href="logo.png" type="image/png"/>
+  <link rel="stylesheet" href="gn-shared.css"/>
+  <style>
+    /* PRODUCT DETAIL STYLES */
+    .pd-section { padding: 48px 0 80px; }
+    .pd-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; }
+    /* GALLERY */
+    .pd-gallery { display: flex; gap: 14px; flex-direction: row; }
+    .pd-thumbs { display: flex; flex-direction: column; gap: 10px; width: 80px; flex-shrink: 0; }
+    .pd-thumb {
+      width: 80px; aspect-ratio: 1; border-radius: var(--radius-sm);
+      overflow: hidden; cursor: pointer; border: 2.5px solid transparent;
+      transition: border-color 0.2s;
     }
-.silk-texture {
-    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuAVFzrXBWGW8VaWewkjbhcuDgUyJuhp5o5JOhDYleaq1mYz0ZzSvZZtVXLq_9914lk5rie4XdjbfCsD6LXNJggpTOS8xEHTs2fzIachho0N-KeJYRRCsElzwqbDOEuc2tEUCij-_LygkHmprrMxWE0dG8ff9ZQldFFxTo7IQvY8_tRcOFYpgoMQZ2y-LXmGwaJGDIvbBtTosDpNr9aAJKDme_PqzE0Ari12KlP4XJAkp_WlZi8i4wQbc88nxagJmynThxDlr24GKQE);
-    opacity: 0.03;
-    pointer-events: none
-    }</style>
+    .pd-thumb.active { border-color: var(--gold); }
+    .pd-thumb img { width:100%; height:100%; object-fit:cover; }
+    .pd-main-img {
+      flex: 1;
+      aspect-ratio: 4/5;
+      border-radius: var(--radius);
+      overflow: hidden;
+      background: var(--cream-dark);
+      position: relative;
+    }
+    .pd-main-img img { width:100%; height:100%; object-fit:cover; transition:transform 0.8s; }
+    .pd-main-img:hover img { transform:scale(1.05); }
+    .pd-badge-wrap { position:absolute; top:16px; left:16px; display:flex; flex-direction:column; gap:6px; }
+    /* INFO PANEL */
+    .pd-info { position: sticky; top: 90px; }
+    .pd-eyebrow { font-size:.68rem; font-weight:700; letter-spacing:.22em; text-transform:uppercase; color:var(--gold); margin-bottom:8px; }
+    .pd-title { font-family:'Playfair Display',serif; font-size:clamp(1.8rem,3vw,2.8rem); color:var(--maroon); line-height:1.15; margin-bottom:14px; }
+    .pd-desc { font-size:.9rem; color:var(--text-mid); line-height:1.8; margin-bottom:24px; }
+    .pd-specs {
+      background: var(--cream);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px;
+      margin-bottom: 24px;
+    }
+    .pd-spec-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 0;
+      border-bottom: 1px solid var(--border-light);
+      font-size: .86rem;
+    }
+    .pd-spec-row:last-child { border-bottom: none; padding-bottom: 0; }
+    .pd-spec-lbl { color: var(--text-light); font-weight: 500; }
+    .pd-spec-val { color: var(--maroon); font-weight: 700; }
+    /* COLOUR SWATCH */
+    .pd-colour-row { margin-bottom: 22px; }
+    .pd-colour-label { font-size:.72rem; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:var(--text-mid); margin-bottom:10px; }
+    .pd-swatches { display: flex; gap: 10px; }
+    .pd-swatch {
+      width: 32px; height: 32px; border-radius: 50%; cursor: pointer;
+      border: 2.5px solid transparent; transition: transform .2s, border-color .2s;
+    }
+    .pd-swatch.active { border-color: var(--maroon); transform: scale(1.15); }
+    .pd-swatch:hover { transform: scale(1.12); }
+    /* CTA BUTTONS */
+    .pd-cta-stack { display: flex; flex-direction: column; gap: 12px; margin-bottom: 22px; }
+    .pd-wa-btn {
+      display: flex; align-items: center; justify-content: center; gap: 12px;
+      padding: 16px; background: #25d366; color: #fff; border-radius: var(--radius-sm);
+      font-size: .82rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase;
+      transition: var(--transition); box-shadow: 0 4px 20px rgba(37,211,102,.25);
+    }
+    .pd-wa-btn:hover { background: #1eaf56; transform: translateY(-2px); box-shadow: 0 8px 28px rgba(37,211,102,.35); }
+    .pd-wa-btn svg { width: 22px; height: 22px; fill: #fff; }
+    .pd-call-btn {
+      display: flex; align-items: center; justify-content: center; gap: 10px;
+      padding: 14px; border: 2px solid var(--border); border-radius: var(--radius-sm);
+      font-size: .78rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase;
+      color: var(--maroon); transition: var(--transition);
+    }
+    .pd-call-btn:hover { border-color: var(--maroon); background: var(--cream); }
+    .pd-call-btn svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 2; }
+    /* TRUST BADGE */
+    .pd-trust {
+      display: flex; align-items: center; gap: 8px;
+      background: rgba(0,180,60,.07); border: 1px solid rgba(0,180,60,.2);
+      border-radius: var(--radius); padding: 10px 14px;
+      font-size: .76rem; color: #1a5c2e;
+    }
+    .pd-trust svg { width: 16px; height: 16px; fill: #25d366; flex-shrink: 0; }
+    /* STORY SECTION */
+    #pd-story { background: var(--cream-dark); padding: 72px 0; }
+    .story-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; }
+    .story-card {
+      background: #fff; border-radius: var(--radius); padding: 32px;
+      border: 1px solid var(--border); text-align: center; transition: var(--transition);
+    }
+    .story-card:hover { box-shadow: var(--shadow); transform: translateY(-4px); }
+    .story-icon { font-size: 2.2rem; margin-bottom: 14px; }
+    .story-title { font-family:'Playfair Display',serif; font-size:1.1rem; color:var(--maroon); margin-bottom:10px; }
+    .story-text { font-size:.84rem; color:var(--text-light); line-height:1.7; }
+    /* RELATED */
+    #pd-related { padding: 72px 0; }
+    .related-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; }
+    @media(max-width:1000px) {
+      .pd-grid { grid-template-columns: 1fr; }
+      .pd-info { position: static; }
+      .pd-gallery { flex-direction: column; }
+      .pd-thumbs { flex-direction: row; width: auto; }
+      .pd-thumb { width: 68px; height: 68px; }
+    }
+    @media(max-width:700px) {
+      .story-grid { grid-template-columns: 1fr; }
+      .related-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media(max-width:480px) {
+      .related-grid { grid-template-columns: 1fr; }
+    }
+  </style>
 </head>
-<body class="bg-surface font-body text-on-surface">
-<!-- Top Navigation Bar -->
-<nav class="bg-white/80 dark:bg-rose-950/80 backdrop-blur-xl docked full-width top-0 sticky z-50 flex justify-between items-center px-8 py-4 max-w-full mx-auto">
-<div class="flex items-center gap-3">
-<img alt="GauriNandan Silk Brand Identity Logo featuring a regal peacock motif" class="h-10 w-auto" data-alt="high-end minimalist brand logo for a luxury silk boutique featuring a gold peacock icon on a deep maroon background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2ytbm13dqTg3JqG6xJ8LbX0NXq56JTXEXeCoadGBvwma5wGoNxYG0oBcZy0O-re5Eqfr3FJZW-uk81H6likNoxTV4uYXB621deTxHpDgA289FRuZKqKDm1MrpvO9Qd339HN7nS7ObURBq9hN9i7fQJE3R19GRp_BOUfuuqIsQcILph6f0LHibxApoVGeUN43pVRHeTepr3S0iUXGgmebxqJzw2eVK8WhJd8qmcYhXauErRTo9uPXCbHLTY3EhpGJ2bKvjPurbdj8"/>
-<span class="text-2xl font-serif font-bold text-rose-900 dark:text-rose-100 tracking-tighter">GauriNandan Silk</span>
-</div>
-<div class="hidden md:flex gap-8 items-center">
-<a class="text-rose-800/70 dark:text-rose-200/70 hover:text-rose-900 dark:hover:text-rose-100 transition-all duration-300 font-sans text-sm tracking-wide" href="index.html">Home</a>
-<a class="text-rose-900 dark:text-amber-400 font-bold border-b-2 border-amber-400 pb-1 font-sans text-sm tracking-wide" href="shop.html">Collections</a>
-<a class="text-rose-800/70 dark:text-rose-200/70 hover:text-rose-900 dark:hover:text-rose-100 transition-all duration-300 font-sans text-sm tracking-wide" href="#">About Us</a>
-<a class="text-rose-800/70 dark:text-rose-200/70 hover:text-rose-900 dark:hover:text-rose-100 transition-all duration-300 font-sans text-sm tracking-wide" href="contact.html">Contact</a>
-</div>
-<div class="flex gap-4 items-center">
-<button class="text-rose-900 dark:text-rose-100 hover:opacity-80 transition-all duration-300 scale-95">
-<span class="material-symbols-outlined">favorite</span>
-</button>
-<button class="text-rose-900 dark:text-rose-100 hover:opacity-80 transition-all duration-300 scale-95">
-<span class="material-symbols-outlined">shopping_bag</span>
-</button>
-</div>
+<body>
+
+<!-- ANNOUNCEMENT -->
+<div id="gn-announcement">✨ <strong>Raj Gharana</strong> Collection Live! &nbsp;|&nbsp;<a href="https://wa.me/919823894289" target="_blank">Order: +91 98238 94289</a></div>
+
+<!-- NAVBAR -->
+<nav id="gn-nav">
+  <div class="nav-inner">
+    <a class="nav-logo" href="index.html">
+      <img src="logo.png" alt="GauriNandan Silk Logo"/>
+      <div class="nav-logo-text">GauriNandan Silk<small>Pune's Heritage Boutique</small></div>
+    </a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="shop.html" class="active">Collections</a>
+      <a href="index.html#about">About Us</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="nav-actions">
+      <a href="https://wa.me/919823894289" target="_blank" class="nav-icon-btn"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.123 1.528 5.849L.057 23.854a.5.5 0 00.605.605l6.005-1.471A11.954 11.954 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22a9.952 9.952 0 01-5.062-1.38l-.361-.215-3.734.914.915-3.734-.215-.361A9.952 9.952 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg></a>
+      <button class="hamburger" id="gn-hamburger"><span></span><span></span><span></span></button>
+    </div>
+  </div>
 </nav>
-<main class="relative">
-<!-- Silk Texture Overlay -->
-<div class="absolute inset-0 silk-texture"></div>
-<!-- Product Hero Section -->
-<section class="max-w-7xl mx-auto px-6 py-12 md:py-20">
-<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-<!-- Gallery Section -->
-<div class="lg:col-span-7 grid grid-cols-12 gap-4">
-<!-- Main Image (Asymmetric Placement) -->
-<div class="col-span-12 md:col-span-10 order-1 md:order-2">
-<div class="aspect-[4/5] bg-surface-container-low rounded-lg overflow-hidden shadow-sm relative group">
-<img alt="Royal Maroon Hand-Woven Silk Saree with gold embroidery" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="cinematic close-up of a luxurious deep maroon silk saree draped elegantly, revealing intricate gold zari embroidery under soft ambient lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCpckdUgdQgApzPETBNG3rzfDPQrFI1m3Fe1CULr5EqanLRzLC8jVFa1bSk_oVdTcwNE4hK3jTTsNkp1u0Rsrc_GytOsYFCOmJDQPxUGvCNaEEmSK06LM-hYu6vBZw3qUCXmHITR1_rXxO5b9TReMx7ZbMgYRME0btVGV4EX6N-4OwgqLbh5sCpz33YGMdhV87f5BkHeTTUlVHJQlGGUYgvHvt5OX3DpZIrh1caQt2owiayJAcdsVgXs2KFhy1V6QDu3pBgaTd0jQ4"/>
-<div class="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent pointer-events-none"></div>
+
+<!-- MOBILE NAV -->
+<div id="gn-mobile-nav">
+  <a href="index.html">Home</a>
+  <a href="shop.html">Collections</a>
+  <a href="contact.html">Contact</a>
+  <div class="mobile-soc-row">
+    <a class="mobile-soc-btn" href="https://wa.me/919823894289" target="_blank">💬 WhatsApp</a>
+    <a class="mobile-soc-btn" href="https://maps.app.goo.gl/ef2P8LEWgLj3ya296" target="_blank">📍 Find Us</a>
+  </div>
 </div>
-</div>
-<!-- Thumbnails -->
-<div class="col-span-12 md:col-span-2 order-2 md:order-1 flex md:flex-col gap-4">
-<div class="aspect-square bg-surface-container-highest rounded border-2 border-secondary overflow-hidden cursor-pointer">
-<img alt="Thumbnail 1" class="w-full h-full object-cover" data-alt="macro shot of silk fabric texture showing fine weave patterns and deep burgundy color" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAY4CJ6pJGzqLGL-q4Xn4mTtwzj4sxmQ0cBWOp4Xjeu-7fV0ijjrE54oESgJwv3wBnV5NbtJveE7CU1iajzEsnDLE0tzv6MwgfMWKQb61WLAOKk8yapduroBNxUakc5tB6SImA1d0N5wEdQaMMzHSZVyi-G5aa8-bWg9qtklULIU2h6im8XP3DVqLvTj6SmDc6RsTBffcWcAo74hyrI3qb0XeToUKEY99-YGhqbX7mrKMEIAhhH7htHvz3jRm1A_dHSew9cHKwfIpY"/>
-</div>
-<div class="aspect-square bg-surface-container-low rounded overflow-hidden cursor-pointer hover:opacity-80 transition-opacity">
-<img alt="Thumbnail 2" class="w-full h-full object-cover" data-alt="detailed close-up of intricate gold zari work on the border of a traditional silk saree" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA7nwWYpVbssDba8t-SN9KgjtvgHcCA6Y98xFwOxvbkHE7_LnxvIWkeSdEeHjOnopshrabHkYn764bppcbzI1lq9WoIthEZmlcKdkWnDjEokx0hH99ll2FBzeowBkApD-IE4GZbkmB6rgb16n4X5wPmmL_w_nTRbhx9-989-fFhYjrsl-ImFCTPb0GfeP_bazg6RJcCjXzj3Mgb-9GqoPFpqkE6bEAURWwIAoz6Q_HrPLpZ4VI1R7lEUM3nX6n53GMrE_Cg9sAOSbs"/>
-</div>
-<div class="aspect-square bg-surface-container-low rounded overflow-hidden cursor-pointer hover:opacity-80 transition-opacity">
-<img alt="Thumbnail 3" class="w-full h-full object-cover" data-alt="the pallu of a silk saree spread out to show expansive gold embroidery patterns and craftsmanship" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCEZFH9D8yB9kGCBMmo1piI7HLGA-_XIs_Zd9UHl2-I3S1bCEnxK2351xYmEx4cLgUAmc64rxBqrmBy5kz-Zu-DVXFBsQH8FUPU-P9cAjQ9WsHncTUaedTavy7LsN4LrXxiAD34EaELA3AmwZ_tbTBrzYm2MoYmG6EFnVSd7FVWvAHYOLjSzyVgk_aN7vEuEVkuINvmdmo2n9dMfnMk_UbmhePrVi1qp80A3kljhxEdegrt4hRuNZcWgHHsSJC5bdT8PERWAQpVQqw"/>
-</div>
-</div>
-</div>
-<!-- Product Content Section -->
-<div class="lg:col-span-5 flex flex-col space-y-8 sticky top-32">
-<div>
-<span class="font-label text-secondary tracking-widest text-xs font-bold mb-2 block">HERITAGE COLLECTION</span>
-<h1 class="font-headline text-4xl md:text-5xl text-primary leading-tight font-bold tracking-tight">Royal Maroon Hand-Woven Silk Saree</h1>
-<p class="text-on-surface-variant mt-4 font-body text-lg leading-relaxed">
-                            A masterpiece of artisanal craftsmanship, this saree features the signature depth of GauriNandan silk, meticulously hand-loomed to drape with effortless grace.
-                        </p>
-</div>
-<!-- Technical Details (Tonal Layering) -->
-<div class="bg-surface-container-low p-6 rounded-lg space-y-4">
-<div class="flex justify-between items-center border-b border-outline-variant/15 pb-3">
-<span class="font-label text-on-surface-variant uppercase text-xs tracking-wider">Fabric</span>
-<span class="font-body font-semibold text-primary">Pure Silk</span>
-</div>
-<div class="flex justify-between items-center border-b border-outline-variant/15 pb-3">
-<span class="font-label text-on-surface-variant uppercase text-xs tracking-wider">Origin</span>
-<span class="font-body font-semibold text-primary">Pune Heritage</span>
-</div>
-<div class="flex justify-between items-center pb-1">
-<span class="font-label text-on-surface-variant uppercase text-xs tracking-wider">Craft</span>
-<span class="font-body font-semibold text-primary">Hand-loomed Gold Zari</span>
-</div>
-</div>
-<!-- Action Buttons -->
-<div class="flex flex-col gap-4">
-<a class="bg-primary-container text-white px-8 py-4 rounded-sm font-bold text-center flex items-center justify-center gap-3 hover:translate-y-[-4px] transition-all duration-300 shadow-md" href="https://wa.me/919823894289" target="_blank">
-<span class="material-symbols-outlined">chat</span>
-                            Chat on WhatsApp
-                        </a>
-<a href="shop.html" class="border border-secondary/30 text-secondary px-8 py-4 rounded-sm font-bold text-center hover:bg-secondary/5 transition-all">
-                            View Collection
-                        </a>
-</div>
-<!-- Availability Note -->
-<div class="flex items-center gap-2 text-on-tertiary-fixed-variant bg-tertiary-fixed/30 p-3 rounded text-sm">
-<span class="material-symbols-outlined scale-75">verified_user</span>
-<span>Inquiry for bespoke tailoring &amp; price via WhatsApp.</span>
-</div>
-</div>
-</div>
-</section>
-<!-- Product Story / Bento Grid Details -->
-<section class="bg-surface-container-lowest py-20 px-6">
-<div class="max-w-7xl mx-auto">
-<h2 class="font-headline text-3xl text-primary text-center mb-16">The Art of the Weave</h2>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-<div class="bg-surface p-10 rounded-lg shadow-sm border border-outline-variant/10">
-<span class="material-symbols-outlined text-secondary text-4xl mb-4">diamond</span>
-<h3 class="font-headline text-xl text-primary mb-3">Authentic Zari</h3>
-<p class="font-body text-on-surface-variant text-sm leading-relaxed">Woven with genuine gold threads that shimmer with every movement, creating a luminous finish that defines Pune's weaving heritage.</p>
-</div>
-<div class="bg-surface p-10 rounded-lg shadow-sm border border-outline-variant/10">
-<span class="material-symbols-outlined text-secondary text-4xl mb-4">pan_tool</span>
-<h3 class="font-headline text-xl text-primary mb-3">Handcrafted Integrity</h3>
-<p class="font-body text-on-surface-variant text-sm leading-relaxed">Each piece takes 2-3 weeks to complete on a traditional pit loom, ensuring no two sarees are ever identical.</p>
-</div>
-<div class="bg-surface p-10 rounded-lg shadow-sm border border-outline-variant/10">
-<span class="material-symbols-outlined text-secondary text-4xl mb-4">eco</span>
-<h3 class="font-headline text-xl text-primary mb-3">Natural Dyes</h3>
-<p class="font-body text-on-surface-variant text-sm leading-relaxed">Our rich maroon pigment is derived from sustainable, natural sources, ensuring the fabric is as kind to the skin as it is beautiful.</p>
-</div>
-</div>
-</div>
-</section>
-<!-- Related Products Section -->
-<section class="max-w-7xl mx-auto px-6 py-24">
-<div class="flex justify-between items-end mb-12">
-<div>
-<h2 class="font-headline text-3xl text-primary">Similar Masterpieces</h2>
-<p class="text-on-surface-variant font-body">Handpicked from our Heritage Silk series.</p>
-</div>
-<a class="text-secondary font-bold hover:underline" href="shop.html">Explore All</a>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-<!-- Related 1 -->
-<div class="group cursor-pointer">
-<div class="aspect-[3/4] overflow-hidden rounded-lg bg-surface-container-low mb-4 relative">
-<img alt="Emerald Green Silk Saree" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="luxurious emerald green silk saree displayed on a mannequin in a sunlit boutique studio" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAkHMhZZhuFAQYO5yBKK27fd6syEmFGbpmi64FDqXhsSJJl7XVdkc0F05PUYpIeQliDk7ZDXc8ihx5uVGNtKeduUsCo9v4g5AmWXBmHyPRA6RfaqUyQewmTdtm-odPU0W7Ew2mRlWqLOMWq3PBDHS0_KUHlYtFuwx8i-Kl15JDdjF_HTfqUBJBt_rkj5FUCtgr-eQMG4Z_9PX2hOmSisaRTLbbxtJg3rVioW87bxchQhtLRcGSFtiVaeRJIWmyl4ucv_4-mqmCEbxg"/>
-<div class="absolute top-4 right-4 bg-white/90 backdrop-blur p-2 rounded-full shadow-sm text-primary opacity-0 group-hover:opacity-100 transition-opacity">
-<span class="material-symbols-outlined">favorite</span>
-</div>
-</div>
-<h3 class="font-headline text-lg text-primary">Emerald Green Heritage</h3>
-<p class="text-on-surface-variant text-sm uppercase tracking-widest mt-1">Pune Hand-loom</p>
-</div>
-<!-- Related 2 -->
-<div class="group cursor-pointer">
-<div class="aspect-[3/4] overflow-hidden rounded-lg bg-surface-container-low mb-4 relative">
-<img alt="Deep Indigo Silk Saree" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="deep indigo blue hand-woven silk saree with silver zari borders, draped over a vintage wooden trunk" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_TMOlZRbZemAEtTAkDhyxU6LZ9H53bMcxuI4rWeO7-NF3ggxSPb7ztjNmHIXBT6JDLBVZCZP2XSvR8YYWUSasjTv7oTp6Yul_MkemTE_EbnOnF83AHMZWHZ8cn4VSkrhevdRnLIDMw42_mrGjMYN0wgYspsVE_9uMUyGsbp4idnagnw3yRKE7b14yLc0R806y35fyFV0_JR2ph9UmqSBa9RqmeGqp7wyDEu71-G5LCt_P96-XlctGJi30awq2Ja98msc53tkwZcc"/>
-<div class="absolute top-4 right-4 bg-white/90 backdrop-blur p-2 rounded-full shadow-sm text-primary opacity-0 group-hover:opacity-100 transition-opacity">
-<span class="material-symbols-outlined">favorite</span>
-</div>
-</div>
-<h3 class="font-headline text-lg text-primary">Midnight Indigo Drape</h3>
-<p class="text-on-surface-variant text-sm uppercase tracking-widest mt-1">Silver Zari Series</p>
-</div>
-<!-- Related 3 -->
-<div class="group cursor-pointer">
-<div class="aspect-[3/4] overflow-hidden rounded-lg bg-surface-container-low mb-4 relative">
-<img alt="Sunset Amber Silk Saree" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="bright golden-orange sunset silk saree with delicate floral embroidery, folded neatly on a white marble surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAt7DDBgGR76764gUASxXYumeIW7hrNDWtrDDqBO3FjpQ0lOCSHxTp6ZJDnJxSEFd8pCsA5qhgOXr1Yx7ajAKDjX_o4N7iAw9CZT9mcVPd4yfywtB12NoUYXsE-rUWiIcoVg0COfQVpXdn-j-4Y_R2SU2fwHi094xuca1caFgw5KsiiLiGTs48U0I8S1Vb5M__O0dIvrfBoM2YooYvZEWixT9nCSQE5oLouJr83v5ZvWugi2J5fqM4RmWo5g1GJtzqRGu8CP35Lvzs"/>
-<div class="absolute top-4 right-4 bg-white/90 backdrop-blur p-2 rounded-full shadow-sm text-primary opacity-0 group-hover:opacity-100 transition-opacity">
-<span class="material-symbols-outlined">favorite</span>
-</div>
-</div>
-<h3 class="font-headline text-lg text-primary">Sunset Amber Gold</h3>
-<p class="text-on-surface-variant text-sm uppercase tracking-widest mt-1">Festive Special</p>
-</div>
-</div>
-</section>
+
+<!-- MAIN -->
+<main>
+  <section class="pd-section">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
+        <a href="shop.html">Collections</a>
+        <svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
+        <span>Royal Maroon Silk Saree</span>
+      </div>
+      <div class="pd-grid">
+        <!-- GALLERY -->
+        <div class="pd-gallery" data-reveal>
+          <div class="pd-thumbs">
+            <div class="pd-thumb active" onclick="switchImg(this, 'https://lh3.googleusercontent.com/aida-public/AB6AXuCpckdUgdQgApzPETBNG3rzfDPQrFI1m3Fe1CULr5EqanLRzLC8jVFa1bSk_oVdTcwNE4hK3jTTsNkp1u0Rsrc_GytOsYFCOmJDQPxUGvCNaEEmSK06LM-hYu6vBZw3qUCXmHITR1_rXxO5b9TReMx7ZbMgYRME0btVGV4EX6N-4OwgqLbh5sCpz33YGMdhV87f5BkHeTTUlVHJQlGGUYgvHvt5OX3DpZIrh1caQt2owiayJAcdsVgXs2KFhy1V6QDu3pBgaTd0jQ4')"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCpckdUgdQgApzPETBNG3rzfDPQrFI1m3Fe1CULr5EqanLRzLC8jVFa1bSk_oVdTcwNE4hK3jTTsNkp1u0Rsrc_GytOsYFCOmJDQPxUGvCNaEEmSK06LM-hYu6vBZw3qUCXmHITR1_rXxO5b9TReMx7ZbMgYRME0btVGV4EX6N-4OwgqLbh5sCpz33YGMdhV87f5BkHeTTUlVHJQlGGUYgvHvt5OX3DpZIrh1caQt2owiayJAcdsVgXs2KFhy1V6QDu3pBgaTd0jQ4" alt=""/></div>
+            <div class="pd-thumb" onclick="switchImg(this, 'https://lh3.googleusercontent.com/aida-public/AB6AXuAY4CJ6pJGzqLGL-q4Xn4mTtwzj4sxmQ0cBWOp4Xjeu-7fV0ijjrE54oESgJwv3wBnV5NbtJveE7CU1iajzEsnDLE0tzv6MwgfMWKQb61WLAOKk8yapduroBNxUakc5tB6SImA1d0N5wEdQaMMzHSZVyi-G5aa8-bWg9qtklULIU2h6im8XP3DVqLvTj6SmDc6RsTBffcWcAo74hyrI3qb0XeToUKEY99-YGhqbX7mrKMEIAhhH7htHvz3jRm1A_dHSew9cHKwfIpY')"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAY4CJ6pJGzqLGL-q4Xn4mTtwzj4sxmQ0cBWOp4Xjeu-7fV0ijjrE54oESgJwv3wBnV5NbtJveE7CU1iajzEsnDLE0tzv6MwgfMWKQb61WLAOKk8yapduroBNxUakc5tB6SImA1d0N5wEdQaMMzHSZVyi-G5aa8-bWg9qtklULIU2h6im8XP3DVqLvTj6SmDc6RsTBffcWcAo74hyrI3qb0XeToUKEY99-YGhqbX7mrKMEIAhhH7htHvz3jRm1A_dHSew9cHKwfIpY" alt=""/></div>
+            <div class="pd-thumb" onclick="switchImg(this, 'https://lh3.googleusercontent.com/aida-public/AB6AXuCEZFH9D8yB9kGCBMmo1piI7HLGA-_XIs_Zd9UHl2-I3S1bCEnxK2351xYmEx4cLgUAmc64rxBqrmBy5kz-Zu-DVXFBsQH8FUPU-P9cAjQ9WsHncTUaedTavy7LsN4LrXxiAD34EaELA3AmwZ_tbTBrzYm2MoYmG6EFnVSd7FVWvAHYOLjSzyVgk_aN7vEuEVkuINvmdmo2n9dMfnMk_UbmhePrVi1qp80A3kljhxEdegrt4hRuNZcWgHHsSJC5bdT8PERWAQpVQqw')"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCEZFH9D8yB9kGCBMmo1piI7HLGA-_XIs_Zd9UHl2-I3S1bCEnxK2351xYmEx4cLgUAmc64rxBqrmBy5kz-Zu-DVXFBsQH8FUPU-P9cAjQ9WsHncTUaedTavy7LsN4LrXxiAD34EaELA3AmwZ_tbTBrzYm2MoYmG6EFnVSd7FVWvAHYOLjSzyVgk_aN7vEuEVkuINvmdmo2n9dMfnMk_UbmhePrVi1qp80A3kljhxEdegrt4hRuNZcWgHHsSJC5bdT8PERWAQpVQqw" alt=""/></div>
+            <div class="pd-thumb" onclick="switchImg(this, 'img/custom/banarasi.png')"><img src="img/custom/banarasi.png" alt=""/></div>
+          </div>
+          <div class="pd-main-img">
+            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCpckdUgdQgApzPETBNG3rzfDPQrFI1m3Fe1CULr5EqanLRzLC8jVFa1bSk_oVdTcwNE4hK3jTTsNkp1u0Rsrc_GytOsYFCOmJDQPxUGvCNaEEmSK06LM-hYu6vBZw3qUCXmHITR1_rXxO5b9TReMx7ZbMgYRME0btVGV4EX6N-4OwgqLbh5sCpz33YGMdhV87f5BkHeTTUlVHJQlGGUYgvHvt5OX3DpZIrh1caQt2owiayJAcdsVgXs2KFhy1V6QDu3pBgaTd0jQ4" alt="Royal Maroon Hand-Woven Silk Saree" id="main-pd-img"/>
+            <div class="pd-badge-wrap">
+              <span class="product-badge" style="position:static">Heritage Collection</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- INFO PANEL -->
+        <div class="pd-info" data-reveal style="transition-delay:.1s">
+          <p class="pd-eyebrow">✦ GauriNandan Signature</p>
+          <h1 class="pd-title font-serif">Royal Maroon Hand-Woven Silk Saree</h1>
+          <p class="pd-desc">A masterpiece of artisanal craftsmanship, this saree features the signature depth of GauriNandan silk, meticulously hand-loomed to drape with effortless grace. Each thread tells a story of heritage, passion, and timeless beauty.</p>
+
+          <div class="pd-specs">
+            <div class="pd-spec-row"><span class="pd-spec-lbl">Fabric</span><span class="pd-spec-val">Pure Mulberry Silk</span></div>
+            <div class="pd-spec-row"><span class="pd-spec-lbl">Origin</span><span class="pd-spec-val">Pune Heritage Loom</span></div>
+            <div class="pd-spec-row"><span class="pd-spec-lbl">Craft</span><span class="pd-spec-val">Hand-loomed Gold Zari</span></div>
+            <div class="pd-spec-row"><span class="pd-spec-lbl">Length</span><span class="pd-spec-val">6.5 Metres + Blouse Piece</span></div>
+            <div class="pd-spec-row"><span class="pd-spec-lbl">Care</span><span class="pd-spec-val">Dry Clean Only</span></div>
+            <div class="pd-spec-row"><span class="pd-spec-lbl">Availability</span><span class="pd-spec-val">✅ Inquire for Stock</span></div>
+          </div>
+
+          <div class="pd-colour-row">
+            <div class="pd-colour-label">Available in These Tones</div>
+            <div class="pd-swatches">
+              <div class="pd-swatch active" style="background:#6B0F1A" title="Royal Maroon"></div>
+              <div class="pd-swatch" style="background:#1A4D2E" title="Forest Green"></div>
+              <div class="pd-swatch" style="background:#C8972B" title="Gold Amber"></div>
+              <div class="pd-swatch" style="background:#1a1a5e" title="Royal Navy"></div>
+              <div class="pd-swatch" style="background:#e83e8c" title="Rose Pink"></div>
+            </div>
+          </div>
+
+          <div class="pd-cta-stack">
+            <a href="https://wa.me/919823894289?text=I'm%20interested%20in%20the%20Royal%20Maroon%20Hand-Woven%20Silk%20Saree.%20Please%20share%20price%20and%20availability." target="_blank" class="pd-wa-btn">
+              <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.123 1.528 5.849L.057 23.854a.5.5 0 00.605.605l6.005-1.471A11.954 11.954 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22a9.952 9.952 0 01-5.062-1.38l-.361-.215-3.734.914.915-3.734-.215-.361A9.952 9.952 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+              Inquire on WhatsApp · +91 98238 94289
+            </a>
+            <a href="shop.html" class="pd-call-btn">
+              <svg viewBox="0 0 24 24"><path d="M19 2H5c-1.1 0-2 .9-2 2v18l4-4h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg>
+              Browse More Collections
+            </a>
+          </div>
+
+          <div class="pd-trust">
+            <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
+            <span>Authentic Silk Mark Certified. No two pieces are identical. Bespoke customization available on inquiry.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STORY -->
+  <section id="pd-story">
+    <div class="container">
+      <div style="text-align:center;margin-bottom:44px;" data-reveal>
+        <div class="section-label">The Craft</div>
+        <h2 class="section-h2">The Art of the Weave</h2>
+      </div>
+      <div class="story-grid">
+        <div class="story-card" data-reveal style="transition-delay:.05s">
+          <div class="story-icon">💎</div>
+          <h3 class="story-title font-serif">Authentic Zari</h3>
+          <p class="story-text">Woven with genuine gold threads that shimmer with every movement, creating a luminous finish that defines Pune's weaving heritage.</p>
+        </div>
+        <div class="story-card" data-reveal style="transition-delay:.1s">
+          <div class="story-icon">🤲</div>
+          <h3 class="story-title font-serif">Handcrafted Integrity</h3>
+          <p class="story-text">Each piece takes 2–3 weeks to complete on a traditional pit loom, ensuring no two sarees are ever identical. Pure artisanal excellence.</p>
+        </div>
+        <div class="story-card" data-reveal style="transition-delay:.15s">
+          <div class="story-icon">🌿</div>
+          <h3 class="story-title font-serif">Natural Dyes</h3>
+          <p class="story-text">Our rich maroon pigment is derived from sustainable, natural sources, ensuring the fabric is as kind to the skin as it is beautiful.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RELATED PRODUCTS -->
+  <section id="pd-related">
+    <div class="container">
+      <div style="display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:36px;flex-wrap:wrap;gap:12px;" data-reveal>
+        <div>
+          <div class="section-label left">More to Love</div>
+          <h2 class="section-h2">Similar Masterpieces</h2>
+        </div>
+        <a href="shop.html" style="font-size:.74rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--maroon);border-bottom:1.5px solid var(--gold);padding-bottom:2px;">Explore All →</a>
+      </div>
+      <div class="related-grid">
+        <div class="product-card" data-reveal style="transition-delay:.05s">
+          <div class="product-img-wrap">
+            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuC67OWgLei8BUUNTeQO-XBYXyDOogoJwSuKrr9ylGNPgfY_0WHeVShF64sjjgRB8N9d4NpIUaktGdUha1UUVRDMOGTQb_3F8f9dZL95-RVYaMwCq0sEF1bEi7AqsqB2qn3Nk_HC0d84WwDqtzORTGcrT6yubjYDirb4SwnPmBhnnqgfkIp9omi4-w2r-bJPzDULb6_gIkGk0N6V6QSBVBgt40iPlYdWmkBYJ0T1bqIVllXM5zb3asxw2lwf-9Q0_VJY5Sgp0_c-Q8g" alt="Emerald Heritage"/>
+            <button class="product-wish"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></button>
+          </div>
+          <div class="product-info">
+            <p class="product-cat">Heritage Silk</p>
+            <h3 class="product-name font-serif">Emerald Green Heritage</h3>
+            <a href="https://wa.me/919823894289?text=Interested%20in%20Emerald%20Green%20Heritage" target="_blank" class="product-inquire">Inquire <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          </div>
+        </div>
+        <div class="product-card" data-reveal style="transition-delay:.1s">
+          <div class="product-img-wrap">
+            <img src="img/custom/paithani.png" alt="Paithani Heritage"/>
+            <button class="product-wish"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></button>
+          </div>
+          <div class="product-info">
+            <p class="product-cat">Raj Gharana</p>
+            <h3 class="product-name font-serif">Regal Paithani Peacock</h3>
+            <a href="https://wa.me/919823894289?text=Interested%20in%20Regal%20Paithani%20Peacock" target="_blank" class="product-inquire">Inquire <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          </div>
+        </div>
+        <div class="product-card" data-reveal style="transition-delay:.15s">
+          <div class="product-img-wrap">
+            <img src="img/custom/kanjivaram.png" alt="Golden Kanjivaram"/>
+            <button class="product-wish"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></button>
+          </div>
+          <div class="product-info">
+            <p class="product-cat">Signature Silk</p>
+            <h3 class="product-name font-serif">Golden Kanjivaram</h3>
+            <a href="https://wa.me/919823894289?text=Interested%20in%20Golden%20Kanjivaram" target="_blank" class="product-inquire">Inquire <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 </main>
-<!-- Footer -->
-<footer class="bg-rose-50 dark:bg-stone-950 w-full border-t border-rose-100 dark:border-stone-800">
-<div class="grid grid-cols-1 md:grid-cols-3 gap-8 px-12 py-16 w-full max-w-7xl mx-auto">
-<div class="space-y-4">
-<span class="text-xl font-serif text-rose-900 dark:text-rose-100 block">GauriNandan Silk</span>
-<p class="text-rose-800/60 font-sans text-sm tracking-wide leading-relaxed">
-                    Crafting timeless elegance since decades, GauriNandan Silk brings the heritage of Pune's hand-loom mastery to the modern world.
-                </p>
-</div>
-<div class="space-y-4">
-<h4 class="font-headline text-sm font-bold text-rose-900 dark:text-rose-100 uppercase tracking-widest">Visit Us</h4>
-<p class="text-rose-800/60 font-sans text-sm tracking-wide leading-relaxed">
-                    Sr No 32/10, Sneha Niwas,<br/>
-                    Nilgiri Chowk Road, Shriram Nagar,<br/>
-                    Pune, Maharashtra 411046
-                </p>
-</div>
-<div class="space-y-4">
-<h4 class="font-headline text-sm font-bold text-rose-900 dark:text-rose-100 uppercase tracking-widest">Contact</h4>
-<p class="text-rose-800/60 font-sans text-sm tracking-wide">
-                    gaurinandan.vedstack.in
-                </p>
-<div class="flex gap-4">
-<span class="material-symbols-outlined text-rose-900/40">language</span>
-<span class="material-symbols-outlined text-rose-900/40">mail</span>
-</div>
-</div>
-</div>
-<div class="text-center py-6 border-t border-rose-100 dark:border-stone-900">
-<p class="font-sans text-sm tracking-wide text-rose-800/60">
-                © 2024 GauriNandan Silk. All rights reserved.
-            </p>
-</div>
+
+<!-- FOOTER -->
+<footer id="gn-footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <img src="logo.png" alt="GauriNandan Silk"/>
+      <p>Curating India's heritage weaves for the modern woman who values tradition and elegance in equal measure.</p>
+      <div class="footer-soc-row">
+        <a class="footer-soc-icon" href="https://www.facebook.com/share/14ZEr9QbPwk/" target="_blank"><svg viewBox="0 0 24 24"><path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z"/></svg></a>
+        <a class="footer-soc-icon" href="https://www.instagram.com/gaurinandan_silk?igsh=MXVwcW5zNHdubG9kYg==" target="_blank"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4s1.791-4 4-4 4 1.791 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+        <a class="footer-soc-icon" href="https://wa.me/919823894289" target="_blank"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.123 1.528 5.849L.057 23.854a.5.5 0 00.605.605l6.005-1.471A11.954 11.954 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22a9.952 9.952 0 01-5.062-1.38l-.361-.215-3.734.914.915-3.734-.215-.361A9.952 9.952 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg></a>
+        <a class="footer-soc-icon" href="https://maps.app.goo.gl/ef2P8LEWgLj3ya296" target="_blank"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg></a>
+      </div>
+    </div>
+    <div class="footer-col"><h5>Quick Links</h5><ul><li><a href="index.html">Home</a></li><li><a href="shop.html">Collections</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+    <div class="footer-col"><h5>Collections</h5><ul><li><a href="shop.html">Paithani</a></li><li><a href="shop.html">Banarasi</a></li><li><a href="shop.html">Kanjivaram</a></li><li><a href="shop.html">Bridal</a></li></ul></div>
+    <div class="footer-col"><h5>Contact</h5><ul><li><a href="https://maps.app.goo.gl/ef2P8LEWgLj3ya296" target="_blank">Shriram Nagar, Pune 411046</a></li><li><a href="tel:+919823894289">+91 98238 94289</a></li><li><a href="https://wa.me/919823894289" target="_blank">WhatsApp Us</a></li></ul></div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2024 GauriNandan Silk. All rights reserved.</p>
+    <div class="footer-certified"><svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>Authentic Silk Certified</div>
+  </div>
 </footer>
-</body></html>
+
+<!-- CHATBOT -->
+<div id="gn-chatbot">
+  <div id="gn-chat-window" role="dialog">
+    <div class="chat-header">
+      <div class="chat-avatar"><img src="logo.png" alt="GauriNandan"/></div>
+      <div class="chat-hdr-info"><div class="chat-hdr-name">GauriNandan Silk</div><div class="chat-hdr-status">Online · Here to help</div></div>
+      <button class="chat-close-btn" id="gn-chat-close">✕</button>
+    </div>
+    <div class="chat-msgs" id="gn-chat-msgs"></div>
+    <div class="chat-quick">
+      <button class="chat-quick-btn" data-msg="WhatsApp Order">💬 Order on WhatsApp</button>
+      <button class="chat-quick-btn" data-msg="Price Inquiry">💰 Price?</button>
+      <button class="chat-quick-btn" data-msg="Store Location">📍 Store Location</button>
+    </div>
+    <div class="chat-input-row">
+      <input class="chat-text-input" id="gn-chat-input" type="text" placeholder="Ask about this saree…" autocomplete="off"/>
+      <button class="chat-send-btn" id="gn-chat-send"><svg viewBox="0 0 24 24"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg></button>
+    </div>
+  </div>
+  <button id="gn-chat-toggle"><div id="gn-chat-badge"></div><svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"/></svg></button>
+</div>
+
+<script src="gn-shared.js"></script>
+<script>
+  function switchImg(thumb, src) {
+    document.querySelectorAll('.pd-thumb').forEach(t => t.classList.remove('active'));
+    thumb.classList.add('active');
+    const img = document.getElementById('main-pd-img');
+    img.style.opacity = '0.5';
+    img.style.transform = 'scale(0.98)';
+    setTimeout(() => {
+      img.src = src;
+      img.style.opacity = '1';
+      img.style.transform = 'scale(1)';
+    }, 200);
+    img.style.transition = 'opacity 0.3s, transform 0.3s';
+  }
+  document.querySelectorAll('.pd-swatch').forEach(sw => {
+    sw.addEventListener('click', function() {
+      document.querySelectorAll('.pd-swatch').forEach(s => s.classList.remove('active'));
+      this.classList.add('active');
+    });
+  });
+</script>
+</body>
+</html>

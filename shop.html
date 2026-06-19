@@ -1,343 +1,454 @@
 <!DOCTYPE html>
-
-<html class="light" lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>GauriNandan Silk | Saree Collections Catalog</title>
-<!-- Fonts & Icons -->
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&amp;family=Manrope:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<script id="tailwind-config">
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            "colors": {
-                    "primary-fixed": "#ffdadc",
-                    "surface-container-low": "#fff1ec",
-                    "primary-fixed-dim": "#ffb2b9",
-                    "on-secondary-fixed-variant": "#5c4200",
-                    "surface-dim": "#ffd0bd",
-                    "inverse-primary": "#ffb2b9",
-                    "surface": "#fff8f6",
-                    "on-primary-fixed-variant": "#792d39",
-                    "tertiary-fixed": "#c8eadf",
-                    "tertiary-fixed-dim": "#adcec3",
-                    "surface-container-lowest": "#ffffff",
-                    "background": "#fff8f6",
-                    "on-error": "#ffffff",
-                    "on-primary": "#ffffff",
-                    "on-background": "#2e1509",
-                    "tertiary-container": "#0a2a23",
-                    "on-surface-variant": "#544244",
-                    "on-primary-container": "#ce707b",
-                    "inverse-surface": "#47291b",
-                    "inverse-on-surface": "#ffede7",
-                    "secondary-fixed": "#ffdea2",
-                    "on-secondary-fixed": "#261900",
-                    "on-primary-fixed": "#3f0110",
-                    "surface-variant": "#ffdbcd",
-                    "primary": "#2a0008",
-                    "outline-variant": "#d9c1c2",
-                    "on-secondary-container": "#785a18",
-                    "on-tertiary": "#ffffff",
-                    "secondary-fixed-dim": "#e8c175",
-                    "secondary": "#775a17",
-                    "on-surface": "#2e1509",
-                    "surface-tint": "#964450",
-                    "error": "#ba1a1a",
-                    "surface-bright": "#fff8f6",
-                    "on-tertiary-container": "#739389",
-                    "error-container": "#ffdad6",
-                    "on-error-container": "#93000a",
-                    "outline": "#877273",
-                    "surface-container-highest": "#ffdbcd",
-                    "on-tertiary-fixed": "#01201a",
-                    "surface-container-high": "#ffe2d7",
-                    "surface-container": "#ffe9e2",
-                    "on-tertiary-fixed-variant": "#2e4c45",
-                    "on-secondary": "#ffffff",
-                    "secondary-container": "#fdd586",
-                    "tertiary": "#00130f",
-                    "primary-container": "#4c0a19"
-            },
-            "borderRadius": {
-                    "DEFAULT": "0.125rem",
-                    "lg": "0.25rem",
-                    "xl": "0.5rem",
-                    "full": "0.75rem"
-            },
-            "fontFamily": {
-                    "headline": ["Noto Serif"],
-                    "body": ["Manrope"],
-                    "label": ["Manrope"]
-            }
-          },
-        },
-      }
-    </script>
-<style>body {
-    font-family: "Manrope", sans-serif;
-    background-color: #fff8f6;
-    color: #2e1509
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Collections | GauriNandan Silk – Exquisite Sarees Pune</title>
+  <meta name="description" content="Browse GauriNandan Silk's full collection of Paithani, Banarasi, Kanjivaram, Patola & bridal sarees. Inquire via WhatsApp: +91 98238 94289."/>
+  <link rel="icon" href="logo.png" type="image/png"/>
+  <link rel="stylesheet" href="gn-shared.css"/>
+  <style>
+    /* FILTER SIDEBAR */
+    .shop-layout { display:grid; grid-template-columns:260px 1fr; gap:40px; padding:48px 0 80px; }
+    .filter-sidebar { position:sticky; top:90px; align-self:start; }
+    .filter-group { margin-bottom:28px; padding-bottom:28px; border-bottom:1px solid var(--border-light); }
+    .filter-group:last-child { border-bottom:none; }
+    .filter-group h4 { font-family:'Playfair Display',serif; font-size:1rem; color:var(--maroon); margin-bottom:14px; }
+    .filter-check { display:flex; align-items:center; gap:10px; margin-bottom:10px; cursor:pointer; }
+    .filter-check input { width:16px; height:16px; accent-color:var(--maroon); cursor:pointer; }
+    .filter-check span { font-size:0.85rem; color:var(--text-mid); transition:color 0.2s; }
+    .filter-check:hover span { color:var(--maroon); }
+    .color-dots { display:flex; flex-wrap:wrap; gap:10px; }
+    .color-dot {
+      width:28px; height:28px; border-radius:50%; cursor:pointer;
+      border:2.5px solid transparent; transition:var(--transition);
     }
-.font-serif {
-    font-family: "Noto Serif", serif
+    .color-dot:hover, .color-dot.active { border-color:var(--maroon); transform:scale(1.15); }
+    .price-slider { width:100%; accent-color:var(--maroon); cursor:pointer; }
+    .price-labels { display:flex; justify-content:space-between; font-size:0.78rem; color:var(--text-light); margin-top:6px; }
+    /* PRODUCT GRID */
+    .shop-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:28px; }
+    .shop-toolbar {
+      display:flex; align-items:center; justify-content:space-between;
+      margin-bottom:28px; flex-wrap:wrap; gap:12px;
     }
-.material-symbols-outlined {
-    font-variation-settings: "FILL" 0, "wght" 300, "GRAD" 0, "opsz" 24
+    .shop-count { font-size:0.82rem; color:var(--text-light); }
+    .sort-select {
+      padding:8px 14px; border:1.5px solid var(--border); border-radius:var(--radius-sm);
+      font-size:0.82rem; color:var(--text-mid); background:#fff; cursor:pointer;
+      outline:none; transition:border-color 0.2s;
     }
-.silk-texture {
-    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuBmAl1OJOGqfjMtpEy6QrHQFo9Wt_pMO_Fc-lGO5aRG6uuo77boqH_P0-IrLpAj28ehd3bMqtitKxeke4MhtPuWUqXjoYxLABxrxH0blPDEwFMKhgeMQhDu1jM6JGnZRFE6Oi3sH35w8j_ffpMUilWf7LENZ99pIJVaUNGgOtDjfzK07VpbupXOQm4LqmzjDUewg8qOx7loZ_eCx5o6DL6LzE1ynDXChBBkwmj8dJVawWXpXHG2b7SY4d8aJ3ydK8Q0pg4InE_qByA);
-    opacity: 0.03
-    }</style>
+    .sort-select:focus { border-color:var(--maroon); }
+    /* FILTER TAGS */
+    .active-filters { display:flex; flex-wrap:wrap; gap:8px; margin-bottom:20px; }
+    .filter-tag {
+      display:flex; align-items:center; gap:6px;
+      background:var(--cream-dark); border:1px solid var(--border);
+      border-radius:var(--radius-pill); padding:5px 12px;
+      font-size:0.72rem; font-weight:600; color:var(--maroon);
+    }
+    .filter-tag button { background:none; border:none; cursor:pointer; font-size:0.8rem; color:var(--text-light); }
+    /* PAGINATION */
+    .pagination { display:flex; justify-content:center; align-items:center; gap:8px; margin-top:52px; }
+    .page-btn {
+      width:40px; height:40px; display:flex; align-items:center; justify-content:center;
+      border:1.5px solid var(--border); border-radius:var(--radius-sm); font-size:0.85rem;
+      color:var(--text-mid); cursor:pointer; transition:var(--transition);
+    }
+    .page-btn:hover, .page-btn.active { background:var(--maroon); color:#fff; border-color:var(--maroon); }
+    .page-btn svg { width:16px; height:16px; stroke:currentColor; fill:none; stroke-width:2; }
+    /* MOBILE FILTER TOGGLE */
+    .mobile-filter-btn {
+      display:none; align-items:center; gap:8px;
+      padding:10px 18px; border:1.5px solid var(--border); border-radius:var(--radius-sm);
+      font-size:0.8rem; font-weight:600; color:var(--maroon); background:#fff;
+      cursor:pointer; transition:var(--transition);
+    }
+    .mobile-filter-btn svg { width:16px; height:16px; fill:none; stroke:currentColor; stroke-width:2; }
+    @media(max-width:900px){
+      .shop-layout { grid-template-columns:1fr; }
+      .filter-sidebar { display:none; position:static; }
+      .filter-sidebar.open { display:block; }
+      .shop-grid { grid-template-columns:repeat(2,1fr); gap:20px; }
+      .mobile-filter-btn { display:flex; }
+    }
+    @media(max-width:480px){
+      .shop-grid { grid-template-columns:1fr; }
+    }
+  </style>
 </head>
-<body class="bg-surface text-on-surface selection:bg-primary-fixed selection:text-primary">
-<!-- TopNavBar -->
-<nav class="bg-white/80 dark:bg-rose-950/80 backdrop-blur-xl flex justify-between items-center px-8 py-4 max-w-full mx-auto docked full-width top-0 sticky z-50 bg-gradient-to-b from-rose-50 to-transparent flat no shadows">
-<div class="text-2xl font-serif font-bold text-rose-900 dark:text-rose-100 tracking-tighter">GauriNandan Silk</div>
-<div class="hidden md:flex items-center space-x-10">
-<a class="text-rose-800/70 dark:text-rose-200/70 hover:text-rose-900 dark:hover:text-rose-100 font-sans text-sm tracking-wide transition-all duration-300" href="index.html">Home</a>
-<a class="text-rose-900 dark:text-amber-400 font-bold border-b-2 border-amber-400 pb-1 font-serif tracking-tight transition-all duration-300" href="shop.html">Collections</a>
-<a class="text-rose-800/70 dark:text-rose-200/70 hover:text-rose-900 dark:hover:text-rose-100 font-sans text-sm tracking-wide transition-all duration-300" href="#">About Us</a>
-<a class="text-rose-800/70 dark:text-rose-200/70 hover:text-rose-900 dark:hover:text-rose-100 font-sans text-sm tracking-wide transition-all duration-300" href="contact.html">Contact</a>
+<body>
+
+<!-- ANNOUNCEMENT -->
+<div id="gn-announcement">
+  ✨ New <strong>Raj Gharana</strong> Collection Live! &nbsp;|&nbsp;
+  <a href="https://wa.me/919823894289" target="_blank">Order on WhatsApp: +91 98238 94289</a>
 </div>
-<div class="flex items-center space-x-6 text-rose-900 dark:text-rose-100">
-<button class="hover:opacity-80 transition-all duration-300 scale-95 duration-200">
-<span class="material-symbols-outlined" data-icon="search">search</span>
-</button>
-<button class="hover:opacity-80 transition-all duration-300 scale-95 duration-200">
-<span class="material-symbols-outlined" data-icon="favorite">favorite</span>
-</button>
-<button class="hover:opacity-80 transition-all duration-300 scale-95 duration-200">
-<span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
-</button>
-</div>
+
+<!-- NAVBAR -->
+<nav id="gn-nav">
+  <div class="nav-inner">
+    <a class="nav-logo" href="index.html">
+      <img src="logo.png" alt="GauriNandan Silk Logo"/>
+      <div class="nav-logo-text">GauriNandan Silk<small>Pune's Heritage Boutique</small></div>
+    </a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="shop.html" class="active">Collections</a>
+      <a href="index.html#about">About Us</a>
+      <a href="index.html#visit">Visit Us</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="nav-actions">
+      <a href="https://wa.me/919823894289" target="_blank" class="nav-icon-btn" title="WhatsApp">
+        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.123 1.528 5.849L.057 23.854a.5.5 0 00.605.605l6.005-1.471A11.954 11.954 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22a9.952 9.952 0 01-5.062-1.38l-.361-.215-3.734.914.915-3.734-.215-.361A9.952 9.952 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+      </a>
+      <button class="hamburger" id="gn-hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
 </nav>
-<main class="relative">
-<div class="silk-texture absolute inset-0 pointer-events-none"></div>
-<!-- Hero Header -->
-<header class="pt-16 pb-12 px-8 max-w-7xl mx-auto">
-<div class="flex flex-col md:flex-row justify-between items-end gap-6">
-<div class="max-w-2xl">
-<span class="label-md uppercase tracking-[0.2em] text-secondary font-semibold mb-4 block">The Heritage Loom</span>
-<h1 class="text-5xl md:text-7xl font-serif text-primary leading-tight tracking-tight">Explore Our <br/>Exquisite Collections</h1>
+
+<!-- MOBILE NAV -->
+<div id="gn-mobile-nav">
+  <a href="index.html">Home</a>
+  <a href="shop.html">Collections</a>
+  <a href="index.html#about">About Us</a>
+  <a href="index.html#visit">Visit Us</a>
+  <a href="contact.html">Contact</a>
+  <div class="mobile-soc-row">
+    <a class="mobile-soc-btn" href="https://wa.me/919823894289" target="_blank">
+      <svg viewBox="0 0 24 24" style="width:16px;height:16px;fill:currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.123 1.528 5.849L.057 23.854a.5.5 0 00.605.605l6.005-1.471A11.954 11.954 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22a9.952 9.952 0 01-5.062-1.38l-.361-.215-3.734.914.915-3.734-.215-.361A9.952 9.952 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+      WhatsApp
+    </a>
+    <a class="mobile-soc-btn" href="https://maps.app.goo.gl/ef2P8LEWgLj3ya296" target="_blank">📍 Find Us</a>
+  </div>
 </div>
-<div class="text-on-surface-variant font-body text-lg max-w-xs italic border-l border-outline-variant/30 pl-6">
-                    A curated selection of timeless drapes, woven with the threads of tradition and elegance.
-                </div>
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <p class="page-hero-label">The Heritage Loom</p>
+  <h1 class="page-hero-title font-serif">Explore Our<br/>Exquisite Collections</h1>
+  <p class="page-hero-sub">A curated selection of timeless drapes, woven with the threads of tradition and elegance.</p>
 </div>
-</header>
-<!-- Catalog Section -->
-<section class="max-w-7xl mx-auto px-8 pb-24 flex flex-col lg:flex-row gap-12">
-<!-- Filters Sidebar -->
-<aside class="w-full lg:w-64 space-y-10">
-<div class="space-y-8">
-<!-- Material Filter -->
-<div>
-<h4 class="font-serif text-lg text-primary mb-4">Material</h4>
-<div class="flex flex-col space-y-2">
-<label class="flex items-center gap-3 cursor-pointer group">
-<input class="w-4 h-4 border-outline-variant text-primary focus:ring-primary-container rounded-sm" type="checkbox"/>
-<span class="text-on-surface-variant group-hover:text-primary transition-colors">Silk</span>
-</label>
-<label class="flex items-center gap-3 cursor-pointer group">
-<input class="w-4 h-4 border-outline-variant text-primary focus:ring-primary-container rounded-sm" type="checkbox"/>
-<span class="text-on-surface-variant group-hover:text-primary transition-colors">Cotton</span>
-</label>
-<label class="flex items-center gap-3 cursor-pointer group">
-<input class="w-4 h-4 border-outline-variant text-primary focus:ring-primary-container rounded-sm" type="checkbox"/>
-<span class="text-on-surface-variant group-hover:text-primary transition-colors">Chiffon</span>
-</label>
-</div>
-</div>
-<!-- Work Filter -->
-<div>
-<h4 class="font-serif text-lg text-primary mb-4">Work</h4>
-<div class="flex flex-col space-y-2">
-<label class="flex items-center gap-3 cursor-pointer group">
-<input class="w-4 h-4 border-outline-variant text-primary focus:ring-primary-container rounded-sm" type="checkbox"/>
-<span class="text-on-surface-variant group-hover:text-primary transition-colors">Zari Weave</span>
-</label>
-<label class="flex items-center gap-3 cursor-pointer group">
-<input class="w-4 h-4 border-outline-variant text-primary focus:ring-primary-container rounded-sm" type="checkbox"/>
-<span class="text-on-surface-variant group-hover:text-primary transition-colors">Embroidery</span>
-</label>
-<label class="flex items-center gap-3 cursor-pointer group">
-<input class="w-4 h-4 border-outline-variant text-primary focus:ring-primary-container rounded-sm" type="checkbox"/>
-<span class="text-on-surface-variant group-hover:text-primary transition-colors">Digital Print</span>
-</label>
-</div>
-</div>
-<!-- Color Filter -->
-<div>
-<h4 class="font-serif text-lg text-primary mb-4">Color</h4>
-<div class="flex flex-wrap gap-3">
-<button class="w-8 h-8 rounded-full bg-rose-900 ring-2 ring-offset-2 ring-transparent hover:ring-outline-variant transition-all"></button>
-<button class="w-8 h-8 rounded-full bg-amber-600 ring-2 ring-offset-2 ring-transparent hover:ring-outline-variant transition-all"></button>
-<button class="w-8 h-8 rounded-full bg-emerald-800 ring-2 ring-offset-2 ring-transparent hover:ring-outline-variant transition-all"></button>
-<button class="w-8 h-8 rounded-full bg-indigo-900 ring-2 ring-offset-2 ring-transparent hover:ring-outline-variant transition-all"></button>
-<button class="w-8 h-8 rounded-full bg-stone-100 border border-outline-variant ring-2 ring-offset-2 ring-transparent hover:ring-outline-variant transition-all"></button>
-</div>
-</div>
-<!-- Price Range -->
-<div>
-<h4 class="font-serif text-lg text-primary mb-4">Price Range</h4>
-<input class="w-full h-1 bg-surface-variant rounded-lg appearance-none cursor-pointer accent-primary-container" type="range"/>
-<div class="flex justify-between text-xs mt-2 text-on-surface-variant">
-<span>₹5,000</span>
-<span>₹1,50,000+</span>
-</div>
-</div>
-</div>
-</aside>
-<!-- Product Grid -->
-<div class="flex-1">
-<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-y-16 gap-x-8">
-<!-- Product 1 -->
-<div class="group relative">
-<div class="aspect-[3/4] overflow-hidden rounded-lg bg-surface-container-low mb-6">
-<a href="product-details.html">
-<img alt="Banarasi Saree" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Stunning close-up of a deep maroon Banarasi silk saree with intricate gold zari weave patterns and elegant floral motifs" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqWGbW00lUuQprFFRgYD54SXxpKThM5709I6ZgVIsJRYkEpU5bd4KAX9x0q8h8gn-y04hTbmjzjZb3aOglLT2wjT9dCDa50uLwqBCBrsfvU86V9rN4Olo3UKzCacp42zb7V8nrnvtSS14yZcdxCjpZuhV4vCeAfJpt3EZ2U42NicXt7klp8884FDuUSpnyR4tdD8SokD6h41cUIrdr6ydIoVojuJNgQwRyMwb_5M9REAT151wcjqwrGL3evUP28FEy6JlOMjBE2pE"/>
-</a>
-</div>
-<div class="space-y-1">
-<p class="label-md text-secondary font-semibold uppercase tracking-widest">Heritage Banarasi</p>
-<h3 class="font-serif text-2xl text-primary"><a href="product-details.html">Midnight Maroon Banarasi</a></h3>
-<p class="text-on-surface-variant text-sm mb-4">Handwoven pure silk with 24k gold plated zari work.</p>
-<a class="inline-flex items-center justify-between w-full mt-4 px-6 py-4 bg-primary-container text-on-primary font-body text-sm tracking-widest hover:bg-primary transition-all group/btn" href="https://wa.me/919823894289">
-<span>INQUIRE NOW</span>
-<span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
-</a>
-</div>
-</div>
-<!-- Product 2 -->
-<div class="group relative">
-<div class="aspect-[3/4] overflow-hidden rounded-lg bg-surface-container-low mb-6">
-<img alt="Golden Weave Saree" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Elegant cream silk saree featuring heavy golden zari embroidery borders draped gracefully over a vintage wooden armchair" src="https://lh3.googleusercontent.com/aida-public/AB6AXuADGT6b4TfPn3I74UnadaFAkmiP3V7tGjg4KBb897LIWjC3rhfe8HccSH_fpmEZm6Jl8qAubR6_t_NG2LYNsd73Z3EG-RdLbwx98ZpLCSTz0E4xMsz2-3B6O7rGTubHNYhS2AdjCyqj36tvlSnuf_rpy0-NEBPvezT9UFevdRB0JiL05IwkguV63MavQUonj6xiyGUnHia_YHEzFRRKQubxt7SalFuhSxHg-hTK2mSjBj-NOwVOKHY4nJ9zHbikKZEYaieohua79W4"/>
-</div>
-<div class="space-y-1">
-<p class="label-md text-secondary font-semibold uppercase tracking-widest">Signature Silk</p>
-<h3 class="font-serif text-2xl text-primary">Golden Weave Kanchipuram</h3>
-<p class="text-on-surface-variant text-sm mb-4">Classic temple borders in heritage gold silk.</p>
-<a class="inline-flex items-center justify-between w-full mt-4 px-6 py-4 bg-primary-container text-on-primary font-body text-sm tracking-widest hover:bg-primary transition-all group/btn" href="https://wa.me/919823894289">
-<span>INQUIRE NOW</span>
-<span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
-</a>
-</div>
-</div>
-<!-- Product 3 -->
-<div class="group relative">
-<div class="aspect-[3/4] overflow-hidden rounded-lg bg-surface-container-low mb-6">
-<img alt="Royal Emerald Saree" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Rich forest green emerald silk saree with delicate silver butta work across the body and a heavy pallu design" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBLZQ4sfp5UkBnteYZHK5_spfUmIb6p6rIlT7jHzgqyKQ9PKmjqVnO2_8MYBm6ogxvcQISSSBwczyjjGYTO_RmrEsIUt6Ui2akxtbqF1kADizlnlFqX7g6ourA_qCJDkOsmXKnDuur20nWtgaOPyC_-Sum5jlV5f1paKP6-uOPLLwaT3CxEe1PzWschIHco1igoMucLSXnsmoDNO_RErTxHiIu6imWKD3GXVcfVnM7hm5WQGJO5N1pQxfQK8vToODFiZ4wX5fVxXBk"/>
-</div>
-<div class="space-y-1">
-<p class="label-md text-secondary font-semibold uppercase tracking-widest">Royal Collection</p>
-<h3 class="font-serif text-2xl text-primary">Emerald Forest Patola</h3>
-<p class="text-on-surface-variant text-sm mb-4">Double ikkat geometric patterns in deep greens.</p>
-<a class="inline-flex items-center justify-between w-full mt-4 px-6 py-4 bg-primary-container text-on-primary font-body text-sm tracking-widest hover:bg-primary transition-all group/btn" href="https://wa.me/919823894289">
-<span>INQUIRE NOW</span>
-<span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
-</a>
-</div>
-</div>
-<!-- Product 4 -->
-<div class="group relative md:translate-y-8">
-<div class="aspect-[3/4] overflow-hidden rounded-lg bg-surface-container-low mb-6">
-<img alt="Peach Chiffon Saree" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Lightweight peach chiffon saree with hand-painted floral art and delicate sequin embroidery along the borders" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBoIKQvNbtWD8aBzqE72YdxdjQb_46B0Mpuf_4vFM0ANw97ihmfIBa0u6ADuj_467mIDJJjd0Wi_r0wM25Tv37j6lBWc4DwxSvzcDMpoU4-YwVAW04b6_WjWkvGwGTSWpxgYPIzqPT1FHCn4VragC-7gVyVb6AQPQx3AV1Jn5DuhPet2fE9Y2XvaICYmvR3im5YJfjrAgdLjEUpQsDUlEIWLeQ3TSt8kP_gSXSqOQkSOhSYXzxhm3dlLJhbbM0R9Nz29ckJLL-wFik"/>
-</div>
-<div class="space-y-1">
-<p class="label-md text-secondary font-semibold uppercase tracking-widest">Contemporary Drapes</p>
-<h3 class="font-serif text-2xl text-primary">Ethereal Peach Chiffon</h3>
-<p class="text-on-surface-variant text-sm mb-4">Hand-painted floral motifs on sheer pure chiffon.</p>
-<a class="inline-flex items-center justify-between w-full mt-4 px-6 py-4 bg-primary-container text-on-primary font-body text-sm tracking-widest hover:bg-primary transition-all group/btn" href="https://wa.me/919823894289">
-<span>INQUIRE NOW</span>
-<span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
-</a>
-</div>
-</div>
-<!-- Product 5 -->
-<div class="group relative md:translate-y-8">
-<div class="aspect-[3/4] overflow-hidden rounded-lg bg-surface-container-low mb-6">
-<img alt="Indigo Cotton Saree" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Deep indigo blue cotton saree with traditional block print designs and a rustic earthy texture shot in natural daylight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_rgDsKspOlOwziPHgXU_26LgR5RIxIljvHlMeDlWzdSSDZeqz0pTD8HO_DD3Zkc_Py7rvAPJ3Bqg8g58ZR2gf4uQYtuR7MZlP3ziErBg7tx2uVLbRmISIEIke3kIQBJKA3JRgNazNQC-WaQP7fzeMVAbE26xojVWrNs4Fl0YtJm1UsEJSOpR2v8iUCuZldoN0X4RyEM-JPJvN7tFyZGF8rn6f_q1VJ_NFHic5JHFfmhuFdZ5di9S3Hs6jPwxLPdyqwsQb84ieFfk"/>
-</div>
-<div class="space-y-1">
-<p class="label-md text-secondary font-semibold uppercase tracking-widest">Earth Loom</p>
-<h3 class="font-serif text-2xl text-primary">Indigo Block Print</h3>
-<p class="text-on-surface-variant text-sm mb-4">Artisanal block printed mulmul cotton for daily elegance.</p>
-<a class="inline-flex items-center justify-between w-full mt-4 px-6 py-4 bg-primary-container text-on-primary font-body text-sm tracking-widest hover:bg-primary transition-all group/btn" href="https://wa.me/919823894289">
-<span>INQUIRE NOW</span>
-<span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
-</a>
-</div>
-</div>
-<!-- Product 6 -->
-<div class="group relative md:translate-y-8">
-<div class="aspect-[3/4] overflow-hidden rounded-lg bg-surface-container-low mb-6">
-<img alt="Sunset Organza Saree" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Translucent sunset orange organza saree with delicate embroidery work and a shimmering metallic finish" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDI3-mdPAnXv1pdiltDHFWPjToEQ9ycxsw4WxGkau5mQtTfHifryqjNTbIpD5tlkSr9YwI6iOHRS4kyUhaGuL7uiiYJW2dcaOT5FHGvYaUnQFEsjFSaUeSpzPHINJ_4XFDCD66EIfs6GMDydegEfdY7XiBf-JUTAcEjkkRn-t7qpQvwyZSvgZs-jGoVG-eZp10OPv-d0IiO4fUqkf_hzqRPs_8CUiwe9x_0eYnIzVPWPMBcZS8tUEv1kiC3pwmtg-Ea1m3D-j8aL2w"/>
-</div>
-<div class="space-y-1">
-<p class="label-md text-secondary font-semibold uppercase tracking-widest">Trendsetter</p>
-<h3 class="font-serif text-2xl text-primary">Sunset Ombre Organza</h3>
-<p class="text-on-surface-variant text-sm mb-4">Dual-tone translucent organza with metallic threadwork.</p>
-<a class="inline-flex items-center justify-between w-full mt-4 px-6 py-4 bg-primary-container text-on-primary font-body text-sm tracking-widest hover:bg-primary transition-all group/btn" href="https://wa.me/919823894289">
-<span>INQUIRE NOW</span>
-<span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
-</a>
-</div>
-</div>
-</div>
-<!-- Pagination -->
-<div class="mt-32 flex justify-center items-center gap-4">
-<button class="w-10 h-10 flex items-center justify-center rounded-sm border border-outline-variant hover:bg-primary-container hover:text-on-primary transition-all">
-<span class="material-symbols-outlined">chevron_left</span>
-</button>
-<span class="text-primary font-serif">1</span>
-<button class="w-10 h-10 flex items-center justify-center rounded-sm border border-outline-variant text-on-surface-variant hover:border-primary transition-all">2</button>
-<button class="w-10 h-10 flex items-center justify-center rounded-sm border border-outline-variant text-on-surface-variant hover:border-primary transition-all">3</button>
-<button class="w-10 h-10 flex items-center justify-center rounded-sm border border-outline-variant hover:bg-primary-container hover:text-on-primary transition-all">
-<span class="material-symbols-outlined">chevron_right</span>
-</button>
-</div>
-</div>
-</section>
-<!-- Aesthetic Divider -->
-<div class="h-px w-full bg-gradient-to-r from-transparent via-outline-variant/30 to-transparent my-12"></div>
-<!-- Footer -->
-<footer class="bg-rose-50 dark:bg-stone-950 text-rose-900 dark:text-rose-100 font-sans text-sm tracking-wide w-full border-t border-rose-100 dark:border-stone-800 grid grid-cols-1 md:grid-cols-3 gap-8 px-12 py-16 w-full tonal-shift-bg flat no shadows">
-<div class="space-y-6">
-<div class="text-xl font-serif text-rose-900 dark:text-rose-100">GauriNandan Silk</div>
-<p class="max-w-xs text-rose-800/60 leading-relaxed italic">Preserving the timeless art of hand-weaving, one masterpiece at a time.</p>
-<div class="flex gap-4">
-<span class="material-symbols-outlined cursor-pointer hover:text-rose-900">social_leaderboard</span>
-<span class="material-symbols-outlined cursor-pointer hover:text-rose-900">camera</span>
-<span class="material-symbols-outlined cursor-pointer hover:text-rose-900">share</span>
-</div>
-</div>
-<div class="space-y-4">
-<h5 class="font-bold text-rose-900">Our Studio</h5>
-<p class="text-rose-800/60 leading-loose">
-                    Sr No 32/10, Sneha Niwas, Nilgiri Chowk Road, behind Trimurti Chowk, Shriram Nagar, Pune, Maharashtra 411046
-                </p>
-<p class="text-rose-800/60">gaurinandan.vedstack.in</p>
-</div>
-<div class="space-y-4">
-<h5 class="font-bold text-rose-900">Quick Links</h5>
-<ul class="space-y-2">
-<li><a class="text-rose-800/60 hover:text-rose-900 hover:underline decoration-amber-500/50 transition-colors duration-200" href="#">Shipping Policy</a></li>
-<li><a class="text-rose-800/60 hover:text-rose-900 hover:underline decoration-amber-500/50 transition-colors duration-200" href="#">Return &amp; Exchange</a></li>
-<li><a class="text-rose-800/60 hover:text-rose-900 hover:underline decoration-amber-500/50 transition-colors duration-200" href="#">Wholesale Inquiries</a></li>
-<li><a class="text-rose-800/60 hover:text-rose-900 hover:underline decoration-amber-500/50 transition-colors duration-200" href="#">Privacy Policy</a></li>
-</ul>
-</div>
-<div class="col-span-1 md:col-span-3 pt-12 border-t border-rose-100/50 flex flex-col md:flex-row justify-between items-center gap-4">
-<p class="text-rose-800/40 text-xs">© 2024 GauriNandan Silk. All rights reserved.</p>
-<div class="flex items-center gap-2">
-<span class="material-symbols-outlined text-rose-300 text-base" data-icon="verified_user">verified_user</span>
-<span class="text-rose-800/40 text-xs uppercase tracking-tighter">Authentic Silk Certified</span>
-</div>
-</div>
-</footer>
+
+<!-- MAIN -->
+<main>
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="index.html">Home</a>
+      <svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
+      <span>Collections</span>
+    </div>
+    <div class="shop-layout">
+
+      <!-- SIDEBAR FILTERS -->
+      <aside class="filter-sidebar">
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:22px;">
+          <h3 class="font-serif" style="font-size:1.2rem;color:var(--maroon);">Refine</h3>
+          <button style="font-size:0.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);cursor:pointer;background:none;border:none;">Clear All</button>
+        </div>
+
+        <div class="filter-group">
+          <h4>Saree Type</h4>
+          <label class="filter-check"><input type="checkbox" checked/><span>Paithani</span></label>
+          <label class="filter-check"><input type="checkbox"/><span>Banarasi</span></label>
+          <label class="filter-check"><input type="checkbox"/><span>Kanjivaram</span></label>
+          <label class="filter-check"><input type="checkbox"/><span>Patola</span></label>
+          <label class="filter-check"><input type="checkbox"/><span>Chiffon</span></label>
+          <label class="filter-check"><input type="checkbox"/><span>Organza</span></label>
+        </div>
+
+        <div class="filter-group">
+          <h4>Work / Craft</h4>
+          <label class="filter-check"><input type="checkbox"/><span>Zari Weave</span></label>
+          <label class="filter-check"><input type="checkbox"/><span>Hand Embroidery</span></label>
+          <label class="filter-check"><input type="checkbox"/><span>Block Print</span></label>
+          <label class="filter-check"><input type="checkbox"/><span>Digital Print</span></label>
+        </div>
+
+        <div class="filter-group">
+          <h4>Occasion</h4>
+          <label class="filter-check"><input type="checkbox"/><span>Bridal</span></label>
+          <label class="filter-check"><input type="checkbox"/><span>Festive</span></label>
+          <label class="filter-check"><input type="checkbox"/><span>Office Wear</span></label>
+          <label class="filter-check"><input type="checkbox"/><span>Casual</span></label>
+        </div>
+
+        <div class="filter-group">
+          <h4>Color</h4>
+          <div class="color-dots">
+            <button class="color-dot active" style="background:#6B0F1A" title="Maroon"></button>
+            <button class="color-dot" style="background:#C8972B" title="Gold"></button>
+            <button class="color-dot" style="background:#1A4D2E" title="Green"></button>
+            <button class="color-dot" style="background:#1a1a5e" title="Navy"></button>
+            <button class="color-dot" style="background:#f5e6c0;border:1px solid #ccc" title="Cream"></button>
+            <button class="color-dot" style="background:#e83e8c" title="Pink"></button>
+            <button class="color-dot" style="background:#e87722" title="Orange"></button>
+            <button class="color-dot" style="background:#1a1a1a" title="Black"></button>
+          </div>
+        </div>
+
+        <div class="filter-group">
+          <h4>Price Range</h4>
+          <input class="price-slider" type="range" min="5000" max="150000" value="75000"/>
+          <div class="price-labels"><span>₹5,000</span><span>₹1,50,000+</span></div>
+        </div>
+
+        <a href="https://wa.me/919823894289?text=I%20need%20help%20finding%20a%20saree" target="_blank" class="btn btn-maroon" style="width:100%;justify-content:center;margin-top:16px;">
+          💬 Personal Styling Help
+        </a>
+      </aside>
+
+      <!-- PRODUCT GRID -->
+      <div>
+        <div class="shop-toolbar">
+          <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+            <button class="mobile-filter-btn" onclick="document.querySelector('.filter-sidebar').classList.toggle('open')">
+              <svg viewBox="0 0 24 24"><path d="M22 3H2l8 9.46V19l4 2v-8.54L22 3z"/></svg>
+              Filters
+            </button>
+            <div class="shop-count">Showing <strong>12</strong> of 48 pieces</div>
+          </div>
+          <select class="sort-select">
+            <option>Featured</option>
+            <option>Newest Arrivals</option>
+            <option>Most Popular</option>
+            <option>Name: A–Z</option>
+          </select>
+        </div>
+
+        <div class="active-filters">
+          <div class="filter-tag">Paithani <button>✕</button></div>
+          <div class="filter-tag">Maroon <button>✕</button></div>
+        </div>
+
+        <div class="shop-grid">
+          <!-- Products 1-12 -->
+          <div class="product-card" data-reveal style="transition-delay:.04s">
+            <div class="product-img-wrap">
+              <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqWGbW00lUuQprFFRgYD54SXxpKThM5709I6ZgVIsJRYkEpU5bd4KAX9x0q8h8gn-y04hTbmjzjZb3aOglLT2wjT9dCDa50uLwqBCBrsfvU86V9rN4Olo3UKzCacp42zb7V8nrnvtSS14yZcdxCjpZuhV4vCeAfJpt3EZ2U42NicXt7klp8884FDuUSpnyR4tdD8SokD6h41cUIrdr6ydIoVojuJNgQwRyMwb_5M9REAT151wcjqwrGL3evUP28FEy6JlOMjBE2pE" alt="Midnight Maroon Banarasi"/>
+              <span class="product-badge">New Arrival</span>
+              <button class="product-wish" aria-label="Wishlist"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></button>
+            </div>
+            <div class="product-info">
+              <p class="product-cat">Heritage Banarasi</p>
+              <h3 class="product-name font-serif"><a href="product-details.html">Midnight Maroon Banarasi</a></h3>
+              <p class="product-desc">Handwoven pure silk with 24k gold plated zari work.</p>
+              <a href="https://wa.me/919823894289?text=Interested%20in%20Midnight%20Maroon%20Banarasi" target="_blank" class="product-inquire">Inquire via WhatsApp <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+            </div>
+          </div>
+
+          <div class="product-card" data-reveal style="transition-delay:.08s">
+            <div class="product-img-wrap">
+              <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuC67OWgLei8BUUNTeQO-XBYXyDOogoJwSuKrr9ylGNPgfY_0WHeVShF64sjjgRB8N9d4NpIUaktGdUha1UUVRDMOGTQb_3F8f9dZL95-RVYaMwCq0sEF1bEi7AqsqB2qn3Nk_HC0d84WwDqtzORTGcrT6yubjYDirb4SwnPmBhnnqgfkIp9omi4-w2r-bJPzDULb6_gIkGk0N6V6QSBVBgt40iPlYdWmkBYJ0T1bqIVllXM5zb3asxw2lwf-9Q0_VJY5Sgp0_c-Q8g" alt="Paithani Heritage"/>
+              <span class="product-badge">Bestseller</span>
+              <button class="product-wish" aria-label="Wishlist"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></button>
+            </div>
+            <div class="product-info">
+              <p class="product-cat">The Royal Choice</p>
+              <h3 class="product-name font-serif"><a href="product-details.html">Paithani Heritage Saree</a></h3>
+              <p class="product-desc">Traditional peacock motifs with pure gold zari borders.</p>
+              <a href="https://wa.me/919823894289?text=Interested%20in%20Paithani%20Heritage%20Saree" target="_blank" class="product-inquire">Inquire via WhatsApp <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+            </div>
+          </div>
+
+          <div class="product-card" data-reveal style="transition-delay:.12s">
+            <div class="product-img-wrap">
+              <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBLZQ4sfp5UkBnteYZHK5_spfUmIb6p6rIlT7jHzgqyKQ9PKmjqVnO2_8MYBm6ogxvcQISSSBwczyjjGYTO_RmrEsIUt6Ui2akxtbqF1kADizlnlFqX7g6ourA_qCJDkOsmXKnDuur20nWtgaOPyC_-Sum5jlV5f1paKP6-uOPLLwaT3CxEe1PzWschIHco1igoMucLSXnsmoDNO_RErTxHiIu6imWKD3GXVcfVnM7hm5WQGJO5N1pQxfQK8vToODFiZ4wX5fVxXBk" alt="Emerald Patola"/>
+              <span class="product-badge gold">Exclusive</span>
+              <button class="product-wish" aria-label="Wishlist"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></button>
+            </div>
+            <div class="product-info">
+              <p class="product-cat">Royal Collection</p>
+              <h3 class="product-name font-serif"><a href="product-details.html">Emerald Forest Patola</a></h3>
+              <p class="product-desc">Double ikkat geometric patterns in deep forest greens.</p>
+              <a href="https://wa.me/919823894289?text=Interested%20in%20Emerald%20Forest%20Patola" target="_blank" class="product-inquire">Inquire via WhatsApp <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+            </div>
+          </div>
+
+          <div class="product-card" data-reveal style="transition-delay:.04s">
+            <div class="product-img-wrap">
+              <img src="img/custom/kanjivaram.png" alt="Golden Kanjivaram"/>
+              <button class="product-wish" aria-label="Wishlist"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></button>
+            </div>
+            <div class="product-info">
+              <p class="product-cat">Signature Silk</p>
+              <h3 class="product-name font-serif"><a href="product-details.html">Golden Kanjivaram</a></h3>
+              <p class="product-desc">Temple border designs in heritage pure Kanjivaram silk.</p>
+              <a href="https://wa.me/919823894289?text=Interested%20in%20Golden%20Kanjivaram" target="_blank" class="product-inquire">Inquire via WhatsApp <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+            </div>
+          </div>
+
+          <div class="product-card" data-reveal style="transition-delay:.08s">
+            <div class="product-img-wrap">
+              <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBoIKQvNbtWD8aBzqE72YdxdjQb_46B0Mpuf_4vFM0ANw97ihmfIBa0u6ADuj_467mIDJJjd0Wi_r0wM25Tv37j6lBWc4DwxSvzcDMpoU4-YwVAW04b6_WjWkvGwGTSWpxgYPIzqPT1FHCn4VragC-7gVyVb6AQPQx3AV1Jn5DuhPet2fE9Y2XvaICYmvR3im5YJfjrAgdLjEUpQsDUlEIWLeQ3TSt8kP_gSXSqOQkSOhSYXzxhm3dlLJhbbM0R9Nz29ckJLL-wFik" alt="Ethereal Chiffon"/>
+              <button class="product-wish" aria-label="Wishlist"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></button>
+            </div>
+            <div class="product-info">
+              <p class="product-cat">Contemporary Drapes</p>
+              <h3 class="product-name font-serif"><a href="product-details.html">Ethereal Peach Chiffon</a></h3>
+              <p class="product-desc">Hand-painted floral motifs on sheer pure chiffon.</p>
+              <a href="https://wa.me/919823894289?text=Interested%20in%20Ethereal%20Peach%20Chiffon" target="_blank" class="product-inquire">Inquire via WhatsApp <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+            </div>
+          </div>
+
+          <div class="product-card" data-reveal style="transition-delay:.12s">
+            <div class="product-img-wrap">
+              <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuADGT6b4TfPn3I74UnadaFAkmiP3V7tGjg4KBb897LIWjC3rhfe8HccSH_fpmEZm6Jl8qAubR6_t_NG2LYNsd73Z3EG-RdLbwx98ZpLCSTz0E4xMsz2-3B6O7rGTubHNYhS2AdjCyqj36tvlSnuf_rpy0-NEBPvezT9UFevdRB0JiL05IwkguV63MavQUonj6xiyGUnHia_YHEzFRRKQubxt7SalFuhSxHg-hTK2mSjBj-NOwVOKHY4nJ9zHbikKZEYaieohua79W4" alt="Bridal Silk"/>
+              <span class="product-badge">Bridal</span>
+              <button class="product-wish" aria-label="Wishlist"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></button>
+            </div>
+            <div class="product-info">
+              <p class="product-cat">Bridal Collection</p>
+              <h3 class="product-name font-serif"><a href="product-details.html">Royal Bridal Special</a></h3>
+              <p class="product-desc">Premium heavy silk with intricate bridal zari embroidery.</p>
+              <a href="https://wa.me/919823894289?text=Interested%20in%20Royal%20Bridal%20Special" target="_blank" class="product-inquire">Inquire via WhatsApp <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+            </div>
+          </div>
+
+          <div class="product-card" data-reveal style="transition-delay:.04s">
+            <div class="product-img-wrap">
+              <img src="img/custom/banarasi.png" alt="Heritage Banarasi"/>
+              <span class="product-badge gold">Limited</span>
+              <button class="product-wish" aria-label="Wishlist"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></button>
+            </div>
+            <div class="product-info">
+              <p class="product-cat">Heritage Series</p>
+              <h3 class="product-name font-serif"><a href="product-details.html">Classic Heritage Banarasi</a></h3>
+              <p class="product-desc">Antique gold zari on deep jewel-tone pure silk.</p>
+              <a href="https://wa.me/919823894289?text=Interested%20in%20Classic%20Heritage%20Banarasi" target="_blank" class="product-inquire">Inquire via WhatsApp <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+            </div>
+          </div>
+
+          <div class="product-card" data-reveal style="transition-delay:.08s">
+            <div class="product-img-wrap">
+              <img src="img/custom/paithani.png" alt="Paithani"/>
+              <button class="product-wish" aria-label="Wishlist"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></button>
+            </div>
+            <div class="product-info">
+              <p class="product-cat">Raj Gharana</p>
+              <h3 class="product-name font-serif"><a href="product-details.html">Regal Paithani Masterpiece</a></h3>
+              <p class="product-desc">Signature peacock border with premium silk finish.</p>
+              <a href="https://wa.me/919823894289?text=Interested%20in%20Regal%20Paithani%20Masterpiece" target="_blank" class="product-inquire">Inquire via WhatsApp <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+            </div>
+          </div>
+
+          <div class="product-card" data-reveal style="transition-delay:.12s">
+            <div class="product-img-wrap">
+              <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAi8gRWbkEvUUoGTxY68Gobfs7NjSg1dUoLGZx-N1AYv2GnJEp0PiPFxLHTF0inTThiCkJCu9q6QnQLckAANr6I3qeMNFUCWXel3MEnjxMMz7-R1LjjdN2zg54twwV6rfaH2Q6ttwbQ0MYcITwnHqfpfLSUXuBboidyCb7VjS6IsiQmAFMe3VxmpvhaDUkPiqfuRdprE3XjbECoL7oHNXvKrLk2qlI0HJqsypYBheXww8ebPSjQsIEhFyqP12cboxJ6T7UBNnSG7JQ" alt="Minimalist Silk"/>
+              <button class="product-wish" aria-label="Wishlist"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></button>
+            </div>
+            <div class="product-info">
+              <p class="product-cat">Contemporary Grace</p>
+              <h3 class="product-name font-serif"><a href="product-details.html">Modern Minimalist Silk</a></h3>
+              <p class="product-desc">Clean, understated elegance for the modern woman.</p>
+              <a href="https://wa.me/919823894289?text=Interested%20in%20Modern%20Minimalist%20Silk" target="_blank" class="product-inquire">Inquire via WhatsApp <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+            </div>
+          </div>
+
+          <div class="product-card" data-reveal style="transition-delay:.04s">
+            <div class="product-img-wrap">
+              <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCe7a9kUiVfhjh_fJ65yUZfoKfhJdNeIujCv6zcjbHr35j1ymh_bjEApkJsukb0IRDluzvLaHpg8jbxmlHt0pS1XSXOM6nPqZEoW1hYU1sohV6aKG5ZZ6rH1hOHilLbxhzTDbotadJ3SGQtu5X3V4U_Sq7Wa6R9Fosi6oPxuHedQDoGIkZbavbfniP6lwV3RdRXHsgHizkMzJ2LCkj8AkpQRZ-l7Yoqtbhuvz0UHvlVMX0VbCE5uXMzpzYcwjWGfjjQavUFmtZGoy8" alt="Opulent Banarasi"/>
+              <span class="product-badge">New</span>
+              <button class="product-wish" aria-label="Wishlist"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></button>
+            </div>
+            <div class="product-info">
+              <p class="product-cat">Majestic Grandeur</p>
+              <h3 class="product-name font-serif"><a href="product-details.html">Banarasi Opulence</a></h3>
+              <p class="product-desc">Heavy gold brocade with intricate floral motifs for weddings.</p>
+              <a href="https://wa.me/919823894289?text=Interested%20in%20Banarasi%20Opulence" target="_blank" class="product-inquire">Inquire via WhatsApp <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+            </div>
+          </div>
+
+          <div class="product-card" data-reveal style="transition-delay:.08s">
+            <div class="product-img-wrap">
+              <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZSXiA2G0CUylhN9aBxidRcagsAFsHpSnTWNL4uye2yGu9D2iT5IgJLu3xK6-eH0IZIQFwsp0Puz0AOOwhpqXXhbff9PFmoyEDx-cNedDq_unjaEZWOLm2upUfcyvXWruCe4MOsaH1uzpd1NAuJ0llrAae4jC8ClfdEw2yAM92l52G-_tJXqz5ht66cNat4-jru0CorhXUIUNlFru2TGmj5Z70luKzd396QwFV587B-pLXVmF3gB15n3RFS2H8aFQ9X0er8zVcRU8" alt="Festival Silk"/>
+              <button class="product-wish" aria-label="Wishlist"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></button>
+            </div>
+            <div class="product-info">
+              <p class="product-cat">Festival Specials</p>
+              <h3 class="product-name font-serif"><a href="product-details.html">Festive Silk Masterpiece</a></h3>
+              <p class="product-desc">Rich festive colours with gold zari on premium silk.</p>
+              <a href="https://wa.me/919823894289?text=Interested%20in%20Festive%20Silk%20Masterpiece" target="_blank" class="product-inquire">Inquire via WhatsApp <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+            </div>
+          </div>
+
+          <div class="product-card" data-reveal style="transition-delay:.12s">
+            <div class="product-img-wrap">
+              <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDI3-mdPAnXv1pdiltDHFWPjToEQ9ycxsw4WxGkau5mQtTfHifryqjNTbIpD5tlkSr9YwI6iOHRS4kyUhaGuL7uiiYJW2dcaOT5FHGvYaUnQFEsjFSaUeSpzPHINJ_4XFDCD66EIfs6GMDydegEfdY7XiBf-JUTAcEjkkRn-t7qpQvwyZSvgZs-jGoVG-eZp10OPv-d0IiO4fUqkf_hzqRPs_8CUiwe9x_0eYnIzVPWPMBcZS8tUEv1kiC3pwmtg-Ea1m3D-j8aL2w" alt="Sunset Organza"/>
+              <span class="product-badge gold">Trendsetter</span>
+              <button class="product-wish" aria-label="Wishlist"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></button>
+            </div>
+            <div class="product-info">
+              <p class="product-cat">Trendsetter</p>
+              <h3 class="product-name font-serif"><a href="product-details.html">Sunset Ombré Organza</a></h3>
+              <p class="product-desc">Dual-tone translucent organza with metallic threadwork.</p>
+              <a href="https://wa.me/919823894289?text=Interested%20in%20Sunset%20Ombr%C3%A9%20Organza" target="_blank" class="product-inquire">Inquire via WhatsApp <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+            </div>
+          </div>
+        </div><!-- /shop-grid -->
+
+        <!-- PAGINATION -->
+        <div class="pagination">
+          <button class="page-btn"><svg viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></svg></button>
+          <button class="page-btn active">1</button>
+          <button class="page-btn">2</button>
+          <button class="page-btn">3</button>
+          <button class="page-btn">4</button>
+          <button class="page-btn"><svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg></button>
+        </div>
+      </div><!-- /product area -->
+    </div><!-- /shop-layout -->
+  </div><!-- /container -->
 </main>
-</body></html>
+
+<!-- FOOTER -->
+<footer id="gn-footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <img src="logo.png" alt="GauriNandan Silk"/>
+      <p>Curating India's heritage weaves for the modern woman who values tradition and elegance in equal measure.</p>
+      <div class="footer-soc-row">
+        <a class="footer-soc-icon" href="https://www.facebook.com/share/14ZEr9QbPwk/" target="_blank"><svg viewBox="0 0 24 24"><path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z"/></svg></a>
+        <a class="footer-soc-icon" href="https://www.instagram.com/gaurinandan_silk?igsh=MXVwcW5zNHdubG9kYg==" target="_blank"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4s1.791-4 4-4 4 1.791 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+        <a class="footer-soc-icon" href="https://wa.me/919823894289" target="_blank"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.123 1.528 5.849L.057 23.854a.5.5 0 00.605.605l6.005-1.471A11.954 11.954 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22a9.952 9.952 0 01-5.062-1.38l-.361-.215-3.734.914.915-3.734-.215-.361A9.952 9.952 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg></a>
+        <a class="footer-soc-icon" href="https://maps.app.goo.gl/ef2P8LEWgLj3ya296" target="_blank"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg></a>
+      </div>
+    </div>
+    <div class="footer-col"><h5>Quick Links</h5><ul><li><a href="index.html">Home</a></li><li><a href="shop.html">Collections</a></li><li><a href="contact.html">Contact</a></li><li><a href="#">Privacy Policy</a></li></ul></div>
+    <div class="footer-col"><h5>Collections</h5><ul><li><a href="shop.html">Paithani Sarees</a></li><li><a href="shop.html">Banarasi Silk</a></li><li><a href="shop.html">Kanjivaram</a></li><li><a href="shop.html">Bridal Collection</a></li><li><a href="shop.html">Raj Gharana</a></li></ul></div>
+    <div class="footer-col"><h5>Contact</h5><ul><li><a href="https://maps.app.goo.gl/ef2P8LEWgLj3ya296" target="_blank">Shriram Nagar, Pune 411046</a></li><li><a href="tel:+919823894289">+91 98238 94289</a></li><li><a href="https://wa.me/919823894289" target="_blank">WhatsApp Us</a></li></ul></div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2024 GauriNandan Silk. All rights reserved.</p>
+    <div class="footer-certified"><svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>Authentic Silk Certified</div>
+  </div>
+</footer>
+
+<!-- CHATBOT -->
+<div id="gn-chatbot">
+  <div id="gn-chat-window" role="dialog">
+    <div class="chat-header">
+      <div class="chat-avatar"><img src="logo.png" alt="GauriNandan"/></div>
+      <div class="chat-hdr-info"><div class="chat-hdr-name">GauriNandan Silk</div><div class="chat-hdr-status">Online · Here to help</div></div>
+      <button class="chat-close-btn" id="gn-chat-close">✕</button>
+    </div>
+    <div class="chat-msgs" id="gn-chat-msgs"></div>
+    <div class="chat-quick">
+      <button class="chat-quick-btn" data-msg="WhatsApp Order">💬 WhatsApp</button>
+      <button class="chat-quick-btn" data-msg="Store Location">📍 Location</button>
+      <button class="chat-quick-btn" data-msg="Bridal Sarees">💍 Bridal</button>
+      <button class="chat-quick-btn" data-msg="Price Inquiry">💰 Pricing</button>
+      <button class="chat-quick-btn" data-msg="Follow on Instagram">📸 Instagram</button>
+    </div>
+    <div class="chat-input-row">
+      <input class="chat-text-input" id="gn-chat-input" type="text" placeholder="Ask about sarees…" autocomplete="off"/>
+      <button class="chat-send-btn" id="gn-chat-send"><svg viewBox="0 0 24 24"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg></button>
+    </div>
+  </div>
+  <button id="gn-chat-toggle"><div id="gn-chat-badge"></div><svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"/></svg></button>
+</div>
+
+<script src="gn-shared.js"></script>
+</body>
+</html>

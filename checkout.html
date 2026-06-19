@@ -1,186 +1,345 @@
 <!DOCTYPE html>
-
-<html class="light" lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Finalize Your Selection | GauriNandan Silk Inquiry</title>
-<!-- Fonts & Icons -->
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&amp;family=Manrope:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<script id="tailwind-config">
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            "colors": {
-                    "primary-fixed": "#ffdadc",
-                    "surface-container-low": "#fff1ec",
-                    "primary-fixed-dim": "#ffb2b9",
-                    "on-secondary-fixed-variant": "#5c4200",
-                    "surface-dim": "#ffd0bd",
-                    "inverse-primary": "#ffb2b9",
-                    "surface": "#fff8f6",
-                    "on-primary-fixed-variant": "#792d39",
-                    "tertiary-fixed": "#c8eadf",
-                    "tertiary-fixed-dim": "#adcec3",
-                    "surface-container-lowest": "#ffffff",
-                    "background": "#fff8f6",
-                    "on-error": "#ffffff",
-                    "on-primary": "#ffffff",
-                    "on-background": "#2e1509",
-                    "tertiary-container": "#0a2a23",
-                    "on-surface-variant": "#544244",
-                    "on-primary-container": "#ce707b",
-                    "inverse-surface": "#47291b",
-                    "inverse-on-surface": "#ffede7",
-                    "secondary-fixed": "#ffdea2",
-                    "on-secondary-fixed": "#261900",
-                    "on-primary-fixed": "#3f0110",
-                    "surface-variant": "#ffdbcd",
-                    "primary": "#2a0008",
-                    "outline-variant": "#d9c1c2",
-                    "on-secondary-container": "#785a18",
-                    "on-tertiary": "#ffffff",
-                    "secondary-fixed-dim": "#e8c175",
-                    "secondary": "#775a17",
-                    "on-surface": "#2e1509",
-                    "surface-tint": "#964450",
-                    "error": "#ba1a1a",
-                    "surface-bright": "#fff8f6",
-                    "on-tertiary-container": "#739389",
-                    "error-container": "#ffdad6",
-                    "on-error-container": "#93000a",
-                    "outline": "#877273",
-                    "surface-container-highest": "#ffdbcd",
-                    "on-tertiary-fixed": "#01201a",
-                    "surface-container-high": "#ffe2d7",
-                    "surface-container": "#ffe9e2",
-                    "on-tertiary-fixed-variant": "#2e4c45",
-                    "on-secondary": "#ffffff",
-                    "secondary-container": "#fdd586",
-                    "tertiary": "#00130f",
-                    "primary-container": "#4c0a19"
-            },
-            "borderRadius": {
-                    "DEFAULT": "0.125rem",
-                    "lg": "0.25rem",
-                    "xl": "0.5rem",
-                    "full": "0.75rem"
-            },
-            "fontFamily": {
-                    "headline": ["Noto Serif"],
-                    "body": ["Manrope"],
-                    "label": ["Manrope"]
-            }
-          },
-        },
-      }
-    </script>
-<style>body {
-    font-family: "Manrope", sans-serif;
-    background-color: #fff8f6;
-    color: #2e1509
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Complete Inquiry | GauriNandan Silk Pune</title>
+  <meta name="description" content="Complete your saree inquiry with GauriNandan Silk. We'll confirm via WhatsApp. +91 98238 94289."/>
+  <link rel="icon" href="logo.png" type="image/png"/>
+  <link rel="stylesheet" href="gn-shared.css"/>
+  <style>
+    .checkout-section { padding: 48px 0 80px; }
+    .checkout-grid { display: grid; grid-template-columns: 1fr 360px; gap: 40px; align-items: start; }
+    /* STEPS */
+    .steps-bar {
+      display: flex; align-items: center; gap: 0;
+      margin-bottom: 40px; overflow: hidden;
     }
-.font-serif {
-    font-family: "Noto Serif", serif
-    }</style>
+    .step-item {
+      display: flex; align-items: center; gap: 10px; flex: 1;
+      padding: 14px 20px; background: var(--cream-dark);
+      font-size: .78rem; font-weight: 700; color: var(--text-light);
+      letter-spacing: .08em; text-transform: uppercase; position: relative;
+    }
+    .step-item.active { background: var(--maroon); color: #fff; }
+    .step-item.done { background: var(--maroon-deep); color: var(--gold-light); }
+    .step-num {
+      width: 26px; height: 26px; border-radius: 50%;
+      background: rgba(255,255,255,.25); display: flex; align-items: center; justify-content: center;
+      font-size: .72rem; flex-shrink: 0;
+    }
+    .step-item.active .step-num, .step-item.done .step-num { background: rgba(255,255,255,.2); }
+    /* FORM CARD */
+    .co-card {
+      background: #fff; border: 1px solid var(--border); border-radius: var(--radius); padding: 32px;
+      margin-bottom: 20px;
+    }
+    .co-card h3 { font-family:'Playfair Display',serif; font-size:1.2rem; color:var(--maroon); margin-bottom:20px; display:flex; align-items:center; gap:10px; }
+    .co-card h3 svg { width:20px; height:20px; fill:none; stroke:var(--gold); stroke-width:2; }
+    .form-row-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; }
+    /* ORDER SUMMARY */
+    .co-summary {
+      background: #fff; border: 1px solid var(--border); border-radius: var(--radius);
+      padding: 26px; position: sticky; top: 90px;
+    }
+    .co-summary h3 { font-family:'Playfair Display',serif; font-size:1.1rem; color:var(--maroon); margin-bottom:16px; }
+    .co-item { display:flex; gap:12px; align-items:center; margin-bottom:14px; padding-bottom:14px; border-bottom:1px solid var(--border-light); }
+    .co-item:last-of-type { border-bottom:none; margin-bottom:0; }
+    .co-item-img { width:52px; height:64px; border-radius:var(--radius-sm); overflow:hidden; flex-shrink:0; }
+    .co-item-img img { width:100%; height:100%; object-fit:cover; }
+    .co-item-name { font-family:'Playfair Display',serif; font-size:.9rem; color:var(--maroon); line-height:1.3; }
+    .co-item-sub { font-size:.72rem; color:var(--text-light); margin-top:3px; font-style:italic; }
+    .co-divider { border:none; border-top:1px solid var(--border); margin:16px 0; }
+    .co-row { display:flex; justify-content:space-between; font-size:.84rem; margin-bottom:8px; color:var(--text-mid); }
+    .co-row strong { color:var(--maroon); }
+    .co-note {
+      background:var(--cream); border-radius:var(--radius-sm); padding:12px;
+      font-size:.74rem; color:var(--text-light); line-height:1.6;
+      border-left:3px solid var(--gold); margin:14px 0;
+    }
+    .co-submit {
+      width:100%; padding:14px; background:var(--maroon); color:#fff;
+      border:none; border-radius:var(--radius-sm);
+      font-size:.78rem; font-weight:700; letter-spacing:.16em; text-transform:uppercase;
+      cursor:pointer; transition:var(--transition); margin-top:4px;
+    }
+    .co-submit:hover { background:var(--maroon-mid); transform:translateY(-2px); box-shadow:var(--shadow); }
+    .co-submit-wa {
+      display:flex; align-items:center; justify-content:center; gap:8px;
+      width:100%; padding:12px; background:#25d366; color:#fff; border:none;
+      border-radius:var(--radius-sm); font-size:.78rem; font-weight:700;
+      letter-spacing:.12em; text-transform:uppercase; cursor:pointer;
+      transition:var(--transition); margin-top:8px;
+    }
+    .co-submit-wa:hover { background:#1eaf56; }
+    .co-submit-wa svg { width:18px; height:18px; fill:#fff; }
+    /* SUCCESS */
+    #checkout-success {
+      display:none; text-align:center; padding:72px 24px;
+    }
+    #checkout-success.show { display:block; }
+    .success-icon { font-size:5rem; margin-bottom:16px; }
+    .success-icon-badge {
+      display:inline-flex; align-items:center; justify-content:center;
+      width:96px; height:96px; border-radius:50%;
+      background:linear-gradient(135deg, var(--maroon-deep), var(--maroon));
+      margin-bottom:24px;
+    }
+    .success-icon-badge svg { width:48px; height:48px; fill:#fff; }
+    @media(max-width:900px) {
+      .checkout-grid { grid-template-columns:1fr; }
+      .co-summary { position:static; }
+    }
+    @media(max-width:540px) {
+      .steps-bar { display:none; }
+      .form-row-3 { grid-template-columns:1fr; }
+    }
+  </style>
 </head>
-<body class="bg-surface text-on-surface selection:bg-primary-fixed selection:text-primary">
-<!-- TopNavBar -->
-<nav class="bg-white/80 dark:bg-rose-950/80 backdrop-blur-xl flex justify-between items-center px-8 py-4 max-w-full mx-auto docked full-width top-0 sticky z-50">
-<a class="text-2xl font-serif font-bold text-rose-900 dark:text-rose-100 tracking-tighter" href="index.html">GauriNandan Silk</a>
-<div class="hidden md:flex items-center space-x-10">
-<a class="text-rose-800/70 hover:text-rose-900 font-sans text-sm tracking-wide" href="index.html">Home</a>
-<a class="text-rose-800/70 hover:text-rose-900 font-sans text-sm tracking-wide" href="shop.html">Collections</a>
-<a class="text-rose-800/70 hover:text-rose-900 font-sans text-sm tracking-wide font-bold border-b border-primary" href="checkout.html">Inquiry</a>
-</div>
+<body>
+
+<div id="gn-announcement">✨ <strong>Raj Gharana</strong> Collection Live! &nbsp;|&nbsp;<a href="https://wa.me/919823894289" target="_blank">+91 98238 94289</a></div>
+
+<nav id="gn-nav">
+  <div class="nav-inner">
+    <a class="nav-logo" href="index.html">
+      <img src="logo.png" alt="GauriNandan Silk Logo"/>
+      <div class="nav-logo-text">GauriNandan Silk<small>Pune's Heritage Boutique</small></div>
+    </a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="shop.html">Collections</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="nav-actions">
+      <a href="https://wa.me/919823894289" target="_blank" class="nav-icon-btn"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.123 1.528 5.849L.057 23.854a.5.5 0 00.605.605l6.005-1.471A11.954 11.954 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22a9.952 9.952 0 01-5.062-1.38l-.361-.215-3.734.914.915-3.734-.215-.361A9.952 9.952 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg></a>
+      <button class="hamburger" id="gn-hamburger"><span></span><span></span><span></span></button>
+    </div>
+  </div>
 </nav>
-<main class="max-w-7xl mx-auto px-8 py-16">
-<h1 class="text-4xl font-serif text-primary mb-12">Finalize Your Selection</h1>
-<div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
-<!-- Inquiry Form -->
-<div class="lg:col-span-8 order-2 lg:order-1">
-<form action="#" class="space-y-8" method="POST">
-<div class="bg-surface-container rounded-sm p-8 border border-outline-variant/10 shadow-sm">
-<h2 class="text-xl font-serif text-primary mb-6">Contact Information</h2>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-<div class="space-y-2">
-<label class="text-xs font-bold uppercase tracking-widest text-on-surface-variant">Full Name</label>
-<input class="w-full bg-surface-container-lowest border-outline-variant/20 focus:border-primary-container focus:ring-0 rounded-none p-3 text-sm transition-all" required="" type="text"/>
+
+<div id="gn-mobile-nav">
+  <a href="index.html">Home</a>
+  <a href="shop.html">Collections</a>
+  <a href="contact.html">Contact</a>
+  <div class="mobile-soc-row">
+    <a class="mobile-soc-btn" href="https://wa.me/919823894289" target="_blank">💬 WhatsApp</a>
+  </div>
 </div>
-<div class="space-y-2">
-<label class="text-xs font-bold uppercase tracking-widest text-on-surface-variant">WhatsApp Number</label>
-<input class="w-full bg-surface-container-lowest border-outline-variant/20 focus:border-primary-container focus:ring-0 rounded-none p-3 text-sm transition-all" required="" type="tel"/>
-</div>
-<div class="space-y-2 md:col-span-2">
-<label class="text-xs font-bold uppercase tracking-widest text-on-surface-variant">Email Address</label>
-<input class="w-full bg-surface-container-lowest border-outline-variant/20 focus:border-primary-container focus:ring-0 rounded-none p-3 text-sm transition-all" type="email"/>
-</div>
-</div>
-</div>
-<div class="bg-surface-container rounded-sm p-8 border border-outline-variant/10 shadow-sm">
-<h2 class="text-xl font-serif text-primary mb-6">Inquiry Details</h2>
-<div class="space-y-6">
-<div class="space-y-2">
-<label class="text-xs font-bold uppercase tracking-widest text-on-surface-variant">Special Requirements / Personalization</label>
-<textarea class="w-full bg-surface-container-lowest border-outline-variant/20 focus:border-primary-container focus:ring-0 rounded-none p-3 text-sm transition-all min-h-[120px]" placeholder="Ex: Need a custom matching blouse, gifting package, etc."></textarea>
-</div>
-<div class="space-y-2">
-<label class="text-xs font-bold uppercase tracking-widest text-on-surface-variant">Shipment Preference</label>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-<label class="flex items-center gap-4 p-4 border border-outline-variant/20 cursor-pointer hover:bg-surface-variant transition-all">
-<input class="w-4 h-4 border-outline-variant text-primary focus:ring-primary-container" name="shipment" type="radio"/>
-<span class="text-sm font-semibold">Standard Shipping</span>
-</label>
-<label class="flex items-center gap-4 p-4 border border-outline-variant/20 cursor-pointer hover:bg-surface-variant transition-all">
-<input class="w-4 h-4 border-outline-variant text-primary focus:ring-primary-container" name="shipment" type="radio"/>
-<span class="text-sm font-semibold">In-Store Pickup (Pune)</span>
-</label>
-</div>
-</div>
-</div>
-</div>
-<div class="flex flex-col md:flex-row gap-4 items-center">
-<button class="w-full bg-primary-container text-on-primary py-4 font-bold uppercase tracking-widest hover:bg-primary transition-all shadow-xl shadow-primary-container/20 flex justify-center items-center gap-3" type="submit">
-<span class="material-symbols-outlined">send_and_archive</span>
-                        SEND FINAL INQUIRY
-                    </button>
-<a class="w-full flex justify-center items-center gap-2 text-primary hover:text-secondary font-bold text-sm underline md:no-underline" href="cart.html">
-                        Return to Cart
-                    </a>
-</div>
-</form>
-</div>
-<!-- Cart Sidebar -->
-<div class="lg:col-span-4 order-1 lg:order-2">
-<div class="bg-surface-container-low p-8 border border-outline-variant/10 shadow-sm sticky top-32">
-<h2 class="text-xl font-serif text-primary mb-6">Selection Summary</h2>
-<div class="space-y-6">
-<div class="flex gap-4 items-center border-b border-outline-variant/10 pb-6">
-<div class="w-16 h-16 rounded overflow-hidden">
-<img alt="Saree Item" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqWGbW00lUuQprFFRgYD54SXxpKThM5709I6ZgVIsJRYkEpU5bd4KAX9x0q8h8gn-y04hTbmjzjZb3aOglLT2wjT9dCDa50uLwqBCBrsfvU86V9rN4Olo3UKzCacp42zb7V8nrnvtSS14yZcdxCjpZuhV4vCeAfJpt3EZ2U42NicXt7klp8884FDuUSpnyR4tdD8SokD6h41cUIrdr6ydIoVojuJNgQwRyMwb_5M9REAT151wcjqwrGL3evUP28FEy6JlOMjBE2pE"/>
-</div>
-<div class="flex-1">
-<h4 class="font-serif text-sm text-primary">Midnight Maroon Banarasi</h4>
-<p class="text-xs text-on-surface-variant uppercase tracking-widest">Qty: 1</p>
-</div>
-<p class="text-xs italic text-on-surface-variant">Inquiry</p>
-</div>
-<div class="pt-4 space-y-4">
-<p class="text-[10px] text-on-surface-variant leading-relaxed">By submitting this inquiry, you indicate interest in our hand-crafted masterpieces. Our specialist will contact you within 24 hours on WhatsApp for final pricing, payment link, and measurement details.</p>
-</div>
-</div>
-<div class="mt-8 pt-8 border-t border-outline-variant/20 flex items-center gap-3 text-rose-900/60 uppercase text-[10px] tracking-widest font-bold">
-<span class="material-symbols-outlined text-[14px]">history_edu</span>
-                        GauriNandan Heritage Assurance
-                    </div>
-</div>
-</div>
-</div>
+
+<main>
+  <section class="checkout-section">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
+        <a href="cart.html">Cart</a>
+        <svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
+        <span>Inquiry Details</span>
+      </div>
+
+      <!-- STEPS -->
+      <div class="steps-bar" style="border-radius:var(--radius-sm);overflow:hidden;margin-bottom:36px;">
+        <div class="step-item done"><div class="step-num">✓</div>Selection</div>
+        <div class="step-item active"><div class="step-num">2</div>Inquiry Details</div>
+        <div class="step-item"><div class="step-num">3</div>Confirmation</div>
+      </div>
+
+      <!-- FORM OR SUCCESS -->
+      <div id="checkout-form-area">
+        <div class="checkout-grid">
+          <!-- FORM -->
+          <div>
+            <form id="checkout-form" novalidate>
+              <!-- Contact Details -->
+              <div class="co-card" data-reveal>
+                <h3 class="font-serif">
+                  <svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2M12 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8z"/></svg>
+                  Your Contact Details
+                </h3>
+                <div class="form-row" style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+                  <div class="form-group">
+                    <label class="form-label">Full Name *</label>
+                    <input type="text" class="form-input" placeholder="Priya Sharma" required id="co-name"/>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label">WhatsApp Number *</label>
+                    <input type="tel" class="form-input" placeholder="+91 98765 43210" required id="co-phone"/>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Email Address (Optional)</label>
+                  <input type="email" class="form-input" placeholder="priya@example.com"/>
+                </div>
+              </div>
+
+              <!-- Delivery Info -->
+              <div class="co-card" data-reveal style="transition-delay:.07s">
+                <h3 class="font-serif">
+                  <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                  Delivery Preference
+                </h3>
+                <div class="form-row" style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+                  <div class="form-group" style="grid-column:1/-1">
+                    <label class="form-label">Preferred Mode of Delivery</label>
+                    <select class="form-select">
+                      <option value="pickup">In-store Pickup (Pune)</option>
+                      <option value="courier">Home Delivery (Courier)</option>
+                      <option value="tbd">To be decided on WhatsApp</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Full Delivery Address (if applicable)</label>
+                  <textarea class="form-textarea" placeholder="Your flat/house address, area, city, pincode…" style="min-height:80px;"></textarea>
+                </div>
+              </div>
+
+              <!-- Special Requests -->
+              <div class="co-card" data-reveal style="transition-delay:.12s">
+                <h3 class="font-serif">
+                  <svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                  Special Requests
+                </h3>
+                <div class="form-group">
+                  <label class="form-label">Occasion &amp; Customization Notes</label>
+                  <textarea class="form-textarea" placeholder="E.g. this is for my wedding on 15th March, I'd like the blouse piece in size 38, matching petticoat needed…"></textarea>
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Preferred Contact Time</label>
+                  <select class="form-select">
+                    <option>Morning (10 AM – 1 PM)</option>
+                    <option>Afternoon (1 PM – 5 PM)</option>
+                    <option>Evening (5 PM – 8 PM)</option>
+                    <option>Anytime</option>
+                  </select>
+                </div>
+              </div>
+            </form>
+          </div>
+
+          <!-- ORDER SUMMARY -->
+          <div class="co-summary" data-reveal style="transition-delay:.1s">
+            <h3 class="font-serif">Order Summary</h3>
+
+            <div class="co-item">
+              <div class="co-item-img">
+                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqWGbW00lUuQprFFRgYD54SXxpKThM5709I6ZgVIsJRYkEpU5bd4KAX9x0q8h8gn-y04hTbmjzjZb3aOglLT2wjT9dCDa50uLwqBCBrsfvU86V9rN4Olo3UKzCacp42zb7V8nrnvtSS14yZcdxCjpZuhV4vCeAfJpt3EZ2U42NicXt7klp8884FDuUSpnyR4tdD8SokD6h41cUIrdr6ydIoVojuJNgQwRyMwb_5M9REAT151wcjqwrGL3evUP28FEy6JlOMjBE2pE" alt=""/>
+              </div>
+              <div>
+                <div class="co-item-name font-serif">Midnight Maroon Banarasi</div>
+                <div class="co-item-sub">Qty: 1 · Pure Hand-woven Silk</div>
+              </div>
+            </div>
+
+            <div class="co-item">
+              <div class="co-item-img">
+                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuC67OWgLei8BUUNTeQO-XBYXyDOogoJwSuKrr9ylGNPgfY_0WHeVShF64sjjgRB8N9d4NpIUaktGdUha1UUVRDMOGTQb_3F8f9dZL95-RVYaMwCq0sEF1bEi7AqsqB2qn3Nk_HC0d84WwDqtzORTGcrT6yubjYDirb4SwnPmBhnnqgfkIp9omi4-w2r-bJPzDULb6_gIkGk0N6V6QSBVBgt40iPlYdWmkBYJ0T1bqIVllXM5zb3asxw2lwf-9Q0_VJY5Sgp0_c-Q8g" alt=""/>
+              </div>
+              <div>
+                <div class="co-item-name font-serif">Paithani Heritage Saree</div>
+                <div class="co-item-sub">Qty: 1 · Traditional Peacock Motif</div>
+              </div>
+            </div>
+
+            <hr class="co-divider"/>
+            <div class="co-row"><span>Selected Items</span><strong>2 Sarees</strong></div>
+            <div class="co-row"><span>Delivery</span><span>To be confirmed</span></div>
+            <div class="co-row"><span>Payment Method</span><span>On WhatsApp</span></div>
+            <div class="co-row"><span>Estimated Dispatch</span><span>7–10 working days</span></div>
+
+            <div class="co-note">
+              💬 After submitting, our team will contact you on WhatsApp within <strong>24 hours</strong> to confirm pricing, customization & payment.
+            </div>
+
+            <button class="co-submit" onclick="submitInquiry()">
+              Submit Inquiry →
+            </button>
+            <a class="co-submit-wa" href="https://wa.me/919823894289?text=Hi!%20I'd%20like%20to%20place%20an%20order%20for%20sarees.%20Can%20you%20help?" target="_blank">
+              <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.123 1.528 5.849L.057 23.854a.5.5 0 00.605.605l6.005-1.471A11.954 11.954 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22a9.952 9.952 0 01-5.062-1.38l-.361-.215-3.734.914.915-3.734-.215-.361A9.952 9.952 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+              Or Chat Directly on WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- SUCCESS STATE -->
+      <div id="checkout-success">
+        <div class="success-icon-badge">
+          <svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>
+        </div>
+        <div class="section-label" style="justify-content:center;margin-bottom:16px;">Inquiry Received</div>
+        <h2 class="section-h2" style="text-align:center;margin-bottom:14px;">Thank You! 🙏</h2>
+        <p style="font-size:.95rem;color:var(--text-light);text-align:center;max-width:460px;margin:0 auto 28px;line-height:1.8;">
+          Your inquiry has been received. Our team at <strong>GauriNandan Silk</strong> will reach out via WhatsApp within 24 hours to confirm pricing, customization options, and payment details.
+        </p>
+        <div style="display:flex;justify-content:center;gap:14px;flex-wrap:wrap;">
+          <a href="https://wa.me/919823894289?text=Hi!%20I%20just%20submitted%20an%20inquiry%20on%20your%20website." target="_blank" class="btn btn-primary">
+            💬 Follow up on WhatsApp
+          </a>
+          <a href="shop.html" class="btn btn-outline">Continue Shopping</a>
+        </div>
+      </div>
+    </div>
+  </section>
 </main>
-<!-- Small Footer -->
-<footer class="py-8 text-center text-[10px] text-on-surface-variant/40 border-t border-outline-variant/10 uppercase tracking-widest">
-        © 2024 GauriNandan Silk. Pune. Verified Authentic Silk.
-    </footer>
-</body></html>
+
+<footer id="gn-footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <img src="logo.png" alt="GauriNandan Silk"/>
+      <p>Curating India's heritage weaves for the modern woman who values tradition and elegance in equal measure.</p>
+      <div class="footer-soc-row">
+        <a class="footer-soc-icon" href="https://www.facebook.com/share/14ZEr9QbPwk/" target="_blank"><svg viewBox="0 0 24 24"><path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z"/></svg></a>
+        <a class="footer-soc-icon" href="https://www.instagram.com/gaurinandan_silk?igsh=MXVwcW5zNHdubG9kYg==" target="_blank"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4s1.791-4 4-4 4 1.791 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+        <a class="footer-soc-icon" href="https://wa.me/919823894289" target="_blank"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.123 1.528 5.849L.057 23.854a.5.5 0 00.605.605l6.005-1.471A11.954 11.954 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22a9.952 9.952 0 01-5.062-1.38l-.361-.215-3.734.914.915-3.734-.215-.361A9.952 9.952 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg></a>
+        <a class="footer-soc-icon" href="https://maps.app.goo.gl/ef2P8LEWgLj3ya296" target="_blank"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg></a>
+      </div>
+    </div>
+    <div class="footer-col"><h5>Quick Links</h5><ul><li><a href="index.html">Home</a></li><li><a href="shop.html">Collections</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+    <div class="footer-col"><h5>Collections</h5><ul><li><a href="shop.html">Paithani</a></li><li><a href="shop.html">Banarasi</a></li><li><a href="shop.html">Bridal</a></li></ul></div>
+    <div class="footer-col"><h5>Contact</h5><ul><li><a href="tel:+919823894289">+91 98238 94289</a></li><li><a href="https://wa.me/919823894289" target="_blank">WhatsApp Us</a></li><li><a href="https://maps.app.goo.gl/ef2P8LEWgLj3ya296" target="_blank">Google Maps</a></li></ul></div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2024 GauriNandan Silk. All rights reserved.</p>
+    <div class="footer-certified"><svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>Authentic Silk Certified</div>
+  </div>
+</footer>
+
+<!-- CHATBOT -->
+<div id="gn-chatbot">
+  <div id="gn-chat-window" role="dialog">
+    <div class="chat-header">
+      <div class="chat-avatar"><img src="logo.png" alt="GauriNandan"/></div>
+      <div class="chat-hdr-info"><div class="chat-hdr-name">GauriNandan Silk</div><div class="chat-hdr-status">Online · Here to help</div></div>
+      <button class="chat-close-btn" id="gn-chat-close">✕</button>
+    </div>
+    <div class="chat-msgs" id="gn-chat-msgs"></div>
+    <div class="chat-quick">
+      <button class="chat-quick-btn" data-msg="WhatsApp Order">💬 WhatsApp</button>
+      <button class="chat-quick-btn" data-msg="Store Location">📍 Location</button>
+    </div>
+    <div class="chat-input-row">
+      <input class="chat-text-input" id="gn-chat-input" type="text" placeholder="Ask us anything…" autocomplete="off"/>
+      <button class="chat-send-btn" id="gn-chat-send"><svg viewBox="0 0 24 24"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg></button>
+    </div>
+  </div>
+  <button id="gn-chat-toggle"><div id="gn-chat-badge"></div><svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"/></svg></button>
+</div>
+
+<script src="gn-shared.js"></script>
+<script>
+  function submitInquiry() {
+    const name = document.getElementById('co-name').value.trim();
+    const phone = document.getElementById('co-phone').value.trim();
+    if (!name || !phone) {
+      alert('Please enter your name and WhatsApp number to proceed.');
+      return;
+    }
+    document.getElementById('checkout-form-area').style.display = 'none';
+    document.getElementById('checkout-success').classList.add('show');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+</script>
+</body>
+</html>
